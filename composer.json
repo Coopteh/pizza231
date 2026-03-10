@@ -1,0 +1,17 @@
+
+{
+    "name": "kkt/store231",
+    "description": "Магазин",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000"
+    }
+}

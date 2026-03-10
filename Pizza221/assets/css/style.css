@@ -1,0 +1,258 @@
+/* =========================================
+   Базовые настройки
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* =========================================
+   Логотип
+   ========================================= */
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+}
+
+/* Если логотип текстовый */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   Навигация
+   ========================================= */
+.navbar {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    background: #fff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #000 !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-link {
+    color: #555 !important;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000 !important;
+    font-weight: 500;
+}
+
+/* =========================================
+   Hero секция
+   ========================================= */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================
+   Кнопки
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* =========================================
+   Категории
+   ========================================= */
+.categories {
+    padding: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.category-card {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.category-card:hover {
+    border-color: #000;
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: #f5f5f5;
+}
+
+.category-card h5 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* =========================================
+   Товары
+   ========================================= */
+.products {
+    padding: 2rem 0 4rem;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.product-image {
+    height: 250px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 3rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 1rem;
+}
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.product-card .card-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.product-card .btn {
+    width: 100%;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background: #f9f9f9;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* =========================================
+   Адаптивность
+   ========================================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .category-card img {
+        height: 150px;
+    }
+}

@@ -10,18 +10,19 @@ Fork репозитория Coopteh/pizza231
 - Войдите в свой аккаунт на github.com и сделайте fork
 на репу https://github.com/Coopteh/pizza231
 - Снимите галочку с "Copy the main branch only"
-Настройте обновление веток в терминале
-> git remote add pizza231 https://github.com/Coopteh/pizza231.git
-получим обновления веток с оригинального репозитория (на coopteh)
-> git fetch pizza231
-выполните в bash терминале
-> git pull
 
 Настройка локального репозитория - клонируйте свой форкнутый репозиторий по SSH-ссылке
 > git clone git@....
 скопируйте в Проводнике (скрытую) папку .git и файл readme.md в корень каталога c:/xampp/htdocs
 удалите папку pizza231
 - в .gitignore добавьте папку vendor (просто запишите эту строку)
+
+Настройте обновление веток в терминале
+> git remote add pizza231 https://github.com/Coopteh/pizza231.git
+получим обновления веток с оригинального репозитория (на coopteh)
+> git fetch pizza231
+выполните в bash терминале
+> git pull
 ```
 Закоммитьте и запуште изменения
 ```

@@ -8,7 +8,7 @@ class BaseTemplate{
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Кафе-Пиццерия Бон Густо </title>
+            <title> %s </title>
             <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
             <script src="../../assets/css/bootstrap.bundle.js"></script>
         </head>
@@ -36,7 +36,7 @@ class BaseTemplate{
                 </div>
                 </nav>
                 <h1>Кафе-Пиццерия Бон Густо</h1>
-
+                <main>%s</main>
             </header>
         </body>
         <footer class="mt-5">

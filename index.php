@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-use App\Views\BaseTemplate;
+use App\Controllers\HomeControllers;
 
-$template = BaseTemplate::getTemplate();
-$resultTemplate =  sprintf($template, "Кафе-Пиццерия Бон Густо", "Просто текст");
-echo $resultTemplate;
+$controller = new HomeControllers();
+echo $controller->get();

@@ -2,7 +2,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 use App\BaseTemplate;
+use App\Views\HomeTemplate;
 
-$template = BaseTemplate::getTemplate();
-$resultTemplate =  sprintf($template, "Основная страница", "Просто текст");
-echo $resultTemplate;
+// $controller = new HomeController();
+// echo $controller->get();
+echo HomeTemplate:: getTemplate();

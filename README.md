@@ -1,3 +1,7 @@
+## Задание по работе с GitHub Project
+
+Видео по теме https://www.youtube.com/watch?v=ff5cBkPg-bQ&list=PLEPZdzLLJH96venmwTpHqH0160NbIHmC5  
+
 ## Задание по разработке кода для группы ИС-231
 
 Работа с git

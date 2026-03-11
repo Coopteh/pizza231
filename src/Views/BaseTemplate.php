@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App\Views;
 class BaseTemplate
 {
     
@@ -33,7 +33,7 @@ class BaseTemplate
             <div class="container">
                 <!-- Логотип и Заголовок "Магазин 231" -->
                 <a class="navbar-brand d-flex align-items-center" href="/">
-                    <img src="assets/images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                    <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
                     Бытовая Техника
                 </a>
                 

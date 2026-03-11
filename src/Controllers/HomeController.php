@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 // Подключаем класс шаблона из корня src/
-use App\BaseTemplate;
+use App\Views\HomeTemplate;
 
 class HomeController
 {
@@ -18,6 +18,6 @@ class HomeController
         ";
         
         // Вызываем статический метод класса BaseTemplate
-        echo BaseTemplate::getTemplate("Главная - Магазин 231", $content);
+        echo HomeTemplate::getTemplate("Главная - Магазин 231", $content);
     }
 }

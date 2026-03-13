@@ -9,6 +9,7 @@ class BaseTemplate{
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title> %s </title>
+            <link rel="shortcut icon" type="image/svg" href="../../assets/img/icon.jpg" />
             <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
             <script src="../../assets/css/bootstrap.bundle.js"></script>
         </head>
@@ -16,7 +17,7 @@ class BaseTemplate{
             <header>
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/home">
                         <img src="../../assets/img/logo.jpg" alt="loading" width="64" height="64">
                         Кафе-Пиццерия Бон Густо
                     </a>
@@ -26,10 +27,10 @@ class BaseTemplate{
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        <a class="nav-link active" aria-current="page" href="/home">Главная</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">О нас</a>
+                        <a class="nav-link" href="/about">О нас</a>
                         </li>
                     </ul>
                     </div>

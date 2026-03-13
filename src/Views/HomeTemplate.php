@@ -5,7 +5,7 @@ class HomeTemplate extends BaseTemplate{
         $template = parent::getTemplate();
         $title= 'Главная страница';
         $content = <<<HTML
-
+        <section>
             <div class="h-50 w-50 mx-auto">        
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" style="height:65vh;">

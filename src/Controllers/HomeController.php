@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 use App\Views\HomeTemplate;
-class HomeControllers{
+class HomeController{
     public static function get(): string 
     {
         return HomeTemplate::getTemplate();

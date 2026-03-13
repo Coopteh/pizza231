@@ -1,9 +1,7 @@
 <?php
+require_once("./vendor/autoload.php");
+use App\Routes\Router;
 
-require_once __DIR__ . '/vendor/autoload.php';
-use App\BaseTemplate;
-use App\Views\HomeTemplate;
-
-// $controller = new HomeController();
-// echo $controller->get();
-echo HomeTemplate:: getTemplate();
+$url = $_SERVER['REQUEST_URI'];
+$controller = new Router();
+echo $controller->route($url);

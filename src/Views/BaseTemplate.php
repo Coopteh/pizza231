@@ -31,17 +31,11 @@ class BaseTemplate
                                     <a class="nav-link active" aria-current="page" href="/">Главная</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/catalog">Каталог</a>
+                                   <a class="nav-link active" aria-current="page" href="/about">Каталог</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/laptops">Ноутбуки</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/pcs">Компьютеры</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/accessories">Аксессуары</a>
-                                </li>
+                                 <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about">О нас</a>
+                        </li>     
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item">

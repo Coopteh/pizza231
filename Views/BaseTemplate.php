@@ -19,7 +19,7 @@ class BaseTemplate
     <!-- Навигация -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="/">🏢 Надежная защита</a>
+            <a class="navbar-brand" href="/">🏢 чёрный вантуз</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,7 +32,7 @@ class BaseTemplate
                         <a class="nav-link" href="?page=services">Услуги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?page=contacts">Контакты</a>
+                        <a class="nav-link" href="/about">О нас</a>
                     </li>
                 </ul>
             </div>
@@ -47,8 +47,7 @@ class BaseTemplate
     <!-- Подвал -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
-            <p class="mb-0">© 2024 Страховая компания "Надежная защита"</p>
-            <small>Кузбасский кооперативный техникум</small>
+            <p class="mb-0">© 1488 Страховая компания "чёрный вантуз"</p>
         </div>
     </footer>
 

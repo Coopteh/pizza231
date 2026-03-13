@@ -6,7 +6,7 @@ class HomeTemplate extends BaseTemplate
     public static function getTemplate(): string
     {
         $template = parent::getTemplate();
-        $title = 'Главная страница - Страховая компания "Надежная защита"';
+        $title = 'Главная страница - Страховая компания "чёрный вантуз"';
         
         $content = '
         <!-- Карусель изображений -->
@@ -55,7 +55,7 @@ class HomeTemplate extends BaseTemplate
         <main class="container my-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="mb-4 text-primary">🛡️ Страховая компания "Надежная защита"</h2>
+                    <h2 class="mb-4 text-primary">🛡️ Страховая компания "чёрный вантуз"</h2>
                     <p class="lead">
                         <strong>Мы заботимся о вашем спокойствии с 2010 года!</strong><br><br>
                         Предлагаем полный спектр страховых услуг для физических и юридических лиц:<br>

@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# Если файл реально существует (картинка, css) - отдаем его
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Иначе отправляем все на index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

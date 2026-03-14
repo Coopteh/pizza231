@@ -33,15 +33,43 @@ class HomeTemplate extends BaseTemplate
                 </div>        
             </div>
             </section>
-            <main class="row">
-                <div class="p-5">
-                    <p>Здесь можно заказать комплектующие с доставкой по городу Кемерово.</p>
-                    <p>Широкий ассортимент, низкие цены, быстрая доставка!</p>
-                    <p> (*) Сайт разработан в рамках обучения в "Кузбасском кооперативном техникуме"<br>
-                    по специальности 09.02.07 "Специалист по информационным технологиям".</p>
+            <main class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        
+                        <h1 class="display-4 fw-bold text-dark mb-3">
+                            Добро пожаловать в <span class="text-primary">«Пиксель»</span>
+                        </h1>
+                        
+                        <p class="lead text-secondary mb-4">
+                            Твой надежный проводник в мир цифровых технологий. 
+                            Мы собираем мечты в реальность, предлагая лучшие комплектующие по городу.
+                        </p>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded bg-light h-100">
+                                    <h5 class="fw-bold">🚀 Быстро</h5>
+                                    <p class="small text-muted">Оперативная обработка заказа и доставка по Кемерово в день обращения.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded bg-light h-100">
+                                    <h5 class="fw-bold">💎 Качественно</h5>
+                                    <p class="small text-muted">Только оригинальная продукция от ведущих мировых брендов.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded bg-light h-100">
+                                    <h5 class="fw-bold">💰 Выгодно</h5>
+                                    <p class="small text-muted">Честные цены без скрытых наценок и регулярные акции.</p>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
                 </div>
             </main> 
-            HTML;
+        HTML;
         $resultTemplate = sprintf($template, $title, $content);
         return $resultTemplate;
     }

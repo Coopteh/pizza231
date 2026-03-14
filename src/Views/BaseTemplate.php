@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App\Views;
 class BaseTemplate
 {
     
@@ -33,7 +33,7 @@ class BaseTemplate
             <div class="container">
                 <!-- Логотип и Заголовок "Магазин 231" -->
                 <a class="navbar-brand d-flex align-items-center" href="/">
-                    <img src="assets/images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                    <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
                     Бытовая Техника
                 </a>
                 
@@ -45,6 +45,11 @@ class BaseTemplate
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                        </li>
+                    </ul>
+                                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about">О нас</a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +64,7 @@ class BaseTemplate
 
 <footer class="mt-5">© 2025 «Кемеровский кооперативный техникум»<footer>
     <!-- Подключение Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.js"></script>
 </body>
 </html>
 HTML;

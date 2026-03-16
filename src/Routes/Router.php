@@ -2,6 +2,7 @@
 namespace App\Routes;
 use App\Controllers\HomeController;
 use App\Controllers\AboutController;
+use App\Controllers\ProductController;
 class Router{
     public function route(string $url):?string 
     {
@@ -18,6 +19,10 @@ class Router{
             case "":
                 $home = new HomeController();
                 return $home->get();
+            case "product":
+                $product = new ProductController();
+                $id = ($pieces[2]) ? intval($pieces[2]) : 0;
+                return $product->get($id);
         }
     }
 }

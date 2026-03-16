@@ -2,36 +2,36 @@
   {
     "id": 1,
     "name": "Гриль",
-    "image": "../../assets/img/card1.png",
+    "image": "/assets/img/card1.png",
     "description": "Хороший гриль, заморский",
     "price": 20000
   },
   {
     "id": 2,
     "name": "Стиральная машина",
-    "image": "../../assets/img/card2.png",
+    "image": "/assets/img/card2.png",
     "description": "Пустышка, без мотора",
     "price": 550
   },
   {
     "id": 3,
     "name": "Чайник",
-    "image": "../../assets/img/card3.png",
+    "image": "/assets/img/card3.png",
     "description": "Чайник, российского производства (шильдик, остальное - импорт заморский, из Вьетнама. Дети делали, качественно)",
     "price": 3500
   },
     {
     "id": 4,
     "name": "Холодильник",
-    "image": "../../assets/img/card4.png",
+    "image": "/assets/img/card4.png",
     "description": "Холодильник корейский, криптовалюту майнит",
     "price": 10000
   },
     {
     "id": 5,
-    "name": "Барак Обама",
-    "image": "../../assets/img/card5.png",
-    "description": "Бывший президент Соединённых Штатов Америки",
+    "name": "Барак Хуссейн Обама II",
+    "image": "/assets/img/card5.png",
+    "description": "44-ый президент Соединённых Штатов Америки. Я не шучу, его второе имя - Хуссейн. Безумие!",
     "price": 2000
   }
 ]

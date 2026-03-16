@@ -3,59 +3,120 @@ namespace App\Views;
 
 use App\Views\BaseTemplate;
 class ProductTemplate extends BaseTemplate {
-    public static function getTemplate()
-    {
-    // $content = <<<HTML
-    //     <section>
-    //     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    //     <div class="carousel-inner">
-    //         <div class="carousel-item active">
-    //             <img src="../../assets/img/img1.png" class="d-block w-100 h-150" alt="...">
-    //         </div>
-    //         <div class="carousel-item">
-    //             <img src="../../assets/img/img2.png" class="d-block w-100 h-150" alt="...">
-    //         </div>
-    //         <div class="carousel-item">
-    //             <img src="../../assets/img/img3.png" class="d-block w-100 h-150" alt="...">
-    //         </div>
-    //     </div>
-    //     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    //         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    //         <span class="visually-hidden">Previous</span>
-    //     </button>
-    //     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    //         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    //         <span class="visually-hidden">Next</span>
-    //     </button>
-    //     </div>
-    //     </section>
-    // HTML;
     
-    }
-    public static function getCard($data)
-    {
-        $card = <<<HTML
-        <section>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="...">
+    public static function getCardTemplate($data): string {
+        
+        if (!$data) {
+            return <<<HTML
+            <div class="container mt-5">
+                <div class="alert alert-warning text-center shadow-sm" role="alert">
+                    <h4 class="alert-heading">Данный товар не найден.</h4>
+                    <p>К сожалению, товар с таким идентификатором отсутствует в нашем каталоге.</p>
+                    <hr>
+                    <a href="/product/1" class="btn btn-outline-warning">Попробовать товар №1</a>
                 </div>
-                <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">$data[name]</h5>
-                    <p class="card-text">$data[description]</p>
-                    <p class="card-text"><small class="text-body-secondary">$data[price]</small></p>
-                </div>
+            </div>';
+            HTML;
+        }
+        
+        // DATA EXTRACTION
+        $image = $data['image'] ?? '';
+        $fallbackImage = '/assets/img/keep_out.png';
+        $fallbackImageJs = json_encode($fallbackImage, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        $title = htmlspecialchars($data['name'] ?? 'Нет названия');
+        $description = htmlspecialchars($data['description'] ?? 'Нет описания');
+        $price = htmlspecialchars($data['price'] ?? 0);
+
+        return parent::getTemplate(<<<HTML
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9">
+                    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <div class="row g-0 h-100">
+                            
+                            <!-- Блок с изображением -->
+                            <div class="col-md-5 col-lg-4 bg-light d-flex align-items-center justify-content-center p-4" style="min-height: 300px;">
+                                <img src="$image"
+                                     class="img-fluid rounded-3 shadow-sm" 
+                                     alt="$title"
+                                     style="max-height: 350px; width: 100%; object-fit: contain;"
+                                     onerror='this.src=$fallbackImageJs; this.onerror=null;'>
+                            </div>
+                            
+                            <!-- Блок с информацией -->
+                            <div class="col-md-7 col-lg-8">
+                                <div class="card-body p-4 p-md-5 d-flex flex-column justify-content-center">
+                                    <h5 class="text-uppercase text-secondary fw-bold ls-1 mb-2" style="font-size: 0.9rem;">Товар</h5>
+                                    <h2 class="card-title display-6 fw-bold text-dark mb-3">$title</h2>
+                                    
+                                    <p class="card-text text-muted lead mb-4" style="line-height: 1.6;">
+                                        $description
+                                    </p>
+                                    
+                                    <div class="mt-auto">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <span class="display-5 fw-bold text-primary me-3">$price ₽</span>
+                                            <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">В наличии</span>
+                                        </div>
+                                        
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow-sm">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus me-2" viewBox="0 0 16 16">
+                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                </svg>
+                                                В корзину
+                                            </button>
+                                            <a href="/" class="btn btn-outline-secondary btn-lg px-4">На главную</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 text-center text-muted small">
+                        <div class="col-4">
+                            <i class="bi bi-truck me-1"></i> Качественная техника*
+                        </div>
+                        <div class="col-4">
+                            <i class="bi bi-shield-check me-1"></i> Гарантия до двух лет**
+                        </div>
+                        <div class="col-4">
+                            <i class="bi bi-heart me-1"></i> Только заводские товары***
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </section>
-    HTML;
-    $template = parent::getTemplate();
-    $title= 'Каталог';
+    HTML);
+    // LEGACY DISPLAY
+    // $template = parent::getTemplate('<h1>НЕТАНЬЯХУ</h1>');
+    // $title= 'Каталог';
     // $content = 'здесь будет контент главной страницы';
-    $resultTemplate =  sprintf($template, $title, $card);
-    return $resultTemplate;
+    // $resultTemplate =  sprintf($template, $title, $card);
+    // return $resultTemplate;
+    // LEGACY CARD
+        //     <<<HTML
+        //     <div class="container py-5">
+        //     <div class="row justify-content-center">
+        //         <div class="col-lg-10 col-xl-9">
+        //             <div class="card mb-3" style="max-width: 540px;">
+        //                 <div class="row g-0">
+        //                     <div class="col-md-4">
+        //                         <img src="$image" class="img-fluid rounded-start" alt="...">
+        //                     </div>
+        //                     <div class="col-md-8">
+        //                         <div class="card-body">
+        //                             <h4 class="card-title">$title </h4>
+        //                             <p class="card-text">$description</p>
+        //                             <p class="card-text"><small class="text-body-secondary">$price</small></p>
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
+        // HTML;
     }
 }

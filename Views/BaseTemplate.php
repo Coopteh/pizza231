@@ -19,17 +19,21 @@ class BaseTemplate
     <!-- Навигация -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="/">🏢 чёрный вантуз</a>
+            <a class="navbar-brand" href="/">
+                <!-- Изображение логотипа берётся из папки assets/images -->
+                <img src="assets/images/5.png" alt="Логотип ЧВ" width="30" height="30" class="d-inline-block align-middle me-2">
+                Чёрный Вантуз
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href=>Главная</a>
+                        <a class="nav-link active" href="/home">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?page=services">Услуги</a>
+                        <a class="nav-link" href="/services">Услуги</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">О нас</a>
@@ -47,7 +51,7 @@ class BaseTemplate
     <!-- Подвал -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
-            <p class="mb-0">© 1488 Страховая компания "чёрный вантуз"</p>
+            <p class="mb-0">© 1488 Страховая компания "Чёрный Вантуз"</p>
         </div>
     </footer>
 

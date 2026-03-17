@@ -1,10 +1,13 @@
 <?php
-require_once("./vendor/autoload.php");
-use App\Views\BaseTemplate;
+require_once __DIR__ . '/src/Router/Router.php';
+require_once __DIR__ . '/src/Controllers/HomeController.php';
+require_once __DIR__ . '/src/Controllers/AboutController.php';
+require_once __DIR__ . '/src/Views/BaseTemplate.php';
+require_once __DIR__ . '/src/Views/HomeTemplate.php';
+require_once __DIR__ . '/src/Views/AboutTemplate.php';
 
-$template = BaseTemplate::getTemplate();
-$resultTemplate =  sprintf($template, 
-    "Основная страница", 
-    "<p>Пиццерия ИС-231 - это вкусная пицца, которую вам доставят прямо на занятия в 409 кабинет!</p>");
+use App\Router\Router;
 
-echo $resultTemplate;
+$router = new Router();
+$url = $_SERVER['REQUEST_URI'];
+echo $router->route($url);

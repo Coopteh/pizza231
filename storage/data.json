@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Развал схождение",
+    "image": "/assets/img/111.jpg", 
+    "description": "Наладим все",
+    "price": 2000
+  },
+  {
+    "id": 2,
+    "name": "Покраска",
+    "image": "/assets/img/1122.jpg",
+    "description": "Покрасим ваше ведро",
+    "price": 100000
+  }
+]

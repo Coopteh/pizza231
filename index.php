@@ -1,30 +1,27 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Controllers\{HomeController, AboutController, ServicesController, ErrorController, ProductController};
+use Controllers\{HomeController, AboutController, ServicesController, ProductController, ErrorController};
 
+// Получаем и очищаем путь
 $requestUri = $_SERVER['REQUEST_URI'];
 $path = parse_url($requestUri, PHP_URL_PATH);
 $resource = trim($path, '/');
 
-// Базовая санитизация
+// Базовая санитизация (разрешаем буквы, цифры, дефис, слэш)
 $resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
 
-// 🆕 Обработка маршрута /product/{id}
-if (preg_match('/^product\/(\d+)$/', $resource, $matches)) {
-    $productId = (int)$matches[1];
-    // Валидация: допустимые ID 1-6
-    if ($productId >= 1 && $productId <= 6) {
-        $controller = new ProductController($productId);
-        echo $controller->get();
-    } else {
-        http_response_code(404);
-        $controller = new ErrorController();
-        echo $controller->get();
-    }
+// === Обработка маршрута /products и /products/{id} ===
+if (str_starts_with($resource, 'products')) {
+    $pieces = explode('/', $resource);
+    $productId = isset($pieces[1]) ? intval($pieces[1]) : null;
+    
+    $controller = new ProductController();
+    echo $controller->get($productId);
     exit;
 }
 
+// === Остальные маршруты ===
 switch ($resource) {
     case '':
     case 'home':

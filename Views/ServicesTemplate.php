@@ -6,25 +6,24 @@ class ServicesTemplate extends BaseTemplate
     public static function getTemplate(): string
     {
         $template = parent::getTemplate();
-        $title = 'Наши услуги - Страховая компания "Чёрный Вантуз"';
+        $title = 'Услуги — Страховая компания «Чёрный Вантуз»';
         
         $customStyles = '
         <style>
+            /* === Карточки услуг === */
             .service-card {
                 border: none;
                 border-radius: 20px;
-                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
                 background: #ffffff;
                 overflow: hidden;
                 position: relative;
-                z-index: 1;
-                cursor: pointer;
+                height: 100%;
             }
             
             .service-card:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
-                text-decoration: none;
+                transform: translateY(-6px);
+                box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
             }
 
             .service-card::before {
@@ -33,79 +32,77 @@ class ServicesTemplate extends BaseTemplate
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 6px;
+                height: 5px;
                 background: linear-gradient(90deg, #0d6efd, #0dcaf0);
-                z-index: 2;
-                opacity: 0.8;
             }
 
             .icon-box {
-                width: 90px;
-                height: 90px;
+                width: 85px;
+                height: 85px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                font-size: 3rem;
-                margin: 0 auto 1.5rem auto;
-                background: linear-gradient(135deg, #f0f4ff 0%, #eef2ff 100%);
+                font-size: 2.75rem;
+                margin: 0 auto 1.5rem;
+                background: linear-gradient(135deg, #eef2ff 0%, #f0f4ff 100%);
                 color: #0d6efd;
-                box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15);
-                transition: transform 0.3s ease;
+                transition: all 0.3s ease;
             }
 
             .service-card:hover .icon-box {
-                transform: scale(1.1) rotate(5deg);
                 background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-                color: #fff;
+                color: #ffffff;
+                transform: scale(1.05);
             }
 
             .card-title {
-                font-weight: 700;
+                font-weight: 600;
                 color: #1e293b;
-                margin-bottom: 0.8rem;
+                margin-bottom: 0.75rem;
+                font-size: 1.25rem;
             }
 
             .card-text {
                 color: #64748b;
                 line-height: 1.6;
                 margin-bottom: 1.5rem;
+                font-size: 0.95rem;
             }
 
             .btn-custom {
                 border-radius: 50px;
-                padding: 10px 25px;
-                font-weight: 600;
+                padding: 10px 28px;
+                font-weight: 500;
                 transition: all 0.3s ease;
                 border: 2px solid #0d6efd;
                 color: #0d6efd;
                 background: transparent;
                 text-decoration: none;
                 display: inline-block;
+                font-size: 0.95rem;
             }
 
             .btn-custom:hover {
                 background: #0d6efd;
-                color: #fff;
-                box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+                color: #ffffff;
+                box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
                 text-decoration: none;
             }
 
             /* CTA карточка */
             .cta-card {
                 background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-                color: white;
-                border: none;
+                color: #ffffff;
             }
             .cta-card::before {
                 background: linear-gradient(90deg, #fbbf24, #f59e0b);
             }
-            .cta-card .card-title { color: #fff; }
+            .cta-card .card-title { color: #ffffff; }
             .cta-card .card-text { color: #cbd5e1; }
             .cta-card .icon-box {
-                background: rgba(255,255,255,0.1);
+                background: rgba(255, 255, 255, 0.1);
                 color: #fbbf24;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             }
             .cta-card:hover .icon-box {
                 background: #fbbf24;
@@ -118,359 +115,526 @@ class ServicesTemplate extends BaseTemplate
             .cta-card .btn-custom:hover {
                 background: #fbbf24;
                 color: #1e293b;
-                box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
             }
 
-            /* === Стили калькулятора === */
-            .calculator-card {
-                background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-                border-radius: 25px;
-                border: none;
-                box-shadow: 0 20px 60px rgba(13, 110, 253, 0.15);
-                overflow: hidden;
+            /* === Калькулятор === */
+            .calc-card {
+                background: #ffffff;
+                border-radius: 24px;
+                border: 1px solid #e2e8f0;
+                padding: 2.5rem;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
             }
-            .calculator-header {
+            
+            .calc-header {
                 background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-                color: white;
+                color: #ffffff;
                 padding: 1.5rem 2rem;
+                border-radius: 20px 20px 0 0;
+                margin: -2.5rem -2.5rem 2rem;
                 text-align: center;
             }
-            .calculator-header h3 {
+            
+            .calc-header h3 {
                 margin: 0;
-                font-weight: 700;
-                font-size: 1.5rem;
-            }
-            .calculator-body {
-                padding: 2rem;
-            }
-            .form-label {
                 font-weight: 600;
+                font-size: 1.35rem;
+            }
+
+            .form-label {
+                font-weight: 500;
                 color: #334155;
                 margin-bottom: 0.5rem;
+                font-size: 0.95rem;
             }
-            .form-control-lg, .form-select-lg {
-                border-radius: 15px;
-                border: 2px solid #e2e8f0;
-                padding: 0.75rem 1.25rem;
-                font-size: 1rem;
-                transition: all 0.2s;
+
+            .form-control,
+            .form-select {
+                border-radius: 12px;
+                border: 1px solid #cbd5e1;
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+                transition: all 0.2s ease;
             }
-            .form-control-lg:focus, .form-select-lg:focus {
+
+            .form-control:focus,
+            .form-select:focus {
                 border-color: #0d6efd;
-                box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+                box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12);
+                outline: none;
             }
+
             .form-check-input:checked {
                 background-color: #0d6efd;
                 border-color: #0d6efd;
             }
-            .btn-calculate {
+
+            .btn-calc {
                 background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
                 border: none;
-                padding: 1rem 2.5rem;
-                font-size: 1.1rem;
-                font-weight: 600;
+                padding: 14px 32px;
                 border-radius: 50px;
-                color: white;
-                transition: all 0.3s ease;
-                box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
+                color: #ffffff;
+                font-weight: 600;
+                font-size: 1rem;
                 width: 100%;
+                transition: all 0.3s ease;
+                box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
             }
-            .btn-calculate:hover {
+
+            .btn-calc:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 15px 35px rgba(13, 110, 253, 0.4);
-                color: white;
+                box-shadow: 0 10px 30px rgba(13, 110, 253, 0.35);
+                color: #ffffff;
             }
+
             .result-box {
-                background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
                 border: 2px solid #0dcaf0;
                 border-radius: 20px;
-                padding: 1.5rem;
+                padding: 2rem;
                 margin-top: 2rem;
                 display: none;
                 animation: slideUp 0.4s ease;
             }
-            @keyframes slideUp {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            .result-value {
-                font-size: 2rem;
-                font-weight: 800;
-                color: #0d6efd;
-            }
-            .product-badge {
-                display: inline-block;
-                background: linear-gradient(135deg, #0d6efd, #0dcaf0);
-                color: white;
-                padding: 0.35rem 1rem;
-                border-radius: 50px;
-                font-size: 0.85rem;
-                font-weight: 600;
-                margin-bottom: 1rem;
-            }
-            .service-card a {
-                text-decoration: none;
-            }
-        </style>
-        ';
 
-        // HTML-контент услуг с ссылками на /product/{id}
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .result-value {
+                font-size: 2.25rem;
+                font-weight: 700;
+                color: #0d6efd;
+                line-height: 1.2;
+            }
+
+            .result-label {
+                font-size: 0.9rem;
+                color: #64748b;
+                margin-bottom: 0.5rem;
+            }
+
+            .term-switch {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 1rem;
+                padding: 0.5rem;
+                background: #f8fafc;
+                border-radius: 12px;
+            }
+
+            .term-switch .form-check {
+                margin: 0;
+                flex: 1;
+            }
+
+            .term-switch .form-check-input {
+                display: none;
+            }
+
+            .term-switch .form-check-label {
+                display: block;
+                text-align: center;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: 500;
+                color: #64748b;
+                transition: all 0.2s ease;
+            }
+
+            .term-switch .form-check-input:checked + .form-check-label {
+                background: #0d6efd;
+                color: #ffffff;
+            }
+
+            .input-group-text {
+                background: #f8fafc;
+                border: 1px solid #cbd5e1;
+                color: #64748b;
+                font-weight: 500;
+            }
+
+            .options-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .option-card {
+                border: 1px solid #e2e8f0;
+                border-radius: 12px;
+                padding: 1rem;
+                transition: all 0.2s ease;
+            }
+
+            .option-card:hover {
+                border-color: #0d6efd;
+                background: #f8fafc;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 0.75rem;
+            }
+
+            .section-subtitle {
+                color: #64748b;
+                font-size: 1rem;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .divider {
+                width: 70px;
+                height: 4px;
+                background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+                margin: 20px auto;
+                border-radius: 2px;
+            }
+        </style>';
+
         $content = $customStyles . '
         <section class="container py-5">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-dark mb-3">🛡️ Наши страховые услуги</h2>
-                <p class="lead text-muted mx-auto" style="max-width: 700px;">
-                    Надежная защита для вас, вашего дома и бизнеса. Выберите подходящий вариант ниже.
+                <h2 class="section-title">Страховые услуги</h2>
+                <p class="section-subtitle">
+                    Комплексные решения для защиты ваших интересов. 
+                    Выберите подходящий продукт ниже.
                 </p>
-                <div style="width: 80px; height: 5px; background: linear-gradient(90deg, #0d6efd, #0dcaf0); margin: 25px auto; border-radius: 10px;"></div>
+                <div class="divider"></div>
             </div>
     
             <div class="row g-4 justify-content-center">
-                
                 <!-- Услуга 1: Авто -->
-                <a href="/product/1" class="col-md-6 col-lg-6 text-decoration-none">
-                    <div class="card service-card h-100 shadow-sm p-4">
+                <a href="/product/1" class="col-md-6 col-lg-4 text-decoration-none">
+                    <div class="card service-card shadow-sm p-4">
                         <div class="card-body text-center">
                             <div class="icon-box">🚗</div>
                             <h4 class="card-title">Автострахование</h4>
-                            <p class="card-text">Полное покрытие ОСАГО и КАСКО. Оформление онлайн за 15 минут, выплаты в день обращения.</p>
-                            <span class="btn btn-custom">Подробнее →</span>
+                            <p class="card-text">ОСАГО и КАСКО с оформлением онлайн. Выплаты в установленные сроки.</p>
+                            <span class="btn btn-custom">Подробнее</span>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Услуга 2: Имущество -->
-                <a href="/product/2" class="col-md-6 col-lg-6 text-decoration-none">
-                    <div class="card service-card h-100 shadow-sm p-4">
+                <a href="/product/2" class="col-md-6 col-lg-4 text-decoration-none">
+                    <div class="card service-card shadow-sm p-4">
                         <div class="card-body text-center">
                             <div class="icon-box">🏠</div>
                             <h4 class="card-title">Имущество</h4>
-                            <p class="card-text">Защита квартиры, дома и дачи от пожара, затопления, кражи и стихийных бедствий.</p>
-                            <span class="btn btn-custom">Подробнее →</span>
+                            <p class="card-text">Защита недвижимости от пожара, затопления, кражи и стихийных бедствий.</p>
+                            <span class="btn btn-custom">Подробнее</span>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Услуга 3: Здоровье -->
-                <a href="/product/3" class="col-md-6 col-lg-6 text-decoration-none">
-                    <div class="card service-card h-100 shadow-sm p-4">
+                <a href="/product/3" class="col-md-6 col-lg-4 text-decoration-none">
+                    <div class="card service-card shadow-sm p-4">
                         <div class="card-body text-center">
                             <div class="icon-box">🏥</div>
                             <h4 class="card-title">Здоровье (ДМС)</h4>
-                            <p class="card-text">Полисы для взрослых и детей. Прием в лучших клиниках города без очередей и справок.</p>
-                            <span class="btn btn-custom">Подробнее →</span>
+                            <p class="card-text">Полисы для взрослых и детей. Обслуживание в партнёрских клиниках.</p>
+                            <span class="btn btn-custom">Подробнее</span>
                         </div>
                     </div>
                 </a>
 
                 <!-- Услуга 4: Бизнес -->
-                <a href="/product/4" class="col-md-6 col-lg-6 text-decoration-none">
-                    <div class="card service-card h-100 shadow-sm p-4">
+                <a href="/product/4" class="col-md-6 col-lg-4 text-decoration-none">
+                    <div class="card service-card shadow-sm p-4">
                         <div class="card-body text-center">
                             <div class="icon-box">💼</div>
-                            <h4 class="card-title">Для Бизнеса</h4>
-                            <p class="card-text">Страхование ответственности, коммерческих грузов и здоровья сотрудников компании.</p>
-                            <span class="btn btn-custom">Подробнее →</span>
+                            <h4 class="card-title">Для бизнеса</h4>
+                            <p class="card-text">Страхование ответственности, грузов и здоровья сотрудников.</p>
+                            <span class="btn btn-custom">Подробнее</span>
                         </div>
                     </div>
                 </a>
 
                 <!-- Услуга 5: Путешествия -->
-                <a href="/product/5" class="col-md-6 col-lg-6 text-decoration-none">
-                    <div class="card service-card h-100 shadow-sm p-4">
+                <a href="/product/5" class="col-md-6 col-lg-4 text-decoration-none">
+                    <div class="card service-card shadow-sm p-4">
                         <div class="card-body text-center">
                             <div class="icon-box">✈️</div>
                             <h4 class="card-title">Путешествия</h4>
-                            <p class="card-text">Туристический полис для визы и поездок за границу. Покрытие до $50,000 и помощь 24/7.</p>
-                            <span class="btn btn-custom">Подробнее →</span>
+                            <p class="card-text">Туристический полис для виз и поездок. Покрытие до $50 000.</p>
+                            <span class="btn btn-custom">Подробнее</span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Услуга 6: Помощь (без ссылки на продукт) -->
-                <div class="col-md-6 col-lg-6">
-                    <div class="card service-card cta-card h-100 shadow-lg p-4">
+                <!-- Услуга 6: Консультация -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card cta-card shadow-lg p-4">
                         <div class="card-body text-center d-flex flex-column justify-content-center">
                             <div class="icon-box">🤝</div>
-                            <h4 class="card-title">Нужна помощь?</h4>
-                            <p class="card-text">Не знаете, что выбрать? Наши эксперты подберут идеальный тариф бесплатно.</p>
-                            <a href="tel:+79999999999" class="btn btn-custom mt-2">📞 8 999 999 99 99</a>
+                            <h4 class="card-title">Консультация</h4>
+                            <p class="card-text">Поможем подобрать оптимальный тариф. Первичная консультация бесплатно.</p>
+                            <a href="tel:+79999999999" class="btn btn-custom mt-2">+7 (999) 999-99-99</a>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </section>';
+        </section>
 
-        // === Красивый калькулятор ===
-        $calculatorContent = '
+        <!-- Calculator -->
         <section class="container my-5" id="calculator">
             <div class="text-center mb-4">
-                <h2 class="display-5 fw-bold text-dark mb-3">🧮 Калькулятор страховых взносов</h2>
-                <p class="lead text-muted mx-auto" style="max-width: 700px;">
-                    Рассчитайте стоимость полиса за 30 секунд — быстро, честно, без скрытых платежей
-                </p>
+                <h2 class="section-title">Калькулятор страховых взносов</h2>
+                <p class="section-subtitle">Расчёт стоимости полиса с учётом индивидуальных параметров</p>
+                <div class="divider"></div>
             </div>
             
-            <div class="calculator-card">
-                <div class="calculator-header">
-                    <h3>✨ Моментальный расчёт</h3>
-                </div>
-                <div class="calculator-body">
-                    <form id="insuranceForm" class="row g-4">
+            <div class="calc-card">
+                <form id="insuranceForm" class="row g-4">
+                    
+                    <!-- Тип страхования -->
+                    <div class="col-md-6">
+                        <label class="form-label" for="productType">Тип страхования</label>
+                        <select id="productType" class="form-select" required>
+                            <option value="" disabled selected>Выберите услугу...</option>
+                            <option value="1" data-rate="0.20">Автострахование (20%)</option>
+                            <option value="2" data-rate="0.25">Имущество (25%)</option>
+                            <option value="3" data-rate="0.10">Здоровье (10%)</option>
+                            <option value="4" data-rate="0.15">Бизнес (15%)</option>
+                            <option value="5" data-rate="0.08">Путешествия (8%)</option>
+                            <option value="6" data-rate="0.12">Жизнь (12%)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Стоимость объекта -->
+                    <div class="col-md-6">
+                        <label class="form-label" for="objectValue">Стоимость объекта (₽)</label>
+                        <input type="number" id="objectValue" class="form-control" 
+                               placeholder="Например: 1 500 000" min="1000" step="1000" required>
+                    </div>
+                    
+                    <!-- Уровень покрытия -->
+                    <div class="col-md-6">
+                        <label class="form-label" for="coverageLevel">Уровень покрытия</label>
+                        <select id="coverageLevel" class="form-select">
+                            <option value="0.5">Базовый (50% от стоимости)</option>
+                            <option value="0.75" selected>Оптимальный (75% от стоимости)</option>
+                            <option value="1.0">Полный (100% от стоимости)</option>
+                            <option value="1.2">Расширенный (120% от стоимости)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Срок страхования -->
+                    <div class="col-md-6">
+                        <label class="form-label">Срок страхования</label>
                         
-                        <!-- Тип страхования -->
-                        <div class="col-md-6">
-                            <label class="form-label">📋 Тип страхования</label>
-                            <select id="productType" class="form-select form-select-lg" required>
-                                <option value="" disabled selected>Выберите услугу...</option>
-                                <option value="1" data-rate="0.20">🚗 Автострахование (20%)</option>
-                                <option value="2" data-rate="0.25">🏠 Имущество (25%)</option>
-                                <option value="3" data-rate="0.10">🏥 Здоровье / ДМС (10%)</option>
-                                <option value="4" data-rate="0.15">💼 Для бизнеса (15%)</option>
-                                <option value="5" data-rate="0.08">✈️ Путешествия (8%)</option>
-                                <option value="6" data-rate="0.12">❤️ Страхование жизни (12%)</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Стоимость объекта -->
-                        <div class="col-md-6">
-                            <label class="form-label">💰 Стоимость объекта (₽)</label>
-                            <input type="number" id="objectValue" class="form-control form-control-lg" 
-                                   placeholder="Например: 1 500 000" min="1000" step="1000" required>
-                        </div>
-                        
-                        <!-- Уровень покрытия -->
-                        <div class="col-md-6">
-                            <label class="form-label">🛡️ Уровень покрытия</label>
-                            <select id="coverageLevel" class="form-select form-select-lg">
-                                <option value="0.5">Базовый (50% от стоимости)</option>
-                                <option value="0.75" selected>Оптимальный (75%)</option>
-                                <option value="1.0">Полный (100%)</option>
-                                <option value="1.2">Расширенный (120%)</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Срок страхования -->
-                        <div class="col-md-6">
-                            <label class="form-label">⏱️ Срок страхования</label>
-                            <select id="term" class="form-select form-select-lg">
-                                <option value="1">1 год</option>
-                                <option value="2">2 года (−5% скидка)</option>
-                                <option value="3">3 года (−10% скидка)</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Дополнительные опции -->
-                        <div class="col-12">
-                            <label class="form-label">🎁 Дополнительные опции</label>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <div class="form-check form-switch p-3 border rounded-3 h-100">
-                                        <input class="form-check-input" type="checkbox" id="optRoad" value="500">
-                                        <label class="form-check-label fw-medium" for="optRoad">
-                                            🛠️ Помощь на дорогах
-                                            <div class="text-muted small">+500 ₽/год</div>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check form-switch p-3 border rounded-3 h-100">
-                                        <input class="form-check-input" type="checkbox" id="optLegal" value="1000">
-                                        <label class="form-check-label fw-medium" for="optLegal">
-                                            ⚖️ Юр. поддержка
-                                            <div class="text-muted small">+1 000 ₽/год</div>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check form-switch p-3 border rounded-3 h-100">
-                                        <input class="form-check-input" type="checkbox" id="optDiag" value="1500">
-                                        <label class="form-check-label fw-medium" for="optDiag">
-                                            🔍 Расширенная диагностика
-                                            <div class="text-muted small">+1 500 ₽/год</div>
-                                        </label>
-                                    </div>
-                                </div>
+                        <div class="term-switch">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="termMode" 
+                                       id="termPreset" value="preset" checked>
+                                <label class="form-check-label" for="termPreset">Готовые варианты</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="termMode" 
+                                       id="termCustom" value="custom">
+                                <label class="form-check-label" for="termCustom">Свой срок</label>
                             </div>
                         </div>
                         
-                        <!-- Кнопка расчёта -->
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-calculate">
-                                ✨ Рассчитать страховку
-                            </button>
+                        <!-- Пресеты -->
+                        <select id="termPresetSelect" class="form-select">
+                            <option value="1">1 год (базовый тариф)</option>
+                            <option value="2">2 года (скидка 5%)</option>
+                            <option value="3">3 года (скидка 10%)</option>
+                            <option value="5">5 лет (скидка 15%)</option>
+                        </select>
+                        
+                        <!-- Кастомный ввод -->
+                        <div id="termCustomInput" class="d-none">
+                            <div class="input-group">
+                                <input type="number" id="termCustomValue" class="form-control" 
+                                       placeholder="Срок" min="1" max="120" value="12">
+                                <select id="termUnit" class="form-select" style="max-width: 100px;">
+                                    <option value="12">мес</option>
+                                    <option value="1" selected>лет</option>
+                                </select>
+                            </div>
+                            <small class="text-muted" style="font-size: 0.8rem;">Доступно от 1 до 120 месяцев</small>
                         </div>
-                    </form>
+                    </div>
                     
-                    <!-- Блок результата -->
-                    <div id="calcResult" class="result-box text-center">
-                        <span class="product-badge" id="resProduct">Автострахование</span>
-                        <h5 class="text-muted mb-3">Ваш ежегодный страховой взнос</h5>
-                        <div class="result-value mb-3" id="finalPrice">0 ₽</div>
-                        <p class="text-muted small mb-4">
-                            * Итоговая сумма может быть скорректирована после оценки экспертом
-                        </p>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                            <a href="tel:+79999999999" class="btn btn-success btn-lg rounded-pill px-4 fw-bold">
-                                📞 Оформить по телефону
-                            </a>
-                            <button type="button" class="btn btn-outline-primary btn-lg rounded-pill px-4" onclick="document.getElementById(\'calcResult\').style.display=\'none\'">
-                                🔁 Новый расчёт
-                            </button>
+                    <!-- Дополнительные опции -->
+                    <div class="col-12">
+                        <label class="form-label">Дополнительные опции</label>
+                        <div class="options-grid">
+                            <div class="option-card">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="optRoad" value="500">
+                                    <label class="form-check-label" for="optRoad">
+                                        <strong>Помощь на дорогах</strong>
+                                        <div class="text-muted small">+500 ₽/год</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="option-card">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="optLegal" value="1000">
+                                    <label class="form-check-label" for="optLegal">
+                                        <strong>Юр. поддержка</strong>
+                                        <div class="text-muted small">+1 000 ₽/год</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="option-card">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="optDiag" value="1500">
+                                    <label class="form-check-label" for="optDiag">
+                                        <strong>Расширенная диагностика</strong>
+                                        <div class="text-muted small">+1 500 ₽/год</div>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <!-- Кнопка расчёта -->
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-calc">
+                            Рассчитать стоимость полиса
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Результат -->
+                <div id="calcResult" class="result-box text-center">
+                    <p class="result-label">Ежегодный страховой взнос</p>
+                    <div class="result-value mb-3" id="finalPrice">0 ₽</div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-4">
+                            <div class="small text-muted">Объект</div>
+                            <div class="fw-semibold" id="resObject">—</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="small text-muted">Покрытие</div>
+                            <div class="fw-semibold" id="resCoverage">—</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="small text-muted">Срок</div>
+                            <div class="fw-semibold" id="resTerm">—</div>
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-3">
+                        * Итоговая сумма может быть скорректирована после оценки экспертом
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="tel:+79999999999" class="btn btn-success btn-lg rounded-pill px-4 fw-bold">
+                            Оформить по телефону
+                        </a>
+                        <button type="button" class="btn btn-outline-primary btn-lg rounded-pill px-4" 
+                                onclick="document.getElementById(\'calcResult\').style.display=\'none\'">
+                            Новый расчёт
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
         
         <script>
+        // Переключение режима срока
+        document.querySelectorAll(\'input[name="termMode"]\').forEach(radio => {
+            radio.addEventListener(\'change\', function() {
+                const presetSelect = document.getElementById(\'termPresetSelect\');
+                const customInput = document.getElementById(\'termCustomInput\');
+                
+                if (this.value === \'custom\') {
+                    presetSelect.classList.add(\'d-none\');
+                    customInput.classList.remove(\'d-none\');
+                } else {
+                    presetSelect.classList.remove(\'d-none\');
+                    customInput.classList.add(\'d-none\');
+                }
+            });
+        });
+
+        // Расчёт
         document.getElementById("insuranceForm").addEventListener("submit", function(e) {
             e.preventDefault();
             
-            // Получаем данные
             const productSelect = document.getElementById("productType");
             const productName = productSelect.options[productSelect.selectedIndex].text.replace(/\\(.*\\)/, "").trim();
             const baseRate = parseFloat(productSelect.options[productSelect.selectedIndex].dataset.rate);
             const objectValue = parseFloat(document.getElementById("objectValue").value) || 0;
             const coverageLevel = parseFloat(document.getElementById("coverageLevel").value);
-            const term = parseInt(document.getElementById("term").value);
+            
+            // Получаем срок
+            let termYears = 1;
+            let termDiscount = 0;
+            const termMode = document.querySelector(\'input[name="termMode"]:checked\').value;
+            
+            if (termMode === \'preset\') {
+                const preset = parseInt(document.getElementById(\'termPresetSelect\').value);
+                termYears = preset;
+                if (preset === 2) termDiscount = 0.05;
+                if (preset === 3) termDiscount = 0.10;
+                if (preset === 5) termDiscount = 0.15;
+            } else {
+                const customValue = parseInt(document.getElementById(\'termCustomValue\').value) || 12;
+                const unit = parseInt(document.getElementById(\'termUnit\').value);
+                const totalMonths = unit === 1 ? customValue * 12 : customValue;
+                termYears = totalMonths / 12;
+                
+                // Скидка за длительный срок
+                if (totalMonths >= 24) termDiscount = 0.05;
+                if (totalMonths >= 36) termDiscount = 0.10;
+                if (totalMonths >= 60) termDiscount = 0.15;
+            }
             
             // Дополнительные опции
             let optionsTotal = 0;
-            if(document.getElementById("optRoad").checked) optionsTotal += 500;
-            if(document.getElementById("optLegal").checked) optionsTotal += 1000;
-            if(document.getElementById("optDiag").checked) optionsTotal += 1500;
+            if (document.getElementById(\'optRoad\').checked) optionsTotal += 500;
+            if (document.getElementById(\'optLegal\').checked) optionsTotal += 1000;
+            if (document.getElementById(\'optDiag\').checked) optionsTotal += 1500;
             
             // Расчёт
             const coverageAmount = objectValue * coverageLevel;
             let premium = coverageAmount * baseRate;
-            
-            // Скидка за срок
-            if(term === 2) premium *= 0.95;
-            if(term === 3) premium *= 0.90;
-            
+            premium = premium * (1 - termDiscount);
             premium += optionsTotal;
             
             // Форматирование
             const formatRub = (num) => new Intl.NumberFormat("ru-RU", {
-                style: "currency", 
-                currency: "RUB", 
+                style: "currency",
+                currency: "RUB",
                 maximumFractionDigits: 0
             }).format(num);
             
-            // Отображаем результат
-            document.getElementById("resProduct").textContent = productName;
+            // Отображение
             document.getElementById("finalPrice").textContent = formatRub(premium);
+            document.getElementById("resObject").textContent = formatRub(objectValue);
+            document.getElementById("resCoverage").textContent = (coverageLevel * 100) + "%";
             
-            // Показываем блок с анимацией
+            let termText = termYears % 1 === 0 ? termYears + " год" : termYears.toFixed(1) + " года";
+            if (termDiscount > 0) {
+                termText += " (−" + (termDiscount * 100) + "%)";
+            }
+            document.getElementById("resTerm").textContent = termText;
+            
+            // Показ результата
             const resultBox = document.getElementById("calcResult");
             resultBox.style.display = "block";
-            resultBox.scrollIntoView({behavior: "smooth", block: "center"});
+            resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
         });
-        </script>
-        ';
+        </script>';
 
-        return sprintf($template, $title, $content . $calculatorContent);
+        return sprintf($template, $title, $content);
     }
 }

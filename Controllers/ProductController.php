@@ -1,20 +1,22 @@
 <?php
 namespace Controllers;
 
+use Models\Product;
 use Views\ProductTemplate;
 
 class ProductController
 {
-    private int $productId;
-    
-    public function __construct(int $productId)
+    public function get(?int $id = null): string 
     {
-        $this->productId = $productId;
-    }
-    
-    public function get(): string 
-    {
-        // 🆕 Вызываем новый метод renderProduct вместо getTemplate
-        return ProductTemplate::renderProduct($this->productId);
+        $model = new Product();
+        $data = $model->loadData();
+        
+        // Если ID не передан — показываем каталог
+        if ($id === null) {
+            return ProductTemplate::getAllTemplate($data);
+        }
+        
+        // Иначе — страница конкретного продукта
+        return ProductTemplate::renderProduct($id, $data);
     }
 }

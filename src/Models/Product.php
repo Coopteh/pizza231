@@ -5,7 +5,7 @@ use App\Config\Config;
 class Product {
     public function loadData(): ?array
     {
-        $file = file_get_contents('c:/xampp/htdocs/storage/data.json');
+        $file = file_get_contents(Config::FILE_DATA);
         $data = json_decode($file, true);
         // $file=fopen("c:/xampp/htdocs/storage/data.json", 'r');
         // if ($file) {

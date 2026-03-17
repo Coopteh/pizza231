@@ -25,6 +25,8 @@ class Router {
 
     // THE FUNCTION TAKEN FROM THE LECTURE.
     // MAY THE MACHINE GOD FORGIVE ME.
+    // I SHALL REDO THE ROUTING FOR CATALOGUE LATER, MAYBE WRITE SEPARATE CONTROLLER FOR IT SPECIFICALLY FOR IT IS THE WAY
+    // ALSO THERE IS A CONFLICT BETWEEN CASE "PRODUCTS" AND CASE "PRODUCT"
 
     public function route(string $url): string 
         {
@@ -36,9 +38,12 @@ class Router {
                 case "about":
                     $about = new AboutController();
                     return $about->get();
+                case "products":
+                    $products = new ProductController();
+                    return $products->get(null);
                 case "product":
                     $product = new ProductController();
-                    $id = ($pieces[2]) ? intval($pieces[2]) : 0;
+                    $id = ($pieces[2]) ? intval($pieces[2]) : null;
                     return $product->get($id);
                 default:
                     $home = new HomeController();

@@ -24,11 +24,15 @@ class ProductController
         $data = $model->loadData();
         
         // DOES THE KEY EXIST AT ALL?
+
+        if (!isset($data[$id]) || $id === 0) {
+            return ProductTemplate::getCatalogue($data);
+        }
         if ($data && isset($data[$id])) {
             $productData = $data[$id];
-            return \App\Views\ProductTemplate::getCardTemplate($productData);
+            return ProductTemplate::getCardTemplate($productData);
         }
-        
-        return '<div class="alert alert-danger">Товар с ID ' . $id . ' не найден</div>';
+        // IMPLEMENT THIS CHECK LATER
+        // return '<div class="alert alert-danger">Товар с ID ' . $id . ' не найден</div>';
     }
 }  

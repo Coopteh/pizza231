@@ -3,6 +3,32 @@ namespace App\Views;
 
 use App\Views\BaseTemplate;
 class ProductTemplate extends BaseTemplate {
+
+    public static function getCatalogue(array $arr): string {
+        $str= '<div class="container">';
+        foreach($arr as $key=> $item) {
+            $element_template= <<<HTML
+            <div class="row mb-5">
+                <div class="col-6">
+                    <img src="{$item['image']}" class="w-100">
+                </div>
+                <div class="col-6">
+                    <div class="block mt-3">
+                        <a href="/products/{$item['id']}"><h2>{$item['name']}</h2></a>
+                        <p>{$item['description']}</p>
+                        <h3>{$item['price']} ₽</h3>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            HTML;
+            
+            $str.= $element_template;        
+        }
+        $str.= "</div>";
+        return parent::getTemplate($str);
+
+    }
     
     public static function getCardTemplate($data): string {
         

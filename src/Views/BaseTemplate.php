@@ -23,23 +23,35 @@ class BaseTemplate
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body>
-
     <!-- Навигация (Меню) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container"> 
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container"> 
+            <!-- 👇 ЛОГОТИП -->
+            <a class="navbar-brand" href="/">
+                <img src="/assets/img/logo.svg" 
+                    alt="Логотип" 
+                    width="120" 
+                    height="40"
+                    class="d-inline-block align-top">
+            </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about">О нас</a>
+                        <a class="nav-link" href="/about">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="/contacts">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/catalog">Каталог</a>
                     </li>
                 </ul>
             </div>
@@ -51,8 +63,10 @@ class BaseTemplate
         $content
     </main>
 
+        
+
     <!-- Подвал (Footer) -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <footer class="footer bg-dark text-white text-center py-3">
         <div class="container">
             <p class="mb-0">&copy; 2026 Кемеровский кооперативный техникум. Все права защищены.</p>
             <small>Разработано студентом группы ИС-231</small>
@@ -61,6 +75,7 @@ class BaseTemplate
 
     <!-- Скрипт Bootstrap (для работы меню и карусели) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
 HTML;

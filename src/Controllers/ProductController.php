@@ -12,9 +12,8 @@ class ProductController
     public function get($id): string 
     {
         $model = new Product();
-        $data = $model->loadData(); // Теперь вернет массив [1 => [...], 2 => [...]]
+        $data = $model->loadData(); 
         
-        // Проверяем, существует ли такой ключ
         if ($data && isset($data[$id])) {
             $productData = $data[$id];
             return \App\Views\ProductTemplate::getCardTemplate($productData);

@@ -24,7 +24,7 @@ class HomeTemplate extends BaseTemplate
             <div class="container">
                 <h1 class="display-4 fw-bold">Добро пожаловать на сайт запчастей для всех марок авто!</h1>
                 <p class="lead">Запчасти разных марок в наличии и под заказ.</p>
-                <a href="/catalog" class="btn btn-light btn-lg mt-3">Каталог</a>
+                <a href="/catalog" class="btn btn-dark btn-lg mt-3">Каталог</a>
             </div>
         </div>
 
@@ -42,14 +42,14 @@ class HomeTemplate extends BaseTemplate
                     <img src="/assets/img/123.jpg" 
                          alt="Запчасти" 
                          class="img-fluid rounded shadow-lg"
-                         onerror="this.src=\'https://via.placeholder.com/600x400?text=Нет+фото\';">
+                         onerror="this.src=\'/assets/img/error.jpg\';">
                 </div>
             </div>
             
             <!-- 👇 Секция с товарами -->
             <div class="row mb-5">
                 <div class="col-12">
-                    <h2 class="text-center mb-4">Популярные товары</h2>
+                    <h2 class="text-center mb-4">Каталог</h2>
                     ' . $productsHtml . '
                 </div>
             </div>
@@ -85,7 +85,7 @@ class HomeTemplate extends BaseTemplate
                          class="card-img-top" 
                          alt="' . $name . '"
                          style="height: 200px; object-fit: cover;"
-                         onerror="this.src=\'https://via.placeholder.com/300x200?text=Нет+фото\';">
+                         onerror="this.src=\'/assets/img/error.jpg\';">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">' . $name . '</h5>
                         <p class="card-text text-muted small flex-grow-1">' . $description . '</p>

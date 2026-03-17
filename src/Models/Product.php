@@ -20,7 +20,6 @@ class Product
             return null;
         }
 
-        // ПРЕОБРАЗУЕМ МАССИВ: делаем ключом значение поля 'id'
         $indexedData = [];
         foreach ($arr as $item) {
             if (isset($item['id'])) {

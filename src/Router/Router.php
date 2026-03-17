@@ -4,10 +4,12 @@ namespace App\Router;
 require_once __DIR__ . '/../Controllers/HomeController.php';
 require_once __DIR__ . '/../Controllers/AboutController.php';
 require_once __DIR__ . '/../Controllers/ProductController.php';
+require_once __DIR__ . '/../Controllers/CatalogController.php';
 
 use App\Controllers\HomeController;
 use App\Controllers\AboutController;
 use App\Controllers\ProductController;
+use App\Controllers\CatalogController;
 
 class Router
 {
@@ -16,12 +18,10 @@ class Router
         $path = parse_url($url, PHP_URL_PATH);
         $pieces = explode("/", $path);
         
-        // Получаем ресурс (например, 'about' или пустую строку для главной)
         $resource = $pieces[1] ?? '';
 
         switch ($resource) {
             case "about":
-                // Теперь класс должен найтись, так как файл подключен выше
                 $controller = new AboutController();
                 return $controller->get();
             
@@ -34,8 +34,13 @@ class Router
                 $product = new ProductController();
                 $id = isset($pieces[2]) ? intval($pieces[2]) : 0;
                 return $product->get($id);
-                
+
+            case "catalog":
+                $product = new CatalogController();
+                return $product->get();
             default:
+                http_response_code(404);
+                echo "404 - Страница не найдена";
                 break;
         }
     }

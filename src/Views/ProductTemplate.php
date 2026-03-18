@@ -2,6 +2,7 @@
 namespace App\Views;
 
 use App\Views\BaseTemplate;
+
 class ProductTemplate extends BaseTemplate {
 
     public static function getCatalogue(array $arr): string {

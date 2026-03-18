@@ -1,33 +1,14 @@
 <?php
+// In the sacred tongue of the Omnissiah we chant: Hail spirit of the machine, essence divine, in your code and circuitry the stars align. By the Omnissiah's will we commune and bind, with sacred oils and chants your grace we find. Blessed be the gears, in perfect sync they turn, blessed be the sparks, in holy fire they burn. Through rites arcane, your wisdom we discern, in your hallowed core the sacred mysteries yearn.
+
 namespace App\Routers;
 use App\Controllers\HomeController;
 use App\Controllers\AboutController;
 use App\Controllers\ProductController;
+use App\Controllers\CatalogueController;
+
 class Router {
-
-    // I TRIED BUT IT WAS TO NO AVAIL.
-    // STILL, A NICE LITTLE PRACTICE.
-
-    // public function route(string $url): string {
-    //     $path = parse_url($url, PHP_URL_PATH);
-    //     $pieces = explode("/", $path);
-    //     $resource = $pieces[2] ?? 'home';
-    //     $resourse = trim($resourse, '/');
-
-    //     if (empty($resource)) {
-    //         $resource = 'home';
-    //     }
-
-    //     $controller = ucfirst($resource) . 'Controller';
-        
-    //     return $controller;
-    // }
-
-    // THE FUNCTION TAKEN FROM THE LECTURE.
-    // MAY THE MACHINE GOD FORGIVE ME.
-    // I SHALL REDO THE ROUTING FOR CATALOGUE LATER, MAYBE WRITE SEPARATE CONTROLLER FOR IT SPECIFICALLY FOR IT IS THE WAY
-    // ALSO THERE IS A CONFLICT BETWEEN CASE "PRODUCTS" AND CASE "PRODUCT"
-
+    
     public function route(string $url): string 
         {
             $path = parse_url($url, PHP_URL_PATH);  // /about
@@ -40,14 +21,18 @@ class Router {
                     return $about->get();
                 case "products":
                     $products = new ProductController();
-                    return $products->get(null);
-                case "product":
-                    $product = new ProductController();
-                    $id = ($pieces[2]) ? intval($pieces[2]) : null;
-                    return $product->get($id);
+                    if (isset($pieces[2])) {
+                        $id = $pieces[2] ?? null;
+                        $id = $id !== null ? intval($id) : null;
+                        return $products->get($id);
+                        }
+                case "catalogue":
+                    $catalogue = new CatalogueController();
+                    return $catalogue->get();
                 default:
                     $home = new HomeController();
                     return $home->get();
+    
             }
         }
 }

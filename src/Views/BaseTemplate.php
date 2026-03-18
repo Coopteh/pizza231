@@ -42,7 +42,7 @@ class BaseTemplate {
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/product/1">Каталог</a>
+                                    <a class="nav-link active" aria-current="page" href="/catalogue">Каталог</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav">

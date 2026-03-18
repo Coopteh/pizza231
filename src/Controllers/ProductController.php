@@ -25,7 +25,7 @@ class ProductController
         
         // DOES THE KEY EXIST AT ALL?
 
-        if (!isset($data[$id]) || $id === 0) {
+        if (!isset($data[$id]) || $id === false) {
             return ProductTemplate::getCatalogue($data);
         }
         if ($data && isset($data[$id])) {

@@ -6,7 +6,7 @@ class Product {
     public function loadData(): ?array {
         
         $file = file_get_contents(Config::FILE_DATA);
-        $data = json_decode($file, associative: true);
+        $data = json_decode($file, true);
 
         return $data;
     }

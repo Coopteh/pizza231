@@ -6,6 +6,7 @@ use App\Controllers\HomeController;
 use App\Controllers\AboutController;
 use App\Controllers\ProductController;
 use App\Controllers\CatalogueController;
+use App\Controllers\BasketController;
 
 class Router {
     
@@ -29,6 +30,11 @@ class Router {
                 case "catalogue":
                     $catalogue = new CatalogueController();
                     return $catalogue->get();
+                case "basket":
+                    $basketController = new BasketController();
+                    $basketController->add();
+                    $prevUrl = $_SERVER['HTTP_REFERER'];
+                    header("Location: {$prevUrl}");
                 default:
                     $home = new HomeController();
                     return $home->get();

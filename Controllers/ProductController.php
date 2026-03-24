@@ -6,17 +6,16 @@ use Views\ProductTemplate;
 
 class ProductController
 {
-    public function get(?int $id = null): string 
+    public function get(int $id): string 
     {
         $model = new Product();
-        $data = $model->loadData();
+        $product = $model->getById($id);
         
-        // Если ID не передан — показываем каталог
-        if ($id === null) {
-            return ProductTemplate::getAllTemplate($data);
+        if (!$product) {
+            http_response_code(404);
+            return (new ErrorController())->get();
         }
         
-        // Иначе — страница конкретного продукта
-        return ProductTemplate::renderProduct($id, $data);
+        return ProductTemplate::render($product);
     }
 }

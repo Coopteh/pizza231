@@ -10,7 +10,6 @@ class ServicesTemplate extends BaseTemplate
         
         $customStyles = '
         <style>
-            /* === Карточки услуг === */
             .service-card {
                 border: none;
                 border-radius: 20px;
@@ -90,7 +89,6 @@ class ServicesTemplate extends BaseTemplate
                 text-decoration: none;
             }
 
-            /* CTA карточка */
             .cta-card {
                 background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
                 color: #ffffff;
@@ -117,7 +115,6 @@ class ServicesTemplate extends BaseTemplate
                 color: #1e293b;
             }
 
-            /* === Калькулятор === */
             .calc-card {
                 background: #ffffff;
                 border-radius: 24px;
@@ -199,14 +196,8 @@ class ServicesTemplate extends BaseTemplate
             }
 
             @keyframes slideUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
             }
 
             .result-value {
@@ -231,15 +222,8 @@ class ServicesTemplate extends BaseTemplate
                 border-radius: 12px;
             }
 
-            .term-switch .form-check {
-                margin: 0;
-                flex: 1;
-            }
-
-            .term-switch .form-check-input {
-                display: none;
-            }
-
+            .term-switch .form-check { margin: 0; flex: 1; }
+            .term-switch .form-check-input { display: none; }
             .term-switch .form-check-label {
                 display: block;
                 text-align: center;
@@ -250,7 +234,6 @@ class ServicesTemplate extends BaseTemplate
                 color: #64748b;
                 transition: all 0.2s ease;
             }
-
             .term-switch .form-check-input:checked + .form-check-label {
                 background: #0d6efd;
                 color: #ffffff;
@@ -275,7 +258,6 @@ class ServicesTemplate extends BaseTemplate
                 padding: 1rem;
                 transition: all 0.2s ease;
             }
-
             .option-card:hover {
                 border-color: #0d6efd;
                 background: #f8fafc;
@@ -376,7 +358,7 @@ class ServicesTemplate extends BaseTemplate
                     </div>
                 </a>
 
-                <!-- Услуга 6: Консультация -->
+                <!-- Услуга 6: Консультация (без перехода на продукт) -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card service-card cta-card shadow-lg p-4">
                         <div class="card-body text-center d-flex flex-column justify-content-center">
@@ -400,8 +382,6 @@ class ServicesTemplate extends BaseTemplate
             
             <div class="calc-card">
                 <form id="insuranceForm" class="row g-4">
-                    
-                    <!-- Тип страхования -->
                     <div class="col-md-6">
                         <label class="form-label" for="productType">Тип страхования</label>
                         <select id="productType" class="form-select" required>
@@ -414,15 +394,11 @@ class ServicesTemplate extends BaseTemplate
                             <option value="6" data-rate="0.12">Жизнь (12%)</option>
                         </select>
                     </div>
-                    
-                    <!-- Стоимость объекта -->
                     <div class="col-md-6">
                         <label class="form-label" for="objectValue">Стоимость объекта (₽)</label>
                         <input type="number" id="objectValue" class="form-control" 
                                placeholder="Например: 1 500 000" min="1000" step="1000" required>
                     </div>
-                    
-                    <!-- Уровень покрытия -->
                     <div class="col-md-6">
                         <label class="form-label" for="coverageLevel">Уровень покрытия</label>
                         <select id="coverageLevel" class="form-select">
@@ -432,11 +408,8 @@ class ServicesTemplate extends BaseTemplate
                             <option value="1.2">Расширенный (120% от стоимости)</option>
                         </select>
                     </div>
-                    
-                    <!-- Срок страхования -->
                     <div class="col-md-6">
                         <label class="form-label">Срок страхования</label>
-                        
                         <div class="term-switch">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="termMode" 
@@ -449,16 +422,12 @@ class ServicesTemplate extends BaseTemplate
                                 <label class="form-check-label" for="termCustom">Свой срок</label>
                             </div>
                         </div>
-                        
-                        <!-- Пресеты -->
                         <select id="termPresetSelect" class="form-select">
                             <option value="1">1 год (базовый тариф)</option>
                             <option value="2">2 года (скидка 5%)</option>
                             <option value="3">3 года (скидка 10%)</option>
                             <option value="5">5 лет (скидка 15%)</option>
                         </select>
-                        
-                        <!-- Кастомный ввод -->
                         <div id="termCustomInput" class="d-none">
                             <div class="input-group">
                                 <input type="number" id="termCustomValue" class="form-control" 
@@ -471,8 +440,6 @@ class ServicesTemplate extends BaseTemplate
                             <small class="text-muted" style="font-size: 0.8rem;">Доступно от 1 до 120 месяцев</small>
                         </div>
                     </div>
-                    
-                    <!-- Дополнительные опции -->
                     <div class="col-12">
                         <label class="form-label">Дополнительные опции</label>
                         <div class="options-grid">
@@ -505,16 +472,10 @@ class ServicesTemplate extends BaseTemplate
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Кнопка расчёта -->
                     <div class="col-12">
-                        <button type="submit" class="btn btn-calc">
-                            Рассчитать стоимость полиса
-                        </button>
+                        <button type="submit" class="btn btn-calc">Рассчитать стоимость полиса</button>
                     </div>
                 </form>
-                
-                <!-- Результат -->
                 <div id="calcResult" class="result-box text-center">
                     <p class="result-label">Ежегодный страховой взнос</p>
                     <div class="result-value mb-3" id="finalPrice">0 ₽</div>
@@ -532,29 +493,21 @@ class ServicesTemplate extends BaseTemplate
                             <div class="fw-semibold" id="resTerm">—</div>
                         </div>
                     </div>
-                    <p class="text-muted small mb-3">
-                        * Итоговая сумма может быть скорректирована после оценки экспертом
-                    </p>
+                    <p class="text-muted small mb-3">* Итоговая сумма может быть скорректирована после оценки экспертом</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <a href="tel:+79999999999" class="btn btn-success btn-lg rounded-pill px-4 fw-bold">
-                            Оформить по телефону
-                        </a>
+                        <a href="tel:+79999999999" class="btn btn-success btn-lg rounded-pill px-4 fw-bold">Оформить по телефону</a>
                         <button type="button" class="btn btn-outline-primary btn-lg rounded-pill px-4" 
-                                onclick="document.getElementById(\'calcResult\').style.display=\'none\'">
-                            Новый расчёт
-                        </button>
+                                onclick="document.getElementById(\'calcResult\').style.display=\'none\'">Новый расчёт</button>
                     </div>
                 </div>
             </div>
         </section>
         
         <script>
-        // Переключение режима срока
         document.querySelectorAll(\'input[name="termMode"]\').forEach(radio => {
             radio.addEventListener(\'change\', function() {
                 const presetSelect = document.getElementById(\'termPresetSelect\');
                 const customInput = document.getElementById(\'termCustomInput\');
-                
                 if (this.value === \'custom\') {
                     presetSelect.classList.add(\'d-none\');
                     customInput.classList.remove(\'d-none\');
@@ -565,21 +518,15 @@ class ServicesTemplate extends BaseTemplate
             });
         });
 
-        // Расчёт
         document.getElementById("insuranceForm").addEventListener("submit", function(e) {
             e.preventDefault();
-            
             const productSelect = document.getElementById("productType");
-            const productName = productSelect.options[productSelect.selectedIndex].text.replace(/\\(.*\\)/, "").trim();
             const baseRate = parseFloat(productSelect.options[productSelect.selectedIndex].dataset.rate);
             const objectValue = parseFloat(document.getElementById("objectValue").value) || 0;
             const coverageLevel = parseFloat(document.getElementById("coverageLevel").value);
             
-            // Получаем срок
-            let termYears = 1;
-            let termDiscount = 0;
+            let termYears = 1, termDiscount = 0;
             const termMode = document.querySelector(\'input[name="termMode"]:checked\').value;
-            
             if (termMode === \'preset\') {
                 const preset = parseInt(document.getElementById(\'termPresetSelect\').value);
                 termYears = preset;
@@ -591,44 +538,32 @@ class ServicesTemplate extends BaseTemplate
                 const unit = parseInt(document.getElementById(\'termUnit\').value);
                 const totalMonths = unit === 1 ? customValue * 12 : customValue;
                 termYears = totalMonths / 12;
-                
-                // Скидка за длительный срок
                 if (totalMonths >= 24) termDiscount = 0.05;
                 if (totalMonths >= 36) termDiscount = 0.10;
                 if (totalMonths >= 60) termDiscount = 0.15;
             }
             
-            // Дополнительные опции
             let optionsTotal = 0;
             if (document.getElementById(\'optRoad\').checked) optionsTotal += 500;
             if (document.getElementById(\'optLegal\').checked) optionsTotal += 1000;
             if (document.getElementById(\'optDiag\').checked) optionsTotal += 1500;
             
-            // Расчёт
             const coverageAmount = objectValue * coverageLevel;
             let premium = coverageAmount * baseRate;
             premium = premium * (1 - termDiscount);
             premium += optionsTotal;
             
-            // Форматирование
             const formatRub = (num) => new Intl.NumberFormat("ru-RU", {
-                style: "currency",
-                currency: "RUB",
-                maximumFractionDigits: 0
+                style: "currency", currency: "RUB", maximumFractionDigits: 0
             }).format(num);
             
-            // Отображение
             document.getElementById("finalPrice").textContent = formatRub(premium);
             document.getElementById("resObject").textContent = formatRub(objectValue);
             document.getElementById("resCoverage").textContent = (coverageLevel * 100) + "%";
-            
             let termText = termYears % 1 === 0 ? termYears + " год" : termYears.toFixed(1) + " года";
-            if (termDiscount > 0) {
-                termText += " (−" + (termDiscount * 100) + "%)";
-            }
+            if (termDiscount > 0) termText += " (−" + (termDiscount * 100) + "%)";
             document.getElementById("resTerm").textContent = termText;
             
-            // Показ результата
             const resultBox = document.getElementById("calcResult");
             resultBox.style.display = "block";
             resultBox.scrollIntoView({ behavior: "smooth", block: "center" });

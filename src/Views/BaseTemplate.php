@@ -5,7 +5,7 @@ class BaseTemplate
 {
     public static function getTemplate(string $content): string
     {
-        return <<<HTML
+        $HTML = <<<HTML
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -57,7 +57,19 @@ class BaseTemplate
             </div>
         </div>
     </nav>
-
+HTML;
+    session_start();
+    if (isset($_SESSION['flash'])) {
+        $HTML .= <<<END
+            <div id="liveAlertBtn" class="alert alert-info alert-dismissible" role="alert">
+                <div>{$_SESSION['flash']}</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                onclick="this.parentNode.style.display='none';"></button>
+            </div>
+        END;
+        unset($_SESSION['flash']);
+    }
+$HTML .= <<<HTML
     <!-- Основной контент -->
     <main class="py-4">
         $content
@@ -79,5 +91,6 @@ class BaseTemplate
 </body>
 </html>
 HTML;
+    return $HTML;
     }
 }

@@ -44,6 +44,7 @@ class Router
                 $basketController->add();
                 $prevUrl = $_SERVER['HTTP_REFERER'];
                 header("Location: {$prevUrl}");
+		        return "";
             default:
                 http_response_code(404);
                 echo "404 - Страница не найдена";

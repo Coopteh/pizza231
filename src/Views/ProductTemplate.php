@@ -72,7 +72,7 @@ class ProductTemplate extends BaseTemplate
                                         <input type="hidden" name="id" value="{$rec[$id]}">
                                         <button type="submit" class="btn btn-primary">Добавить в корзину</button>
                                     </form>
-                                    <a href="/" class="btn btn-outline-light btn-lg px-4">На главную</a>
+                                    <a href="/" class="btn btn-lg px-4">На главную</a>
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ class BaseTemplate {
     public static function getTemplate(string $content): string
     {
         // Шаблон с двумя вставками %s: первая для title, вторая для контента
-        return <<<HTML
+        $html = <<<HTML
         <!DOCTYPE html>
         <html lang="ru">
         <head>
@@ -54,7 +54,20 @@ class BaseTemplate {
                     </div>
                 </nav>
             </header>
+        HTML;
+        session_start();
+        if (isset($_SESSION['flash'])) {
+            $html .= <<<END
+                <div id="liveAlertBtn" class="alert alert-info alert-dismissible" role="alert">
+                    <div>{$_SESSION['flash']}</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                    onclick="this.parentNode.style.display='none';"></button>
+                </div>
+            END;
+            unset($_SESSION['flash']);
+        }
 
+        $html .= <<<HTML
             <main class="container mt-4">
                 $content
             </main>
@@ -65,6 +78,7 @@ class BaseTemplate {
         </body>
         </html>
         HTML;
+        return $html;
         // LEGACY CRAP
         // $title="BASETPLT";
         // $content="test";

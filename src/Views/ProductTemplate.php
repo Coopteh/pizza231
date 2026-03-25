@@ -89,6 +89,7 @@ class ProductTemplate extends BaseTemplate {
                                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                                             <form class="mt-4" action="/basket" method="POST">
                                                 <input type="hidden" name="id" value="{$data['id']}">
+                                                <input type="hidden" name="name" value="{$data['name']}">
                                                 <button type="submit" class="btn btn-primary">Добавить в корзину</button>
                                             </form>  
                                             <a href="/" class="btn btn-outline-secondary btn-lg px-4">На главную</a>

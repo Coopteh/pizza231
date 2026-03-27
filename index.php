@@ -1,7 +1,20 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Controllers\{HomeController, AboutController, ServicesController, CatalogController, ProductController, BasketController, AuthController, ProfileController, CheckoutController, ErrorController};
+// 🔹 Подключаем все контроллеры
+use Controllers\{
+    HomeController,
+    AboutController,
+    ServicesController,
+    CatalogController,
+    ProductController,
+    BasketController,
+    AuthController,
+    ProfileController,
+    CheckoutController,
+    ErrorController,
+    OrderController
+};
 
 // Запускаем сессию в самом начале
 if (session_status() === PHP_SESSION_NONE) {
@@ -13,7 +26,7 @@ $requestUri = $_SERVER['REQUEST_URI'];
 $path = parse_url($requestUri, PHP_URL_PATH);
 $resource = trim($path, '/');
 
-// Базовая санитизация (разрешаем буквы, цифры, дефис, слэш)
+// Базовая санитизация (разрешаем буквы, цифры, дефис, слэш, подчёркивание)
 $resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
 
 // === 🔐 Маршруты авторизации ===
@@ -82,9 +95,10 @@ if ($resource === 'cart/setStorage') {
     exit;
 }
 
-// === 💳 Маршруты оплаты ===
+// === 💳 Маршруты оплаты (оставляем для совместимости) ===
 if ($resource === 'checkout') {
-    echo (new CheckoutController())->get();
+    // 🔹 Перенаправляем /checkout на /order (форма доставки из задания)
+    header("Location: /order");
     exit;
 }
 if ($resource === 'checkout/process') {
@@ -94,6 +108,20 @@ if ($resource === 'checkout/process') {
 if ($resource === 'checkout/success') {
     echo (new CheckoutController())->success();
     exit;
+}
+
+// === 📋 НОВЫЙ Маршрут оформления заказа (форма доставки) ===
+if ($resource === 'order') {
+    $controller = new OrderController();
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // ✅ Метод create() должен быть public в OrderController
+        $controller->create();
+        exit;
+    } else {
+        echo $controller->get();
+        exit;
+    }
 }
 
 // === 📦 Маршрут /product/{id} ===

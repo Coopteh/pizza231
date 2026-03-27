@@ -1,16 +1,21 @@
 {
-    "name": "kkt/pizza231",
-    "description": "Пиццерия на PHP с использованием MVC",
+    "name": "coopteh/insurance221",
+    "description": "Сайт страховой компании - курсовая работа",
     "type": "project",
     "require": {
         "php": ">=7.4"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Controllers\\": "Controllers/",
+            "Views\\": "Views/",
+            "Models\\": "Models/"
         }
     },
-    "scripts": {
-        "start": "php -S localhost:8000"
-    }
+    "authors": [
+        {
+            "name": "Student",
+            "email": "student@kuzbasskt.ru"
+        }
+    ]
 }

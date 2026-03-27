@@ -6,11 +6,13 @@ require_once __DIR__ . '/../Controllers/AboutController.php';
 require_once __DIR__ . '/../Controllers/ProductController.php';
 require_once __DIR__ . '/../Controllers/CatalogController.php';
 require_once __DIR__ . '/../Controllers/BasketController.php';
+require_once __DIR__ . '/../Controllers/OrderController.php';
 use App\Controllers\HomeController;
 use App\Controllers\AboutController;
 use App\Controllers\ProductController;
 use App\Controllers\CatalogController;
 use App\Controllers\BasketController;
+use App\Controllers\OrderController;
 
 class Router
 {
@@ -45,6 +47,9 @@ class Router
                 $prevUrl = $_SERVER['HTTP_REFERER'];
                 header("Location: {$prevUrl}");
 		        return "";
+            case "order":
+                $controller = new OrderController();
+                return $controller->get();
             default:
                 http_response_code(404);
                 echo "404 - Страница не найдена";

@@ -63,16 +63,16 @@ class ProductTemplate extends BaseTemplate
                             <div class="mt-auto">
                                 <div class="d-flex align-items-center mb-4">
                                     <span class="display-5 fw-bold me-3 ">' . $price . ' ₽</span>
-                                    <span class="badge bg-success   px-3 py-2 rounded-pill border border-success border-opacity-50">В наличии</span>
+                                    <span class="badge bg-success rounded-pill border border-success border-opacity-50">В наличии</span>
                                 </div>
                                 
                                 <!-- Кнопки -->
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                                     <form class="mt-4" action="/basket" method="POST">
                                         <input type="hidden" name="id" value="{$rec[$id]}">
-                                        <button type="submit" class="btn btn-primary">Добавить в корзину</button>
+                                        <button type="submit" class="btn btn-primary ">Добавить в корзину</button>
                                     </form>
-                                    <a href="/" class="btn btn-lg px-4">На главную</a>
+                                    <a href="/" class="btn btn-lg">На главную</a>
                                 </div>
                             </div>
                         </div>

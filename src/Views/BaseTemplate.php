@@ -24,11 +24,11 @@ class BaseTemplate
 </head>
 <body>
     <!-- Навигация (Меню) -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <nav class="navbar navbar-expand-lg ">
     <div class="container"> 
             <!-- 👇 ЛОГОТИП -->
             <a class="navbar-brand" href="/">
-                <img src="/assets/img/logo.svg" 
+                <img src="/assets/img/logo.jpg" 
                     alt="Логотип" 
                     width="120" 
                     height="40"
@@ -48,7 +48,7 @@ class BaseTemplate
                         <a class="nav-link" href="/about">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contacts">Контакты</a>
+                        <a class="nav-link" href="/order">Корзина</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/catalog">Каталог</a>
@@ -78,7 +78,7 @@ $HTML .= <<<HTML
         
 
     <!-- Подвал (Footer) -->
-    <footer class="footer bg-dark text-white text-center py-3">
+    <footer class="footer bg-dark text-center py-3">
         <div class="container">
             <p class="mb-0">&copy; 2026 Кемеровский кооперативный техникум. Все права защищены.</p>
             <small>Разработано студентом группы ИС-231</small>

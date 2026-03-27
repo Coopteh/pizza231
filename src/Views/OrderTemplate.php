@@ -28,10 +28,10 @@ class OrderTemplate extends BaseTemplate {
         $content = '<main class="row">
             <h3 class="mb-5">Корзина</h3></main>';
         foreach ($products as $product) {
-            $name = $product['name'];
-            $price = $product['price'];
-            $id = $product['id']-1;
-            $quantity = $product['quantity'];
+            $name = $product['name'] ?? "Товар #{$product}"; 
+            $price = $product['price'] ?? 0; // Цены нет в сессии
+            $quantity = $product['quantity'] ?? 1;
+
 
             $sum = $price * $quantity;
             $all_sum += $sum;
@@ -71,6 +71,25 @@ class OrderTemplate extends BaseTemplate {
             </div>
             HTML;
         }
+        $content .= <<<HTML
+        <section>
+            <form action="/order" method="POST">
+                <div class="mb-3">
+                    <label for="fio" class="form-label">ФИО</label>
+                    <input type="name" name ="fio" class="form-control" id="fio">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Адресс</label>
+                    <input type="address" name ="address" class="form-control" id="address">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Телефон</label>
+                    <input type="phone" name ="phone" class="form-control" id="phone">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        <section>
+        HTML;
         return parent::getTemplate($content);
     }
 }

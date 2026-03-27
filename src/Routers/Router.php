@@ -16,6 +16,7 @@ class Router {
             $path = parse_url($url, PHP_URL_PATH);  // /about
             $pieces = explode("/", $path);  // [0]- пусто, [1]- pizza221, [2]- about
             $resource = $pieces[1];
+            $method = $_SERVER['REQUEST_METHOD'];
             switch ($resource) 
             {
                 case "about":
@@ -43,6 +44,8 @@ class Router {
                 return "";
                 case "order":
                     $order = new OrderController();
+                        if ($method == "POST")
+    	    	        return $order->create();
                     return $order->get();
                 default:
                     $home = new HomeController();

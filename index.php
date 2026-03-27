@@ -3,9 +3,8 @@
 
 // 1. Подключаем автозагрузчик Composer
 require_once __DIR__ . '/vendor/autoload.php';
-
 use App\Routers\Router;
-
+session_start();
 $router = new Router();
 $url = $_SERVER['REQUEST_URI'];
 echo $router->route($url);

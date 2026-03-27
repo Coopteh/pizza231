@@ -90,7 +90,7 @@ class ProductTemplate extends BaseTemplate {
                                             <form class="mt-4" action="/basket" method="POST">
                                                 <input type="hidden" name="id" value="{$data['id']}">
                                                 <input type="hidden" name="name" value="{$data['name']}">
-                                                <button type="submit" class="btn btn-primary">Добавить в корзину</button>
+                                                <button type="submit" class="btn btn-primary" onclick="location.href='/order'">Добавить в корзину</button>
                                             </form>  
                                             <a href="/" class="btn btn-outline-secondary btn-lg px-4">На главную</a>
                                         </div>

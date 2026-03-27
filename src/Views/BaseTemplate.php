@@ -47,6 +47,11 @@ class BaseTemplate {
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/order">Корзина</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/about">О нас</a>
                                 </li>
                             </ul>
@@ -55,7 +60,7 @@ class BaseTemplate {
                 </nav>
             </header>
         HTML;
-        session_start();
+        
         if (isset($_SESSION['flash'])) {
             $html .= <<<END
                 <div id="liveAlertBtn" class="alert alert-info alert-dismissible" role="alert">

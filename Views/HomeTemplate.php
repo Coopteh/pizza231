@@ -145,7 +145,7 @@ class HomeTemplate extends BaseTemplate
         <div class="carousel-inner">
             <!-- Слайд 1: Фрукты -->
             <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=1920&h=1080&fit=crop" 
+                <img src="https://img.freepik.com/free-photo/top-view-fresh-fruits-different-mellow-fruits-white-background-tree-tasty-photo-ripe-diet-color-health-berry-citrus_140725-98578.jpg?semt=ais_hybrid&w=740" 
                      class="d-block w-100" alt="Свежие фрукты">
                 <div class="carousel-caption d-none d-md-block hero-caption">
                     <h5>🍎 Свежие фрукты</h5>
@@ -155,7 +155,7 @@ class HomeTemplate extends BaseTemplate
             </div>
             <!-- Слайд 2: Овощи -->
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1920&h=1080&fit=crop" 
+                <img src="https://img.freepik.com/free-photo/spices-vegetables-salad_23-2148585829.jpg" 
                      class="d-block w-100" alt="Фермерские овощи">
                 <div class="carousel-caption d-none d-md-block hero-caption">
                     <h5>🥬 Фермерские овощи</h5>
@@ -165,7 +165,7 @@ class HomeTemplate extends BaseTemplate
             </div>
             <!-- Слайд 3: Молочные продукты -->
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=1920&h=1080&fit=crop" 
+                <img src="https://main-cdn.sbermegamarket.ru/mid9/hlr-system/-19/933/823/599/116/33/100074672550b0.jpg" 
                      class="d-block w-100" alt="Молочные продукты">
                 <div class="carousel-caption d-none d-md-block hero-caption">
                     <h5>🥛 Молочные продукты</h5>
@@ -175,7 +175,7 @@ class HomeTemplate extends BaseTemplate
             </div>
             <!-- Слайд 4: Мясо -->
             <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1607623814075-e51df1bd6565?w=1920&h=1080&fit=crop" 
+                <img src="https://avatars.mds.yandex.net/i?id=edf30931e096c9311942027217690086_l-4668036-images-thumbs&n=13" 
                      class="d-block w-100" alt="Свежее мясо">
                 <div class="carousel-caption d-none d-md-block hero-caption">
                     <h5>🥩 Свежее мясо</h5>

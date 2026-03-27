@@ -1,14 +1,28 @@
 <?php
+// Подключаем автозагрузку Composer
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Controllers\{HomeController, AboutController, CoursesController, CourseController, CartController, ProductController, ProductsController};
+// Импортируем классы контроллеров
+use Controllers\{
+    HomeController,
+    AboutController,
+    ProductsController,
+    ProductController,
+    CartController,
+    OrderController
+};
 
+// Получаем текущий URI
 $requestUri = $_SERVER['REQUEST_URI'];
 $path = parse_url($requestUri, PHP_URL_PATH);
 $resource = trim($path, '/');
+
+// Очищаем ресурс от лишних символов (безопасность)
 $resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
 
-// Маршруты корзины
+// ==========================================
+// 🛒 МАРШРУТЫ КОРЗИНЫ
+// ==========================================
 if ($resource === 'cart/count' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $controller = new CartController();
     $controller->getCountJson();
@@ -33,11 +47,68 @@ if ($resource === 'cart/clear' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-// Маршрут товара
+if ($resource === 'cart/update' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = new CartController();
+    $controller->update();
+    exit;
+}
+
+if ($resource === 'cart' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $controller = new CartController();
+    echo $controller->view();
+    exit;
+}
+
+// ==========================================
+// 📦 МАРШРУТЫ ЗАКАЗОВ (ORDER)
+// ==========================================
+if ($resource === 'order/checkout' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $controller = new OrderController();
+    echo $controller->checkout();
+    exit;
+}
+
+if ($resource === 'order/submit' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = new OrderController();
+    $controller->submit();
+    exit;
+}
+
+if ($resource === 'order/success' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $controller = new OrderController();
+    echo $controller->success();
+    exit;
+}
+
+// ==========================================
+// 🔐 МАРШРУТЫ АДМИНКИ
+// ==========================================
+if ($resource === 'admin/orders' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $controller = new OrderController();
+    echo $controller->admin();
+    exit;
+}
+
+if ($resource === 'admin/orders' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = new OrderController();
+    echo $controller->admin();
+    exit;
+}
+
+if ($resource === 'admin/update-status' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = new OrderController();
+    $controller->updateStatus();
+    exit;
+}
+
+// ==========================================
+// 🍎 МАРШРУТЫ ТОВАРОВ (PRODUCTS)
+// ==========================================
+// Страница конкретного товара (например, /course/1)
 if (preg_match('/^course\/(\d+)$/', $resource, $matches)) {
-    $courseId = (int)$matches[1];
-    if ($courseId >= 1 && $courseId <= 6) {
-        $controller = new ProductController($courseId);
+    $productId = (int)$matches[1];
+    if ($productId >= 1 && $productId <= 6) {
+        $controller = new ProductController($productId);
         echo $controller->get();
     } else {
         http_response_code(404);
@@ -46,26 +117,27 @@ if (preg_match('/^course\/(\d+)$/', $resource, $matches)) {
     exit;
 }
 
-// Основные маршруты
+// ==========================================
+// 🏠 ОСНОВНЫЕ МАРШРУТЫ (SWITCH)
+// ==========================================
 switch ($resource) {
     case '':
     case 'home':
         $controller = new HomeController();
         echo $controller->get();
         break;
+
     case 'products':
     case 'course':
         $controller = new ProductsController();
         echo $controller->get();
         break;
+
     case 'about':
         $controller = new AboutController();
         echo $controller->get();
         break;
-    case 'cart':
-        $controller = new CartController();
-        echo $controller->view();
-        break;
+
     default:
         http_response_code(404);
         $controller = new \Controllers\ErrorController();

@@ -22,6 +22,7 @@ class CartTemplate extends BaseTemplate
                 case 'added': $successMessage = '✅ Товар добавлен'; break;
                 case 'removed': $successMessage = '✅ Товар удалён'; break;
                 case 'cleared': $successMessage = '✅ Корзина очищена'; break;
+                case 'updated': $successMessage = '✅ Количество обновлено'; break;
             }
         }
 
@@ -78,11 +79,54 @@ class CartTemplate extends BaseTemplate
     color: #666;
     font-size: 0.95rem;
 }
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1.5rem;
+}
+.quantity-btn {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ff6b35;
+    background: white;
+    color: #ff6b35;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantity-btn:hover {
+    background: #ff6b35;
+    color: white;
+}
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 2px solid #ff6b35;
+    border-radius: 10px;
+    padding: 0.3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+}
 .item-price {
     font-size: 1.8rem;
     font-weight: 900;
     color: #ff6b35;
     margin-right: 2rem;
+    min-width: 120px;
+    text-align: right;
+}
+.item-price .price-per-unit {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 400;
+    display: block;
 }
 .btn-remove {
     background: #ff4757;
@@ -106,11 +150,23 @@ class CartTemplate extends BaseTemplate
     margin-top: 2rem;
     text-align: center;
 }
-.total-amount {
-    font-size: 3rem;
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+.total-row.final {
+    border-top: 2px solid rgba(255,255,255,0.3);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
     font-weight: 900;
-    margin: 1rem 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.total-amount {
+    font-size: 2.5rem;
+    font-weight: 900;
 }
 .btn-checkout {
     background: white;
@@ -124,6 +180,7 @@ class CartTemplate extends BaseTemplate
     display: inline-block;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    margin-top: 1rem;
 }
 .btn-checkout:hover {
     transform: translateY(-5px);
@@ -156,39 +213,95 @@ class CartTemplate extends BaseTemplate
     color: #721c24;
     border: 2px solid #dc3545;
 }
+.saving-badge {
+    background: #22c55e;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
 </style>';
 
         $cartItemsHtml = '';
         $totalPrice = 0;
+        $totalItems = 0;
 
         if ($cartCount > 0) {
             foreach ($cartItems as $item) {
                 $priceNum = (int)preg_replace('/[^0-9]/', '', $item['price']);
-                $totalPrice += $priceNum;
+                $quantity = $item['quantity'] ?? 1;
+                $itemTotal = $priceNum * $quantity;
+                $totalPrice += $itemTotal;
+                $totalItems += $quantity;
+                
                 $cartItemsHtml .= '
-<div class="cart-item-row">
+<div class="cart-item-row" data-item-id="' . $item['id'] . '" data-price="' . $priceNum . '">
     <div class="item-emoji">' . $item['icon'] . '</div>
     <div class="item-details">
         <div class="item-name">' . htmlspecialchars($item['title']) . '</div>
         <div class="item-info">📦 ' . htmlspecialchars($item['duration']) . '</div>
     </div>
-    <div class="item-price">' . htmlspecialchars($item['price']) . '</div>
+    <div class="quantity-control">
+        <button type="button" class="quantity-btn btn-minus" onclick="changeQuantity(' . $item['id'] . ', -1)">−</button>
+        <input type="number" class="quantity-input" value="' . $quantity . '" min="1" max="99" 
+               onchange="updateQuantity(' . $item['id'] . ', this.value)" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        <button type="button" class="quantity-btn btn-plus" onclick="changeQuantity(' . $item['id'] . ', 1)">+</button>
+    </div>
+    <div class="item-price">
+        <span class="item-total-price">' . number_format($itemTotal, 0, '.', ' ') . ' ₽</span>
+        <span class="price-per-unit">по ' . number_format($priceNum, 0, '.', ' ') . ' ₽/шт</span>
+    </div>
     <form method="POST" action="/cart/remove" style="display:inline;">
         <input type="hidden" name="courseId" value="' . $item['id'] . '">
-        <button type="submit" class="btn-remove">🗑️</button>
+        <button type="submit" class="btn-remove" title="Удалить товар">🗑️</button>
     </form>
 </div>';
             }
 
+            // Рассчитываем скидку при заказе от 5000₽
+            $discount = 0;
+            $finalTotal = $totalPrice;
+            if ($totalPrice >= 5000) {
+                $discount = round($totalPrice * 0.05);
+                $finalTotal = $totalPrice - $discount;
+            }
+
             $cartItemsHtml .= '
 <div class="cart-total-box">
-    <h3 class="mb-2">📊 Итого к оплате</h3>
-    <div class="total-amount">' . number_format($totalPrice, 0, '.', ' ') . ' ₽</div>
-    <p class="mb-4">Товаров: ' . $cartCount . ' шт.</p>
-    <a href="mailto:info@produkty24.ru?subject=Заказ" class="btn-checkout">
+    <h3 class="mb-3">📊 Итого к оплате</h3>
+    <div class="total-row">
+        <span>Товаров в корзине:</span>
+        <span class="fw-bold">' . $totalItems . ' шт.</span>
+    </div>
+    <div class="total-row">
+        <span>Сумма:</span>
+        <span>' . number_format($totalPrice, 0, '.', ' ') . ' ₽</span>
+    </div>';
+            
+            if ($discount > 0) {
+                $cartItemsHtml .= '
+    <div class="total-row" style="color: #22c55e;">
+        <span>Скидка 5%:</span>
+        <span>−' . number_format($discount, 0, '.', ' ') . ' ₽</span>
+    </div>
+    <div class="saving-badge">🎉 Вы экономите ' . number_format($discount, 0, '.', ' ') . ' ₽!</div>';
+            }
+            
+            $cartItemsHtml .= '
+    <div class="total-row final">
+        <span>К оплате:</span>
+        <span class="total-amount">' . number_format($finalTotal, 0, '.', ' ') . ' ₽</span>
+    </div>
+    
+    <!-- ✅ ИСПРАВЛЕННАЯ КНОПКА (ведет на форму заказа) -->
+    <a href="/order/checkout" class="btn-checkout">
         ✅ Оформить заказ
     </a>
-    <p class="small mt-3" style="opacity: 0.9;">Менеджер перезвонит через 10 минут</p>
+    
+    <p class="small mt-3" style="opacity: 0.9;">🚚 Доставка: бесплатно при заказе от 3000 ₽</p>
 </div>
 <div class="text-center mt-4">
     <form method="POST" action="/cart/clear" style="display:inline;">
@@ -222,7 +335,115 @@ class CartTemplate extends BaseTemplate
     <h1 class="display-4 fw-bold text-center mb-4" style="color: #ff6b35;">🛒 Ваша корзина</h1>
     ' . $alertHtml . '
     <div class="cart-wrapper">' . $cartItemsHtml . '</div>
-</section>';
+</section>
+
+<script>
+// Изменение количества через кнопки +/-
+function changeQuantity(itemId, change) {
+    const row = document.querySelector(\'.cart-item-row[data-item-id="\' + itemId + \'"]\');
+    if (!row) return;
+    
+    const input = row.querySelector(\'.quantity-input\');
+    let quantity = parseInt(input.value) || 1;
+    quantity = Math.max(1, Math.min(99, quantity + change));
+    
+    input.value = quantity;
+    updateItemTotal(row, quantity);
+    updateCartTotals();
+    saveQuantityToSession(itemId, quantity);
+}
+
+// Обновление через input
+function updateQuantity(itemId, value) {
+    let quantity = parseInt(value) || 1;
+    quantity = Math.max(1, Math.min(99, quantity));
+    
+    const row = document.querySelector(\'.cart-item-row[data-item-id="\' + itemId + \'"]\');
+    if (!row) return;
+    
+    row.querySelector(\'.quantity-input\').value = quantity;
+    updateItemTotal(row, quantity);
+    updateCartTotals();
+    saveQuantityToSession(itemId, quantity);
+}
+
+// Пересчёт суммы для одного товара
+function updateItemTotal(row, quantity) {
+    const price = parseInt(row.dataset.price) || 0;
+    const total = price * quantity;
+    
+    const totalSpan = row.querySelector(\'.item-total-price\');
+    if (totalSpan) {
+        totalSpan.textContent = new Intl.NumberFormat(\'ru-RU\').format(total) + \' ₽\';
+    }
+}
+
+// Пересчёт общей суммы корзины
+function updateCartTotals() {
+    let totalItems = 0;
+    let totalPrice = 0;
+    
+    document.querySelectorAll(\'.cart-item-row\').forEach(row => {
+        const quantity = parseInt(row.querySelector(\'.quantity-input\').value) || 1;
+        const price = parseInt(row.dataset.price) || 0;
+        
+        totalItems += quantity;
+        totalPrice += price * quantity;
+    });
+    
+    // Обновляем строки итогов
+    const itemsCountEl = document.querySelector(\'.cart-total-box .total-row:first-child .fw-bold\');
+    if (itemsCountEl) itemsCountEl.textContent = totalItems + \' шт.\';
+    
+    const sumEl = document.querySelector(\'.cart-total-box .total-row:nth-child(2) span:last-child\');
+    if (sumEl) sumEl.textContent = new Intl.NumberFormat(\'ru-RU\').format(totalPrice) + \' ₽\';
+    
+    // Скидка
+    let discount = 0;
+    let finalTotal = totalPrice;
+    if (totalPrice >= 5000) {
+        discount = Math.round(totalPrice * 0.05);
+        finalTotal = totalPrice - discount;
+    }
+    
+    const discountRow = document.querySelector(\'.cart-total-box .total-row[style*="22c55e"]\');
+    if (discount > 0 && discountRow) {
+        discountRow.querySelector(\'span:last-child\').textContent = \'−\' + new Intl.NumberFormat(\'ru-RU\').format(discount) + \' ₽\';
+    }
+    
+    const savingBadge = document.querySelector(\'.saving-badge\');
+    if (discount > 0 && savingBadge) {
+        savingBadge.textContent = \'🎉 Вы экономите \' + new Intl.NumberFormat(\'ru-RU\').format(discount) + \' ₽!\';
+    }
+    
+    const finalEl = document.querySelector(\'.total-amount\');
+    if (finalEl) finalEl.textContent = new Intl.NumberFormat(\'ru-RU\').format(finalTotal) + \' ₽\';
+}
+
+// Сохранение количества в сессию (AJAX)
+function saveQuantityToSession(itemId, quantity) {
+    fetch(\'/cart/update\', {
+        method: \'POST\',
+        headers: {
+            \'Content-Type\': \'application/x-www-form-urlencoded\',
+        },
+        body: \'courseId=\' + itemId + \'&quantity=\' + quantity
+    })
+    .then(response => {
+        if (response.ok) {
+            showNotification(\'✅ Количество обновлено\');
+        }
+    })
+    .catch(error => {
+        console.log(\'Ошибка сохранения:\', error);
+    });
+}
+
+// Инициализация при загрузке
+document.addEventListener(\'DOMContentLoaded\', function() {
+    updateCartTotals();
+});
+</script>';
 
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }

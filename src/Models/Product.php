@@ -64,46 +64,65 @@ class Product {
     }
     // В класс Product добавьте:
 
-    public function prepareData(array $form_data, array $basket_data): array
-    {
-        $products = $this->loadData();
-        $items = [];
-        $all_sum = 0;
-        
-        foreach ($basket_data as $product_id => $data) {
-            $quantity = (int)($data['quantity'] ?? 0);
-            
-            // Валидация
-            if ($quantity <= 0) {
-                throw new \InvalidArgumentException("Некорректное количество для товара #$product_id");
-            }
-            
-            // Поиск товара в базе
-            $product = current(array_filter($products, fn($p) => $p['id'] == $product_id));
-            
-            if (!$product) {
-                throw new \Exception("Товар с ID #$product_id не найден");
-            }
-            
-            $price = (float)$product['price'];
-            $sum = $price * $quantity;
-            $all_sum += $sum;
-            
-            $items[] = [
-                'id' => $product_id,
-                'name' => $product['name'],
-                'quantity' => $quantity,
-                'price' => $price,
-                'sum' => $sum,
-            ];
-        }
-        
-        return [
-            'form_data' => $form_data,
-            'items' => $items,
-            'all_sum' => $all_sum,
-            'created_at' => date('Y-m-d H:i:s'),
-        ];
-    }
+    public function prepareData(array $form_data,array $basket_data){
+            $arr = [];
+            $arr['fio'] = $form_data['fio'];
+            $arr['address'] = $form_data['address'];
+            $arr['phone'] = $form_data['phone'];
+            $arr['created_at'] = date("d-m-Y H:i:s");   
 
+            $arr['products'] = $basket_data;
+            $all_sum = 0;
+            foreach($basket_data as $product){
+                $all_sum += $product['price'] * $product['quantity'];
+            }
+            $arr['all_sum'] = $all_sum;
+            return $arr;   
+        // LEGACY FUCKASS CODE, MAY I BE STRUCK BY LIGHTNING FOR MY SINS
+        // public function prepareData($basketProducts): array {
+        // $arr=[];
+        // $arr['fio'] = urldecode( $_POST['fio'] );
+        //     $arr['address'] = urldecode( $_POST['address'] );
+        //     $arr['phone'] = $_POST['phone'];
+        //     $arr['created_at'] = date("d-m-Y H:i:s");
+        // $products = $this->loadData();
+        // $items = [];
+        // $all_sum = 0;
+        
+        // foreach ($basketProducts as $product_id => $data) {
+        //     $quantity = (int)($data['quantity'] ?? 0);
+            
+        //     // Валидация
+        //     if ($quantity <= 0) {
+        //         throw new \InvalidArgumentException("Некорректное количество для товара #$product_id");
+        //     }
+            
+        //     // Поиск товара в базе
+        //     $product = current(array_filter($products, fn($p) => $p['id'] == $product_id));
+            
+        //     if (!$product) {
+        //         throw new \Exception("Товар с ID #$product_id не найден");
+        //     }
+            
+        //     $price = (float)$product['price'];
+        //     $sum = $price * $quantity;
+        //     $all_sum += $sum;
+            
+        //     $items[] = [
+        //         'id' => $product_id,
+        //         'name' => $product['name'],
+        //         'quantity' => $quantity,
+        //         'price' => $price,
+        //         'sum' => $sum,
+        //     ];
+        // }
+        
+        // return [
+        //     'form_data' => $arr,
+        //     'items' => $items,
+        //     'all_sum' => $all_sum,
+        //     'created_at' => date('Y-m-d H:i:s'),
+        // ];
+        // }
+    }
 }

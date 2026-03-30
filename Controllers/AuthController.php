@@ -1,145 +1,124 @@
 <?php
 namespace Controllers;
-
 use Models\User;
+use Models\Log;
 use Views\AuthTemplate;
 
 class AuthController
 {
-    public function register(): string
+    public function register()
     {
-        if (isset($_SESSION['user_id'])) {
-            header('Location: /');
-            exit;
-        }
-        return AuthTemplate::registerForm();
+        echo AuthTemplate::registerForm();
     }
-    
-    public function processRegister(): void
+
+    public function processRegister()
     {
-        if (isset($_SESSION['user_id'])) {
-            header('Location: /');
-            exit;
-        }
+        if (session_status() === PHP_SESSION_NONE) session_start();
         
-        $errors = [];
         $name = trim($_POST['name'] ?? '');
         $email = trim($_POST['email'] ?? '');
         $password = $_POST['password'] ?? '';
         $passwordConfirm = $_POST['password_confirm'] ?? '';
         
-        // Валидация
+        $errors = [];
         if (empty($name)) $errors[] = 'Введите имя';
-        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Введите корректный email';
-        if (strlen($password) < 6) $errors[] = 'Пароль должен содержать минимум 6 символов';
+        if (empty($email)) $errors[] = 'Введите email';
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Некорректный email';
+        if (strlen($password) < 6) $errors[] = 'Пароль минимум 6 символов';
         if ($password !== $passwordConfirm) $errors[] = 'Пароли не совпадают';
         
-        // Проверка на существующий email
-        if (empty($errors)) {
-            $userModel = new User();
-            if ($userModel->findByEmail($email)) {
-                $errors[] = 'Пользователь с таким email уже существует';
-            }
+        if (!empty($errors)) {
+            $_SESSION['auth_errors'] = $errors;
+            $_SESSION['auth_old'] = ['name' => $name, 'email' => $email];
+            header('Location: /register');
+            exit;
         }
         
-        // Регистрация
-        if (empty($errors)) {
-            $userModel = new User();
-            $userId = $userModel->create($name, $email, password_hash($password, PASSWORD_DEFAULT));
-            
-            if ($userId) {
-                $_SESSION['user_id'] = $userId;
-                $_SESSION['user_name'] = $name;
-                $_SESSION['user_email'] = $email;
-                header('Location: /products');
-                exit;
-            } else {
-                $errors[] = 'Ошибка при регистрации. Попробуйте позже.';
-            }
+        $userModel = new User();
+        $existingUser = $userModel->findByEmail($email);
+        
+        if ($existingUser) {
+            $_SESSION['auth_errors'] = ['Email уже зарегистрирован'];
+            $_SESSION['auth_old'] = ['name' => $name, 'email' => $email];
+            header('Location: /register');
+            exit;
         }
         
-        // Если есть ошибки — показываем форму с сообщениями
-        $_SESSION['auth_errors'] = $errors;
-        $_SESSION['auth_old'] = ['name' => $name, 'email' => $email];
-        header('Location: /register');
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $userId = $userModel->create($name, $email, $passwordHash);
+        
+        if (!$userId) {
+            $_SESSION['auth_errors'] = ['Ошибка регистрации'];
+            header('Location: /register');
+            exit;
+        }
+        
+        // 🔔 Логирование регистрации
+        $logModel = new Log();
+        $logModel->add('Регистрация пользователя', $name, ['email' => $email]);
+        
+        // 🔐 ОТПРАВЛЯЕМ НА ПОДТВЕРЖДЕНИЕ EMAIL
+        $_SESSION['pending_email'] = $email;
+        header('Location: /verify');
         exit;
     }
-    
-    public function login(): string
+
+    public function login()
     {
-        if (isset($_SESSION['user_id'])) {
-            header('Location: /');
-            exit;
-        }
-        return AuthTemplate::loginForm();
+        echo AuthTemplate::loginForm();
     }
-    
-    public function processLogin(): void
+
+    public function processLogin()
     {
-        if (isset($_SESSION['user_id'])) {
-            header('Location: /');
-            exit;
-        }
+        if (session_status() === PHP_SESSION_NONE) session_start();
         
-        $errors = [];
         $email = trim($_POST['email'] ?? '');
         $password = $_POST['password'] ?? '';
         
-        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors[] = 'Введите корректный email';
-        }
-        if (empty($password)) {
-            $errors[] = 'Введите пароль';
+        $errors = [];
+        if (empty($email)) $errors[] = 'Введите email';
+        if (empty($password)) $errors[] = 'Введите пароль';
+        
+        if (!empty($errors)) {
+            $_SESSION['auth_errors'] = $errors;
+            $_SESSION['auth_old'] = ['email' => $email];
+            header('Location: /login');
+            exit;
         }
         
-        if (empty($errors)) {
-            $userModel = new User();
-            $user = $userModel->findByEmail($email);
-            
-            if ($user && password_verify($password, $user['password'])) {
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['user_name'] = $user['name'];
-                $_SESSION['user_email'] = $user['email'];
-                
-                // Перенаправление на страницу, с которой пришли, или в каталог
-                $referer = $_POST['referer'] ?? '/products';
-                header('Location: ' . $referer);
-                exit;
-            } else {
-                $errors[] = 'Неверный email или пароль';
-            }
+        $userModel = new User();
+        $user = $userModel->findByEmail($email);
+        
+        if (!$user || !password_verify($password, $user['password'])) {
+            $_SESSION['auth_errors'] = ['Неверный email или пароль'];
+            $_SESSION['auth_old'] = ['email' => $email];
+            header('Location: /login');
+            exit;
         }
         
-        $_SESSION['auth_errors'] = $errors;
-        $_SESSION['auth_old'] = ['email' => $email];
-        header('Location: /login');
+        // ✅ Устанавливаем сессию
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_name'] = $user['name'];
+        $_SESSION['user_email'] = $user['email'];
+        $_SESSION['user_role'] = $user['role'] ?? 'user';
+        
+        // 🔔 Логирование входа
+        $logModel = new Log();
+        $logModel->add('Вход в систему', $user['name'], [
+            'email' => $user['email'], 
+            'ip' => $_SERVER['REMOTE_ADDR'] ?? ''
+        ]);
+        
+        // 🔹 ПЕРЕНАПРАВЛЯЕМ В ПРОФИЛЬ (вместо referer)
+        header('Location: /profile');
         exit;
     }
-    
-    public function logout(): void
+
+    public function logout()
     {
-        session_unset();
+        if (session_status() === PHP_SESSION_NONE) session_start();
         session_destroy();
         header('Location: /');
         exit;
-    }
-    
-    // Проверка авторизации (для использования в других контроллерах)
-    public static function checkAuth(): bool
-    {
-        return isset($_SESSION['user_id']);
-    }
-    
-    // Получение данных текущего пользователя
-    public static function getCurrentUser(): ?array
-    {
-        if (isset($_SESSION['user_id'])) {
-            return [
-                'id' => $_SESSION['user_id'],
-                'name' => $_SESSION['user_name'] ?? '',
-                'email' => $_SESSION['user_email'] ?? ''
-            ];
-        }
-        return null;
     }
 }

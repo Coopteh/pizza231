@@ -1,11 +1,10 @@
 <?php
-namespace Controllers; 
-
+namespace Controllers;
 use Views\AboutTemplate;
 
 class AboutController
 {
-    public function get(): string 
+    public function get(): string
     {
         return AboutTemplate::getTemplate();
     }

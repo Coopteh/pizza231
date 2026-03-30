@@ -1,0 +1,23 @@
+[
+    {
+        "id": "log_69ca39fcf313e",
+        "timestamp": "2026-03-30 10:53:16",
+        "user": "zamena masla",
+        "action": "Полная очистка логов",
+        "ip": "::1",
+        "details": {
+            "method": "clear_all"
+        }
+    },
+    {
+        "id": "log_69ca3c0293f24",
+        "timestamp": "2026-03-30 11:01:54",
+        "user": "Мой GigaChat API",
+        "action": "Вход в систему",
+        "ip": "::1",
+        "details": {
+            "email": "ivasenkoignat22@gmail.com",
+            "ip": "::1"
+        }
+    }
+]

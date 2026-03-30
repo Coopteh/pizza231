@@ -1,7 +1,19 @@
 <?php
+// 🔹 Запускаем сессию в самом начале
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// 🔹 Подключаем автозагрузчик Composer
 require_once __DIR__ . '/vendor/autoload.php';
 
-// 🔹 Подключаем все контроллеры
+// 🔹 Загружаем переменные из .env
+if (file_exists(__DIR__ . '/config/env.php')) {
+    require_once __DIR__ . '/config/env.php';
+    EnvLoader::load(__DIR__);
+}
+
+// 🔹 Подключаем контроллеры
 use Controllers\{
     HomeController,
     AboutController,
@@ -13,20 +25,15 @@ use Controllers\{
     ProfileController,
     CheckoutController,
     ErrorController,
-    OrderController
+    OrderController,
+    AdminController,
+    VerificationController
 };
 
-// Запускаем сессию в самом начале
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Получаем и очищаем путь
+// 🔹 Получаем и очищаем путь
 $requestUri = $_SERVER['REQUEST_URI'];
 $path = parse_url($requestUri, PHP_URL_PATH);
 $resource = trim($path, '/');
-
-// Базовая санитизация (разрешаем буквы, цифры, дефис, слэш, подчёркивание)
 $resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
 
 // === 🔐 Маршруты авторизации ===
@@ -48,6 +55,16 @@ if ($resource === 'login/process') {
 }
 if ($resource === 'logout') {
     (new AuthController())->logout();
+    exit;
+}
+
+// === ✉️ Верификация ===
+if ($resource === 'verify') {
+    (new VerificationController())->verify();
+    exit;
+}
+if ($resource === 'verification/send') {
+    (new VerificationController())->sendCode();
     exit;
 }
 
@@ -95,27 +112,14 @@ if ($resource === 'cart/setStorage') {
     exit;
 }
 
-// === 💳 Маршруты оплаты (оставляем для совместимости) ===
+// === 💳 Оформление заказа ===
 if ($resource === 'checkout') {
-    // 🔹 Перенаправляем /checkout на /order (форма доставки из задания)
     header("Location: /order");
     exit;
 }
-if ($resource === 'checkout/process') {
-    (new CheckoutController())->process();
-    exit;
-}
-if ($resource === 'checkout/success') {
-    echo (new CheckoutController())->success();
-    exit;
-}
-
-// === 📋 НОВЫЙ Маршрут оформления заказа (форма доставки) ===
 if ($resource === 'order') {
     $controller = new OrderController();
-    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // ✅ Метод create() должен быть public в OrderController
         $controller->create();
         exit;
     } else {
@@ -136,21 +140,52 @@ if ($resource === 'products') {
     exit;
 }
 
+// === 👑 Админ-панель ===
+if ($resource === 'admin') {
+    echo (new AdminController())->dashboard();
+    exit;
+}
+if ($resource === 'admin/product/edit') {
+    (new AdminController())->editProduct();
+    exit;
+}
+if ($resource === 'admin/product/add') {
+    (new AdminController())->addProduct();
+    exit;
+}
+if ($resource === 'admin/user/delete') {
+    (new AdminController())->deleteUser();
+    exit;
+}
+if ($resource === 'admin/role') {
+    (new AdminController())->setRole();
+    exit;
+}
+if ($resource === 'admin/activate') {
+    (new AdminController())->activate();
+    exit;
+}
+if ($resource === 'admin/logs') {
+    (new AdminController())->logs();
+    exit;
+}
+if ($resource === 'admin/logs/clear') {
+    (new AdminController())->clearLogs();
+    exit;
+}
+
 // === 🏠 Остальные маршруты ===
 switch ($resource) {
     case '':
     case 'home':
         echo (new HomeController())->get();
         break;
-    
     case 'about':
         echo (new AboutController())->get();
         break;
-    
     case 'services':
         echo (new ServicesController())->get();
         break;
-    
     default:
         http_response_code(404);
         echo (new ErrorController())->get();

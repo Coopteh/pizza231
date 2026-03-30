@@ -7,7 +7,11 @@ class User
     
     public function __construct()
     {
-        $this->dbFile = __DIR__ . '/../Storage/users.json';
+        $this->dbFile = 'C:/xampp/htdocs/Storage/users.json';
+        $dir = dirname($this->dbFile);
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
+        }
         if (!file_exists($this->dbFile)) {
             file_put_contents($this->dbFile, json_encode([]));
         }
@@ -37,7 +41,9 @@ class User
             'password' => $passwordHash,
             'phone' => '',
             'card_last4' => '',
-            'created_at' => date('Y-m-d H:i:s')
+            'created_at' => date('Y-m-d H:i:s'),
+            'verified' => false,
+            'role' => 'user'
         ];
         $users[] = $newUser;
         $this->saveUsers($users);
@@ -65,7 +71,50 @@ class User
         return null;
     }
     
-    // 🔧 Методы для профиля
+    public function getAllUsers(): array
+    {
+        return $this->loadUsers();
+    }
+    
+    public function deleteUser(int $id): bool
+    {
+        $users = $this->loadUsers();
+        foreach ($users as $key => $user) {
+            if ($user['id'] === $id) {
+                unset($users[$key]);
+                $this->saveUsers(array_values($users));
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public function setRole(int $userId, string $role): bool
+    {
+        $users = $this->loadUsers();
+        foreach ($users as &$user) {
+            if ($user['id'] === $userId) {
+                $user['role'] = $role;
+                $this->saveUsers($users);
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public function verifyUser(int $userId): bool
+    {
+        $users = $this->loadUsers();
+        foreach ($users as &$user) {
+            if ($user['id'] === $userId) {
+                $user['verified'] = true;
+                $this->saveUsers($users);
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public function updatePhone(int $userId, string $phone): bool
     {
         $users = $this->loadUsers();
@@ -97,7 +146,6 @@ class User
         $users = $this->loadUsers();
         foreach ($users as &$user) {
             if ($user['id'] === $userId) {
-                // Сохраняем только последние 4 цифры
                 $cardNumber = preg_replace('/\D/', '', $cardNumber);
                 $user['card_last4'] = strlen($cardNumber) >= 4 ? substr($cardNumber, -4) : '';
                 $this->saveUsers($users);

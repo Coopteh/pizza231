@@ -1,7 +1,7 @@
 <?php
 namespace Controllers;
-
 use Models\Product;
+use Models\Log;
 use Views\BasketTemplate;
 
 class BasketController
@@ -27,16 +27,12 @@ class BasketController
             setcookie('basket', json_encode($cart), time() + 86400 * 30, '/');
         }
     }
-    
+
     public function get(): string
     {
-        // 🔐 Проверка авторизации для просмотра корзины (опционально)
-        // if (!AuthController::checkAuth()) { header('Location: /login'); exit; }
-        
         $basket = $this->getCart();
         $productModel = new Product();
         $items = []; $total = 0;
-        
         foreach ($basket as $productId => $item) {
             $product = $productModel->getById($productId);
             if ($product) {
@@ -50,40 +46,40 @@ class BasketController
         }
         return BasketTemplate::render($items, $total, $this->getStorageType());
     }
-    
+
     public function add(): void
     {
-        // 🔐 Проверка авторизации перед добавлением в корзину
-        if (!AuthController::checkAuth()) {
-            // Перенаправляем на страницу входа с возвратом на текущую
+        if (session_status() === PHP_SESSION_NONE) session_start();
+        if (!isset($_SESSION['user_id'])) {
             $referer = $_SERVER['HTTP_REFERER'] ?? '/products';
             $_SESSION['login_redirect'] = $referer;
             header('Location: /login');
             exit;
         }
-        
         if (isset($_POST['id'])) {
             $productId = (int)$_POST['id'];
             $cart = $this->getCart();
-            
             if (isset($cart[$productId])) {
                 $cart[$productId]['quantity'] = ($cart[$productId]['quantity'] ?? 0) + 1;
             } else {
                 $cart[$productId] = ['quantity' => 1];
             }
             $this->saveCart($cart);
+            
+            // 🔔 Логирование добавления в корзину
+            $logModel = new Log();
+            $logModel->add('Добавление в корзину', $_SESSION['user_name'] ?? 'Гость', ['product_id' => $productId]);
         }
-        
         $referer = $_SESSION['login_redirect'] ?? ($_SERVER['HTTP_REFERER'] ?? '/products');
         unset($_SESSION['login_redirect']);
         header('Location: ' . $referer);
         exit;
     }
-    
+
     public function remove(): void
     {
-        if (!AuthController::checkAuth()) { header('Location: /login'); exit; }
-        
+        if (session_status() === PHP_SESSION_NONE) session_start();
+        if (!isset($_SESSION['user_id'])) { header('Location: /login'); exit; }
         if (isset($_GET['id'])) {
             $productId = (int)$_GET['id'];
             $cart = $this->getCart();
@@ -94,23 +90,23 @@ class BasketController
         }
         header('Location: /cart'); exit;
     }
-    
+
     public function clear(): void
     {
-        if (!AuthController::checkAuth()) { header('Location: /login'); exit; }
+        if (session_status() === PHP_SESSION_NONE) session_start();
+        if (!isset($_SESSION['user_id'])) { header('Location: /login'); exit; }
         $this->saveCart([]);
         header('Location: /cart'); exit;
     }
-    
+
     public function update(): void
     {
-        if (!AuthController::checkAuth()) {
-            header('Content-Type: application/json');
+        if (session_status() === PHP_SESSION_NONE) session_start();
+        header('Content-Type: application/json');
+        if (!isset($_SESSION['user_id'])) {
             echo json_encode(['success' => false, 'error' => 'auth_required']);
             exit;
         }
-        
-        header('Content-Type: application/json');
         if (isset($_POST['id'], $_POST['quantity'])) {
             $productId = (int)$_POST['id'];
             $quantity = max(1, (int)$_POST['quantity']);
@@ -124,7 +120,7 @@ class BasketController
         }
         echo json_encode(['success' => false]);
     }
-    
+
     public function setStorage(): void
     {
         if (isset($_POST['type']) && in_array($_POST['type'], ['session', 'cookie'])) {

@@ -24,10 +24,12 @@ class OrderController {
             $products = $model->getBasketData();
             $arr['products'] = $products;
         // подсчитаем общую сумму заказа
-            $all_sum = 0;
-            foreach ($products as $product) {
-            $all_sum += $product['price'] * $product['quantity'];
-            }
+            $all_sum = $model ->prepareData($arr, $products);
+            // $all_sum = 0;
+            // foreach ($products as $product) {
+            // $all_sum += $product['price'] * $product['quantity'];
+            // }
+            // $arr['all_sum'] = $all_sum;
             $arr['all_sum'] = $all_sum;
 
             $model->saveData($arr);

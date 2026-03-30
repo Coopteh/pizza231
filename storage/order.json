@@ -60,5 +60,195 @@
             }
         ],
         "all_sum": 20000
+    },
+    {
+        "fio": "",
+        "address": "",
+        "phone": "",
+        "created_at": "30-03-2026 10:40:58",
+        "products": [],
+        "all_sum": {
+            "form_data": {
+                "fio": "",
+                "address": "",
+                "phone": "",
+                "created_at": "30-03-2026 10:40:58",
+                "products": []
+            },
+            "items": [],
+            "all_sum": 0,
+            "created_at": "2026-03-30 10:40:58"
+        }
+    },
+    {
+        "fio": "йааааааа",
+        "address": "КУЗБАСС ",
+        "phone": "88005553555",
+        "created_at": "30-03-2026 10:42:50",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 1,
+                "price": 20000,
+                "sum": 20000
+            },
+            {
+                "id": 2,
+                "name": "Стиральная машина",
+                "quantity": 1,
+                "price": 12000,
+                "sum": 12000
+            }
+        ],
+        "all_sum": {
+            "form_data": {
+                "fio": "йааааааа",
+                "address": "КУЗБАСС ",
+                "phone": "88005553555",
+                "created_at": "30-03-2026 10:42:50",
+                "products": [
+                    {
+                        "id": 1,
+                        "name": "Гриль",
+                        "quantity": 1,
+                        "price": 20000,
+                        "sum": 20000
+                    },
+                    {
+                        "id": 2,
+                        "name": "Стиральная машина",
+                        "quantity": 1,
+                        "price": 12000,
+                        "sum": 12000
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": 0,
+                    "name": null,
+                    "quantity": 1,
+                    "price": 0,
+                    "sum": 0
+                },
+                {
+                    "id": 1,
+                    "name": "Гриль",
+                    "quantity": 1,
+                    "price": 20000,
+                    "sum": 20000
+                }
+            ],
+            "all_sum": 20000,
+            "created_at": "2026-03-30 10:42:50"
+        }
+    },
+    {
+        "fio": "",
+        "address": "",
+        "phone": "",
+        "created_at": "30-03-2026 10:44:58",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 1,
+                "price": 20000,
+                "sum": 20000
+            },
+            {
+                "id": 2,
+                "name": "Стиральная машина",
+                "quantity": 1,
+                "price": 12000,
+                "sum": 12000
+            }
+        ],
+        "all_sum": {
+            "form_data": {
+                "fio": "",
+                "address": "",
+                "phone": "",
+                "created_at": "30-03-2026 10:44:58",
+                "products": [
+                    {
+                        "id": 1,
+                        "name": "Гриль",
+                        "quantity": 1,
+                        "price": 20000,
+                        "sum": 20000
+                    },
+                    {
+                        "id": 2,
+                        "name": "Стиральная машина",
+                        "quantity": 1,
+                        "price": 12000,
+                        "sum": 12000
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": 0,
+                    "name": "Гриль",
+                    "quantity": 1,
+                    "price": 20000,
+                    "sum": 20000
+                },
+                {
+                    "id": 1,
+                    "name": "Стиральная машина",
+                    "quantity": 1,
+                    "price": 12000,
+                    "sum": 12000
+                }
+            ],
+            "all_sum": 32000,
+            "created_at": "2026-03-30 10:44:58"
+        }
+    },
+    {
+        "fio": "цадолофвафв",
+        "address": "фвфвфц",
+        "phone": "вфывфв",
+        "created_at": "30-03-2026 10:46:33",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 1,
+                "price": 20000,
+                "sum": 20000
+            }
+        ],
+        "all_sum": {
+            "form_data": {
+                "fio": "цадолофвафв",
+                "address": "фвфвфц",
+                "phone": "вфывфв",
+                "created_at": "30-03-2026 10:46:33",
+                "products": [
+                    {
+                        "id": 1,
+                        "name": "Гриль",
+                        "quantity": 1,
+                        "price": 20000,
+                        "sum": 20000
+                    }
+                ]
+            },
+            "items": [
+                {
+                    "id": 0,
+                    "name": "Гриль",
+                    "quantity": 1,
+                    "price": 20000,
+                    "sum": 20000
+                }
+            ],
+            "all_sum": 20000,
+            "created_at": "2026-03-30 10:46:33"
+        }
     }
 ]

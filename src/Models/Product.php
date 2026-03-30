@@ -62,5 +62,48 @@ class Product {
         fwrite($handle, $json);
         fclose($handle);
     }
+    // В класс Product добавьте:
+
+    public function prepareData(array $form_data, array $basket_data): array
+    {
+        $products = $this->loadData();
+        $items = [];
+        $all_sum = 0;
+        
+        foreach ($basket_data as $product_id => $data) {
+            $quantity = (int)($data['quantity'] ?? 0);
+            
+            // Валидация
+            if ($quantity <= 0) {
+                throw new \InvalidArgumentException("Некорректное количество для товара #$product_id");
+            }
+            
+            // Поиск товара в базе
+            $product = current(array_filter($products, fn($p) => $p['id'] == $product_id));
+            
+            if (!$product) {
+                throw new \Exception("Товар с ID #$product_id не найден");
+            }
+            
+            $price = (float)$product['price'];
+            $sum = $price * $quantity;
+            $all_sum += $sum;
+            
+            $items[] = [
+                'id' => $product_id,
+                'name' => $product['name'],
+                'quantity' => $quantity,
+                'price' => $price,
+                'sum' => $sum,
+            ];
+        }
+        
+        return [
+            'form_data' => $form_data,
+            'items' => $items,
+            'all_sum' => $all_sum,
+            'created_at' => date('Y-m-d H:i:s'),
+        ];
+    }
 
 }

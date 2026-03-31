@@ -1,0 +1,293 @@
+[
+    {
+        "id": "ORD-20260331-58D51A",
+        "created_at": "2026-03-31 11:14:29",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "aekbokhan2143232@gmail.com"
+        },
+        "items": [
+            {
+                "id": 1,
+                "title": "Фрукты и ягоды",
+                "price": "от 150 ₽\/кг",
+                "icon": "🍎",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774948460
+            }
+        ],
+        "total": 150
+    },
+    {
+        "id": "ORD-20260331-63921F",
+        "created_at": "2026-03-31 11:00:06",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "aekbokhan2143232@gmail.com"
+        },
+        "items": [
+            {
+                "id": 5,
+                "title": "Рыба и морепродукты",
+                "price": "от 450 ₽\/кг",
+                "icon": "🐟",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774947601
+            }
+        ],
+        "total": 450
+    },
+    {
+        "id": "ORD-20260330-8CC8FD",
+        "created_at": "2026-03-30 12:10:00",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "aekbokhan2143232@gmail.com"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774865396
+            }
+        ],
+        "total": 80
+    },
+    {
+        "id": "ORD-20260330-A8BCE2",
+        "created_at": "2026-03-30 12:07:06",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "aekbokhan2143232@gmail.com"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774865221
+            }
+        ],
+        "total": 80
+    },
+    {
+        "id": "ORD-20260330-7DA62A",
+        "created_at": "2026-03-30 12:05:59",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "aekbokhan2143232@gmail.com"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774865154
+            }
+        ],
+        "total": 80
+    },
+    {
+        "id": "ORD-20260330-8C5446",
+        "created_at": "2026-03-30 10:38:48",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "art.seli.12@mai.ru"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774859922
+            }
+        ],
+        "total": 80
+    },
+    {
+        "id": "ORD-20260330-63BE9A",
+        "created_at": "2026-03-30 10:37:26",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "art.seli.12@mai.ru"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774859840
+            }
+        ],
+        "total": 80
+    },
+    {
+        "id": "ORD-20260330-46DB88",
+        "created_at": "2026-03-30 10:35:00",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "art.seli.12@mai.ru"
+        },
+        "items": [
+            {
+                "id": 1,
+                "title": "Фрукты и ягоды",
+                "price": "от 150 ₽\/кг",
+                "icon": "🍎",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774859693
+            }
+        ],
+        "total": 150
+    },
+    {
+        "id": "ORD-20260330-19A98D",
+        "created_at": "2026-03-30 10:21:37",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "art.seli.12@mai.ru"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774858890
+            },
+            {
+                "id": 3,
+                "title": "Молочные продукты",
+                "price": "от 90 ₽",
+                "icon": "🥛",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774858891
+            }
+        ],
+        "total": 170
+    },
+    {
+        "id": "ORD-20260330-8ECEB1",
+        "created_at": "2026-03-30 10:19:20",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "89049982824",
+            "email": "art.seli.12@mai.ru"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774858724
+            }
+        ],
+        "total": 80
+    },
+    {
+        "id": "ORD-20260327-1BEF94",
+        "created_at": "2026-03-27 07:54:57",
+        "status": "new",
+        "customer": {
+            "name": "Старичков Алим Дмитриевич, Надеин Тимофей Михайлович Милевский Владислав Анатольевич",
+            "phone": "89511719251",
+            "email": "Aidentiw.col.kick@mail.ru"
+        },
+        "items": [
+            {
+                "id": 1,
+                "title": "Фрукты и ягоды",
+                "price": "от 150 ₽\/кг",
+                "icon": "🍎",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774594490
+            },
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774594490
+            },
+            {
+                "id": 3,
+                "title": "Молочные продукты",
+                "price": "от 90 ₽",
+                "icon": "🥛",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774594491
+            }
+        ],
+        "total": 320
+    },
+    {
+        "id": "ORD-20260327-5C01E2",
+        "created_at": "2026-03-27 07:53:25",
+        "status": "new",
+        "customer": {
+            "name": "aek",
+            "phone": "+79059000687",
+            "email": "upied288@mail.ru"
+        },
+        "items": [
+            {
+                "id": 2,
+                "title": "Овощи и зелень",
+                "price": "от 80 ₽\/кг",
+                "icon": "🥬",
+                "duration": "В наличии • Доставка 60 мин",
+                "quantity": 1,
+                "added_at": 1774594381
+            }
+        ],
+        "total": 80
+    }
+]

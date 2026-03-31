@@ -4,18 +4,33 @@ use App\Views\OrderTemplate;
 use App\Models\Product;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use App\Config\Config;
+use App\Services\DatabaseStorage;
+use App\Services\FileStorage;
 
 class OrderController {
     public function get(): string 
     {
-        $product = new Product();
+        if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+            $serviceStorage = new FileStorage();
+        } else {
+            $serviceStorage = new DatabaseStorage();
+        }
+        $product = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);
+
         // получаем массив с характеристиками товаров из корзины
         $data = $product->getBasketData();
         return OrderTemplate::getOrderTemplate($data);
     }
 
     public function create() {
-        $model = new Product();
+        if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+            $serviceStorage = new FileStorage();
+        } else {
+            $serviceStorage = new DatabaseStorage();
+        }
+        $model = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);
+
         // список заказанных продуктов - берем список товаров из корзины
         $products = $model->getBasketData();
         // подготовка массив c данными заказа

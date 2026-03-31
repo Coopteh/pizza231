@@ -2,22 +2,30 @@
 namespace App\Models;
 
 use App\Config\Config;
+use App\Services\ILoadStorage;
+use App\Services\ISaveStorage;
+use App\Services\IStorage;
 
-class Product {
-    /* открывает файл с именем Config::FILE_PRODUCTS в режиме чтения ('r'), 
-    затем считывает все содержимое из него в переменную $data, 
-    закрывает файл, декодирует строку (формата json) в ассоциативный массив $arr
-    функцией json_decode($data, true); и возвращает получившийся массив $arr 
-    оператором return
-    */
-    public function loadData(): ?array
+class Product
+{
+    private IStorage $dataStorage;
+    private string $nameResourceLoad;
+    private string $nameResourceSave;
+    
+    // Внедряем зависимость через конструктор
+    public function __construct(IStorage $service, string $nameLoad, string $nameSave)
     {
-        $data = file_get_contents(Config::FILE_PRODUCTS);
-        if ($data) {
-            $arr = json_decode($data, true);
-            return $arr;
-        }
-        return null;
+        $this->dataStorage = $service;
+        $this->nameResourceLoad = $nameLoad;
+        $this->nameResourceSave = $nameSave;
+    }
+
+    public function loadData(): ?array {
+        return $this->dataStorage->loadData( $this->nameResourceLoad ); 
+    }
+
+    public function saveData($arr): bool {
+        return $this->dataStorage->saveData( $this->nameResourceSave, $arr ); 
     }
 
     public function getBasketData(): array {
@@ -54,27 +62,7 @@ class Product {
 	    return $basketProducts;
     }
 
-    public function saveData($arr) {
-        $nameFile= Config::FILE_ORDERS;
-
-        $handle = fopen($nameFile, "r");
-        if (filesize($nameFile) > 0){ 
-            $data = fread($handle, filesize($nameFile)); 
-            $allRecords = json_decode($data, true); 
-        } else {
-            $allRecords = [];
-        }
-        fclose($handle);
-        
-        $allRecords[]= $arr;
-        $json = json_encode($allRecords, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
-        $handle = fopen($nameFile, "w");
-        fwrite($handle, $json);
-        fclose($handle);
-     }
-
-     public function prepareData(array $form_data, array $basket_data): array {
+    public function prepareData(array $form_data, array $basket_data): array {
         $arr = [];
 
 	    $arr['fio'] = $form_data['fio'];

@@ -1,23 +1,30 @@
 <?php
-// Подключаем автозагрузку Composer
-require_once __DIR__ . '/vendor/autoload.php';
+// Включаем отображение ошибок
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Импортируем классы контроллеров
+// Подключаем автозагрузку Composer
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+} else {
+    die('❌ Ошибка: Не найден vendor/autoload.php. Выполните: composer install');
+}
+
+// Импортируем классы
 use Controllers\{
     HomeController,
     AboutController,
     ProductsController,
     ProductController,
     CartController,
-    OrderController
+    OrderController,
+    ErrorController
 };
 
 // Получаем текущий URI
 $requestUri = $_SERVER['REQUEST_URI'];
 $path = parse_url($requestUri, PHP_URL_PATH);
 $resource = trim($path, '/');
-
-// Очищаем ресурс от лишних символов (безопасность)
 $resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
 
 // ==========================================
@@ -60,7 +67,7 @@ if ($resource === 'cart' && $_SERVER['REQUEST_METHOD'] === 'GET') {
 }
 
 // ==========================================
-// 📦 МАРШРУТЫ ЗАКАЗОВ (ORDER)
+// 📦 МАРШРУТЫ ЗАКАЗОВ
 // ==========================================
 if ($resource === 'order/checkout' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $controller = new OrderController();
@@ -83,13 +90,7 @@ if ($resource === 'order/success' && $_SERVER['REQUEST_METHOD'] === 'GET') {
 // ==========================================
 // 🔐 МАРШРУТЫ АДМИНКИ
 // ==========================================
-if ($resource === 'admin/orders' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $controller = new OrderController();
-    echo $controller->admin();
-    exit;
-}
-
-if ($resource === 'admin/orders' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($resource === 'admin/orders') {
     $controller = new OrderController();
     echo $controller->admin();
     exit;
@@ -102,9 +103,8 @@ if ($resource === 'admin/update-status' && $_SERVER['REQUEST_METHOD'] === 'POST'
 }
 
 // ==========================================
-// 🍎 МАРШРУТЫ ТОВАРОВ (PRODUCTS)
+// 🍎 МАРШРУТЫ ТОВАРОВ
 // ==========================================
-// Страница конкретного товара (например, /course/1)
 if (preg_match('/^course\/(\d+)$/', $resource, $matches)) {
     $productId = (int)$matches[1];
     if ($productId >= 1 && $productId <= 6) {
@@ -112,13 +112,14 @@ if (preg_match('/^course\/(\d+)$/', $resource, $matches)) {
         echo $controller->get();
     } else {
         http_response_code(404);
-        echo '<h1>Товар не найден</h1>';
+        $controller = new ErrorController();
+        echo $controller->get();
     }
     exit;
 }
 
 // ==========================================
-// 🏠 ОСНОВНЫЕ МАРШРУТЫ (SWITCH)
+// 🏠 ОСНОВНЫЕ МАРШРУТЫ
 // ==========================================
 switch ($resource) {
     case '':
@@ -140,7 +141,7 @@ switch ($resource) {
 
     default:
         http_response_code(404);
-        $controller = new \Controllers\ErrorController();
+        $controller = new ErrorController();
         echo $controller->get();
         break;
 }

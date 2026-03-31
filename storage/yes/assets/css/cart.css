@@ -1,0 +1,29 @@
+/* === Стили для cart.html.php === */
+.cart-table thead th {
+    white-space: nowrap;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-quantity-input {
+    width: 70px;
+    text-align: center;
+}
+
+.cart-summary {
+    border-top: 2px solid #dee2e6;
+}
+
+.checkout-form .form-label {
+    font-weight: 500;
+}
+
+.checkout-modal .modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}

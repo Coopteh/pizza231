@@ -1,0 +1,17 @@
+/* === Стили для about.html.php === */
+.about-map-container {
+    min-height: 300px;
+}
+
+.about-map-container iframe {
+    border-radius: 8px;
+}
+
+.about-contact-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.about-contact-list li:last-child {
+    border-bottom: none;
+}

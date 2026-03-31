@@ -1,0 +1,363 @@
+[
+    {
+        "id": "order_69c63e8134e72",
+        "created_at": "2026-03-27 09:23:29",
+        "fio": "Москвикинasfasfa",
+        "email": "ivasenkoignat22@gmail.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "card",
+        "items": [
+            {
+                "id": 1,
+                "name": "Коленвал",
+                "price": 12500,
+                "image": "\/assets\/img\/1.jpg",
+                "quantity": 1,
+                "added_at": 1774599792
+            }
+        ],
+        "total": 12500,
+        "status": "new"
+    },
+    {
+        "id": "order_69c63fa276bef",
+        "created_at": "2026-03-27 09:28:18",
+        "fio": "Москвикинasfasfa",
+        "email": "ivasenkoignat22@gmail.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 5,
+                "name": "Амортизатор задний",
+                "price": 3200,
+                "image": "\/assets\/img\/5.jpg",
+                "quantity": 1,
+                "added_at": 1774600091
+            }
+        ],
+        "total": 3200,
+        "status": "completed",
+        "completed_at": "2026-03-27 09:29:51"
+    },
+    {
+        "id": "order_69c64bb9c240f",
+        "created_at": "2026-03-27 10:19:53",
+        "fio": "123",
+        "email": "bugalter@gameil.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 1,
+                "name": "Коленвал",
+                "price": 12500,
+                "image": "\/assets\/img\/1.jpg",
+                "quantity": 1,
+                "added_at": 1774603182
+            }
+        ],
+        "total": 12500,
+        "status": "completed",
+        "completed_at": "2026-03-27 10:20:11",
+        "user_id": 2
+    },
+    {
+        "id": "order_69c64dc2ebebe",
+        "created_at": "2026-03-27 10:28:34",
+        "fio": "123",
+        "email": "admin@example.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 2,
+                "name": "Тормозные колодки (передние)",
+                "price": 1850,
+                "image": "\/assets\/img\/2.jpg",
+                "quantity": 1,
+                "added_at": 1774603707
+            }
+        ],
+        "total": 1850,
+        "status": "new"
+    },
+    {
+        "id": "order_69c652b03614f",
+        "created_at": "2026-03-27 10:49:36",
+        "fio": "123",
+        "email": "bugalter@gameil.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 2,
+                "name": "Тормозные колодки (передние)",
+                "price": 1850,
+                "image": "\/assets\/img\/2.jpg",
+                "quantity": 1,
+                "added_at": 1774604967
+            },
+            {
+                "id": 1,
+                "name": "Коленвал",
+                "price": 12500,
+                "image": "\/assets\/img\/1.jpg",
+                "quantity": 1,
+                "added_at": 1774604968
+            },
+            {
+                "id": 3,
+                "name": "Масляный фильтр",
+                "price": 450,
+                "image": "\/assets\/img\/3.jpg",
+                "quantity": 1,
+                "added_at": 1774604968
+            }
+        ],
+        "total": 14800,
+        "status": "new",
+        "user_id": 2
+    },
+    {
+        "id": "order_69c6596d225c3",
+        "created_at": "2026-03-27 11:18:21",
+        "fio": "Саша",
+        "email": "moscvicin2007@gmail.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 1,
+                "name": "Коленвал",
+                "price": 12500,
+                "image": "\/assets\/img\/1.jpg",
+                "quantity": 1,
+                "added_at": 1774606695
+            }
+        ],
+        "total": 12500,
+        "status": "new",
+        "user_id": 4
+    },
+    {
+        "id": "order_69ca2eaa98612",
+        "created_at": "2026-03-30 10:04:58",
+        "fio": "Москвикинasfasfa",
+        "email": "admin@example.com",
+        "phone": "79235232565",
+        "address": "улица Пушкина",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 1,
+                "name": "Коленвал",
+                "price": 19500,
+                "base_price": 16000,
+                "image": "\/assets\/img\/1.jpg",
+                "quantity": 1,
+                "modifiers": [
+                    {
+                        "name": "Установка",
+                        "price": 2000
+                    },
+                    {
+                        "name": "С гарантией",
+                        "price": 1500
+                    }
+                ],
+                "modifiers_display": "Установка, С гарантией",
+                "item_key": "1_51d82eae0c9c66e0c47ac0b0102e7215",
+                "added_at": 1774855655
+            }
+        ],
+        "total": 19500,
+        "status": "completed",
+        "user_id": 0,
+        "completed_at": "2026-03-30 10:05:18"
+    },
+    {
+        "id": 1,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "+79000000000",
+        "address": "Test Address 1",
+        "total": 500,
+        "status": "pending",
+        "items": [
+            {
+                "id": 1,
+                "name": "Product 1",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "created_at": "2026-03-30 10:57:27"
+    },
+    {
+        "id": 2,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "",
+        "address": "",
+        "total": 100,
+        "status": "completed",
+        "items": [],
+        "created_at": "2026-03-30 10:57:31",
+        "updated_at": "2026-03-30 10:57:31"
+    },
+    {
+        "id": 3,
+        "user_id": null,
+        "email": null,
+        "name": "Test User",
+        "phone": "",
+        "address": "",
+        "total": 100,
+        "status": "pending",
+        "items": [],
+        "created_at": "2026-03-30 11:00:45"
+    },
+    {
+        "id": 4,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "+79000000000",
+        "address": "Test Address 1",
+        "total": 500,
+        "status": "pending",
+        "items": [
+            {
+                "id": 1,
+                "name": "Product 1",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "created_at": "2026-03-30 11:00:49"
+    },
+    {
+        "id": 5,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "",
+        "address": "",
+        "total": 100,
+        "status": "completed",
+        "items": [],
+        "created_at": "2026-03-30 11:00:53",
+        "updated_at": "2026-03-30 11:00:53"
+    },
+    {
+        "id": 6,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "+79000000000",
+        "address": "Test Address 1",
+        "total": 500,
+        "status": "pending",
+        "items": [
+            {
+                "id": 1,
+                "name": "Product 1",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "created_at": "2026-03-30 11:08:56"
+    },
+    {
+        "id": 7,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "",
+        "address": "",
+        "total": 100,
+        "status": "completed",
+        "items": [],
+        "created_at": "2026-03-30 11:09:00",
+        "updated_at": "2026-03-30 11:09:00"
+    },
+    {
+        "id": 8,
+        "user_id": null,
+        "email": "test_order@example.com",
+        "name": "Test User",
+        "phone": "+79000000000",
+        "address": "Test Address",
+        "total": 250,
+        "status": "pending",
+        "items": [
+            {
+                "id": 1,
+                "name": "Product",
+                "price": 250,
+                "quantity": 1
+            }
+        ],
+        "created_at": "2026-03-30 11:09:12"
+    },
+    {
+        "id": 9,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "+79000000000",
+        "address": "Test Address 1",
+        "total": 500,
+        "status": "pending",
+        "items": [
+            {
+                "id": 1,
+                "name": "Product 1",
+                "price": 250,
+                "quantity": 2
+            }
+        ],
+        "created_at": "2026-03-30 11:17:41"
+    },
+    {
+        "id": 10,
+        "user_id": null,
+        "email": "test@example.com",
+        "name": "Test User",
+        "phone": "",
+        "address": "",
+        "total": 100,
+        "status": "completed",
+        "items": [],
+        "created_at": "2026-03-30 11:17:45",
+        "updated_at": "2026-03-30 11:17:45"
+    },
+    {
+        "id": 11,
+        "user_id": null,
+        "email": "test_order@example.com",
+        "name": "Test User",
+        "phone": "+79000000000",
+        "address": "Test Address",
+        "total": 250,
+        "status": "pending",
+        "items": [
+            {
+                "id": 1,
+                "name": "Product",
+                "price": 250,
+                "quantity": 1
+            }
+        ],
+        "created_at": "2026-03-30 11:17:58"
+    }
+]

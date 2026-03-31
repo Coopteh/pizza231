@@ -1,0 +1,47 @@
+{
+    "title": "Мой профиль",
+    "pageTitle": "Настройки профиля",
+    "avatar": {
+        "title": "Аватар",
+        "change": "Изменить аватар",
+        "remove": "Удалить",
+        "uploadHint": "Перетащите изображение или нажмите для выбора",
+        "formats": "JPEG, PNG, GIF, WebP (макс. 2MB)"
+    },
+    "form": {
+        "name": "Имя",
+        "namePlaceholder": "Ваше имя",
+        "email": "Email",
+        "phone": "Телефон",
+        "phonePlaceholder": "+7 (999) 123-45-67",
+        "address": "Адрес доставки",
+        "addressPlaceholder": "Улица, дом, квартира, индекс",
+        "save": "Сохранить изменения",
+        "saving": "Сохранение...",
+        "success": "Профиль успешно обновлён!",
+        "error": "Ошибка сохранения профиля"
+    },
+    "info": {
+        "title": "Информация",
+        "emailNote": "Email нельзя изменить",
+        "phoneNote": "Телефон нельзя изменить"
+    },
+    "orders": {
+        "title": "История заказов",
+        "noOrders": "У вас пока нет заказов",
+        "orderNumber": "Заказ",
+        "date": "Дата",
+        "status": "Статус",
+        "total": "Сумма",
+        "details": "Детали",
+        "items": "Товаров",
+        "statusNew": "Новый",
+        "statusProcessing": "В обработке",
+        "statusCompleted": "Выполнен",
+        "statusCancelled": "Отменён",
+        "paymentCash": "Наличными",
+        "paymentCard": "Картой",
+        "viewDetails": "Показать детали",
+        "hideDetails": "Скрыть детали"
+    }
+}

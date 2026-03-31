@@ -1,0 +1,14 @@
+/* === Стили для admin_users.html.php === */
+.users-table th,
+.users-table td {
+    vertical-align: middle;
+}
+
+.users-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.user-email {
+    color: #6c757d;
+    font-size: 0.9rem;
+}

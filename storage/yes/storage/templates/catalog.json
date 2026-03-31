@@ -1,0 +1,49 @@
+{
+    "pageTitle": "Каталог товаров",
+    "title": "Каталог товаров",
+    "search": {
+        "placeholder": "Поиск товаров...",
+        "button": "Найти",
+        "total": "Всего товаров:",
+        "results": "Найдено по запросу"
+    },
+    "empty": {
+        "title": "Ничего не найдено 😔",
+        "message": "Попробуйте изменить поисковый запрос",
+        "resetLink": "Сбросить фильтр"
+    },
+    "product": {
+        "label": "Наше меню",
+        "inStock": "В наличии",
+        "addToCart": "В корзину",
+        "details": "Подробнее"
+    },
+    "toast": {
+        "added": "Товар добавлен в корзину!",
+        "addedWithName": "добавлен в корзину!"
+    },
+    "modal": {
+        "title": "Информация о товаре",
+        "notFound": "Товар не найден",
+        "error": "Ошибка загрузки товара"
+    },
+    "checkout": {
+        "title": "Оформление заказа",
+        "fio": "ФИО",
+        "fioPlaceholder": "Иванов Иван Иванович",
+        "email": "Email",
+        "emailPlaceholder": "example@mail.ru",
+        "phone": "Телефон",
+        "phonePlaceholder": "+7 (999) 123-45-67",
+        "address": "Адрес доставки",
+        "addressPlaceholder": "г. Кемерово, ул. Примерная, д. 1, кв. 1",
+        "payment": "Способ оплаты",
+        "paymentSelect": "Выберите способ оплаты",
+        "paymentCash": "Наличными при получении",
+        "paymentCard": "Банковской картой",
+        "paymentOnline": "Онлайн-оплата",
+        "total": "Итого к оплате:",
+        "cancel": "Отмена",
+        "submit": "Подтвердить заказ"
+    }
+}

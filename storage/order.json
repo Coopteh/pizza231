@@ -332,5 +332,22 @@
         "created_at": "31-03-2026 11:29:23",
         "products": [],
         "all_sum": 0
+    },
+    {
+        "fio": "f",
+        "address": "f",
+        "phone": "f",
+        "email": "heslessscum@gmail.com",
+        "created_at": "31-03-2026 12:57:30",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 3,
+                "price": 20000,
+                "sum": 60000
+            }
+        ],
+        "all_sum": 60000
     }
 ]

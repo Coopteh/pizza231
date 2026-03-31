@@ -5,24 +5,52 @@ use App\Views\BaseTemplate;
 use App\Models\Product;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use App\Services\DatabaseStorage;
+use App\Services\FileStorage;
+use App\Config\Config;
 
 class OrderController extends BaseTemplate {
     public function get(): string 
     {
-        $product = new Product();
+        if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+            $serviceStorage = new FileStorage();
+        } else {
+            $serviceStorage = new DatabaseStorage();
+        }
+        $product = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
+
         // получаем массив с характеристиками товаров из корзины
         $data = $product->getBasketData();
         return OrderTemplate::getOrderTemplate($data);
+        // $product = new Product();
+        // // получаем массив с характеристиками товаров из корзины
+        // $data = $product->getBasketData();
+        // return OrderTemplate::getOrderTemplate($data);
     }
 
     public function create() {
-        $model = new Product();
+        
+        if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+            $serviceStorage = new FileStorage();
+        } else {
+            $serviceStorage = new DatabaseStorage();
+        }
+        $model = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
+
         // список заказанных продуктов - берем список товаров из корзины
         $products = $model->getBasketData();
         // подготовка массив c данными заказа
         $arr = $model->prepareData( $_POST, $products );
         // сохранение заказа
         $model->saveData($arr);
+    
+        // $model = new Product();
+        // // список заказанных продуктов - берем список товаров из корзины
+        // $products = $model->getBasketData();
+        // // подготовка массив c данными заказа
+        // $arr = $model->prepareData( $_POST, $products );
+        // // сохранение заказа
+        // $model->saveData($arr);
 
         // отправка емайл
         if ($this->sendMail($arr['email'], $arr)) {

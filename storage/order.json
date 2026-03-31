@@ -266,5 +266,53 @@
             }
         ],
         "all_sum": 40000
+    },
+    {
+        "fio": "Я",
+        "address": "Я",
+        "phone": "йайа",
+        "created_at": "31-03-2026 10:22:33",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 2,
+                "price": 20000,
+                "sum": 40000
+            }
+        ],
+        "all_sum": 40000
+    },
+    {
+        "fio": "f",
+        "address": "f",
+        "phone": "f",
+        "created_at": "31-03-2026 10:25:27",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 4,
+                "price": 20000,
+                "sum": 80000
+            }
+        ],
+        "all_sum": 80000
+    },
+    {
+        "fio": "",
+        "address": "",
+        "phone": "",
+        "created_at": "31-03-2026 10:26:55",
+        "products": [
+            {
+                "id": 1,
+                "name": "Гриль",
+                "quantity": 5,
+                "price": 20000,
+                "sum": 100000
+            }
+        ],
+        "all_sum": 100000
     }
 ]

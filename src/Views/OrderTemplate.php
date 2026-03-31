@@ -90,6 +90,7 @@ class OrderTemplate extends BaseTemplate {
             </form>
         <section>
         HTML;
+        
         return parent::getTemplate($content);
     }
 }

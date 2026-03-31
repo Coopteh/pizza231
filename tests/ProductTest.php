@@ -8,7 +8,9 @@ class ProductTest extends TestCase
 {
     public function testPrepareData()
     {
-        $model = new Product();
+        $storage = new MockStorage();
+        $model = new Product($storage, "", "");
+
         $form_data['fio'] = "";
         $form_data['address'] = "";
         $form_data['phone'] = "";

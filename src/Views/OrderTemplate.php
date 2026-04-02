@@ -75,7 +75,14 @@ class OrderTemplate extends BaseTemplate {
 Телефон покупателя (input) c label "Телефон:"
 Кнопка (submit) "Создать заказ"
         */
-        $content .= <<<ORDERFORM
+        $content .= self::formOrder();
+
+        $resultTemplate = sprintf($template, $title, $content);
+        return $resultTemplate;
+    }
+
+    public static function formOrder(){
+        $form = <<<ORDERFORM
         <h3 class="mt-5">Параметры для доставки</h3>
         <div class="col-8">
             <form action="/order" method="POST">
@@ -101,9 +108,7 @@ class OrderTemplate extends BaseTemplate {
             </form>
         </div>
         ORDERFORM;
-
-
-        $resultTemplate = sprintf($template, $title, $content);
-        return $resultTemplate;
+        
+        return $form;
     }
 }

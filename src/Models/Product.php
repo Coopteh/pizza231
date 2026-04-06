@@ -18,7 +18,7 @@ class Product
         if (Config::isDatabaseAvailable()) {
             $this->db = Database::getConnection();
         }
-    
+        
     }
 
     public function loadData(): ?array
@@ -252,4 +252,5 @@ class Product
             return false;
         }
     }
+
 }

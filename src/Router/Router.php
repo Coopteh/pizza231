@@ -242,4 +242,64 @@ class Router
         
         return null;
     }
+    private function getRoutes(): array {
+        return [
+            'about' => ['controller' => AboutController::class, 
+                        'method' => 'get'],
+            'products' => ['controller' => ProductController::class, 
+                        'method' => 'get', 
+                        'params' => ['id' => $this->id]],
+            'basket' => ['controller' => BasketController::class, 
+                        'method' => 'add', 
+                        'redirect' => true],
+            'order' => [
+                'GET' => ['controller' => OrderController::class, 
+                        'method' => 'get'],
+                'POST' => ['controller' => OrderController::class, 
+                        'method' => 'create'],
+            ],
+            'basket_clear' => ['controller' => BasketController::class,
+                        'method' => 'clear',                         
+                        'redirect' => true],
+        ];
+        
+    }
+    private int $id = 0;
+    public function router(string $url): string {
+        $path = parse_url($url, PHP_URL_PATH);
+        $pieces = explode("/", $path);
+        $resource = $pieces[1];
+        $this->id = (isset($pieces[2])) ? intval($pieces[2]) : 0;
+        $method = $_SERVER['REQUEST_METHOD'];
+
+        $routes = $this->getRoutes();
+        if (!isset($routes[$resource])) {
+            return $this->handleDefault();
+        }
+    
+        $route = $routes[$resource];
+    
+        // Обработка методов для ресурса (например, order)
+        if (isset($route[$method])) {
+            $route = $route[$method];
+        }
+    
+        return $this->executeRouter($route, $pieces);
+    }
+        private function executeRouter(array $route, array $pieces): string {
+        $controller = new $route['controller']();
+        $params = ($this->id) ? ['id' => $this->id] : [];
+        $result = $controller->{$route['method']}(...$params);
+    
+        if ($route['redirect'] ?? false) {
+            $prevUrl = $server['HTTP_REFERER'] ?? '/';
+            header("Location: {$prevUrl}");
+            return '';
+        }
+        return $result ?? '';
+    }
+
+    private function handleDefault(): string {
+        return (new HomeController())->get();
+    }
 }

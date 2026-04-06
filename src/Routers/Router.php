@@ -15,9 +15,9 @@ class Router {
         return [
             'about' => ['controller' => AboutController::class, 
                         'method' => 'get'],
-            'product' => ['product' => ProductController::class, 
+            'products' => ['controller' => ProductController::class, 
                         'method' => 'get',
-                        'params' => ['id' => $this->id]],
+                        'params' => ['id']],
             'catalogue' => ['controller' => CatalogueController::class, 
                         'method' => 'get', 
                         'params' => ['id' => $this->id]],

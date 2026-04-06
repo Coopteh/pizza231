@@ -17,16 +17,16 @@
 создайте новую ветку
 > git checkout -b april-trash
 ```
-Мы изменили модуль Product, теперь в модель передается при создании
-серсив для работы с данными и прочие параметры 
-`public function __construct(IStorage $service, string $nameLoad, string $nameSave)`
-`$model = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);`
-Задача - изменить тесты ProdutTest с использованием mock-объекта заглушки
+Мы изменили модуль Product, теперь в модель передается при создании  
+серсив для работы с данными и прочие параметры   
+`public function __construct(IStorage $service, string $nameLoad, string $nameSave)`  
+`$model = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);`  
+Задача - изменить тесты ProdutTest с использованием mock-объекта заглушки  
 ```
         $storage = new MockStorage();
         $model = new Product($storage, "", "");
 ```  
-чтобы тесты успешно работали!
+чтобы тесты успешно работали!  
 
 ## Задание-2 - рефакторинг маршрутизатора
 

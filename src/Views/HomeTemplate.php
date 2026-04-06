@@ -2,77 +2,82 @@
 namespace App\Views;
 
 require_once __DIR__ . '/BaseTemplate.php';
-require_once __DIR__ . '/../Models/Product.php'; // Подключаем модель
+require_once __DIR__ . '/../Models/Product.php';
+require_once __DIR__ . '/../Config/Config.php';
 
 use App\Models\Product;
+use App\Config\Config;
 
 class HomeTemplate extends BaseTemplate
 {
-    public static function getTemplate(string $content = ''): string 
+    /**
+     * Путь к файлу шаблона
+     */
+    private const TEMPLATE_PATH = __DIR__ . '/templates/home.html.php';
+
+    /**
+     * Путь к файлу с текстами
+     */
+    private const TEXTS_PATH = __DIR__ . '/../../storage/templates/home.json';
+
+    /**
+     * Загружает тексты из JSON файла
+     */
+    private static function loadTexts(): array
     {
-        // 👇 Загружаем продукты через модель
+        $path = self::TEXTS_PATH;
+        if (!file_exists($path)) {
+            return [];
+        }
+        $json = file_get_contents($path);
+        return json_decode($json, true) ?? [];
+    }
+
+    public static function getTemplate(string $content = '', array $texts = []): string 
+    {
+        // Загружаем тексты
+        $texts = self::loadTexts();
+        
+        // Загружаем продукты через модель
         $productModel = new Product();
         $products = $productModel->loadData() ?? [];
         
-        // 👇 Генерируем HTML для карточек товаров
-        $productsHtml = self::renderProducts($products);
+        // Генерируем HTML для карточек товаров
+        $productsHtml = self::renderProducts($products, $texts);
 
-        // Формируем основной контент
-        $ourContent = '
-        <!-- Герой-блок (Баннер) -->
-        <div class="hero-section text-center">
-            <div class="container">
-                <h1 class="display-4 fw-bold">Добро пожаловать на сайт запчастей для всех марок авто!</h1>
-                <p class="lead">Запчасти разных марок в наличии и под заказ.</p>
-                <a href="/catalog" class="btn btn-dark btn-lg mt-3">Каталог</a>
-            </div>
-        </div>
+        // Показывать ли каталог на главной
+        $showCatalog = Config::SHOW_CATALOG_AT_HOME;
 
-        <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <h2 class="mb-3">Почему выбирают нас?</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success"></i> Оригинальные запчасти</li>
-                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success"></i> Наличие большого количества деталей</li>
-                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success"></i> Доступные цены</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <img src="/assets/img/123.jpg" 
-                         alt="Запчасти" 
-                         class="img-fluid rounded shadow-lg"
-                         onerror="this.src=\'/assets/img/error.jpg\';">
-                </div>
-            </div>
-            
-            <!-- 👇 Секция с товарами -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="text-center mb-4">Каталог</h2>
-                    ' . $productsHtml . '
-                </div>
-            </div>
-        </div>
-        ';
+        // Передаём тексты в шаблон
+        $texts = $texts;
+
+        // Подключаем шаблон
+        ob_start();
+        include self::TEMPLATE_PATH;
+        $content = ob_get_clean();
         
-        return parent::getTemplate($ourContent);
+        return parent::getTemplate($content, $texts);
     }
     
     /**
      * Рендерит карточки товаров
      */
-    private static function renderProducts(array $products): string
+    private static function renderProducts(array $products, array $texts = []): string
     {
+        $noProductsText = $texts['catalog']['noProducts'] ?? 'Товары временно отсутствуют';
+        
         if (empty($products)) {
-            return '<p class="text-center text-muted">Товары временно отсутствуют</p>';
+            return '<p class="text-center text-muted">' . htmlspecialchars($noProductsText) . '</p>';
         }
+
+        $noNameText = $texts['catalog']['noName'] ?? 'Без названия';
+        $detailsButton = $texts['catalog']['detailsButton'] ?? 'Подробнее';
+        $currency = $texts['catalog']['currency'] ?? '₽';
 
         $html = '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">';
         
         foreach ($products as $product) {
-            // Экранируем вывод для безопасности
-            $name = htmlspecialchars($product['name'] ?? 'Без названия');
+            $name = htmlspecialchars($product['name'] ?? $noNameText);
             $description = htmlspecialchars($product['description'] ?? '');
             $price = number_format($product['price'] ?? 0, 0, '.', ' ');
             $image = htmlspecialchars($product['image'] ?? '/assets/img/no-image.jpg');
@@ -90,8 +95,8 @@ class HomeTemplate extends BaseTemplate
                         <h5 class="card-title">' . $name . '</h5>
                         <p class="card-text text-muted small flex-grow-1">' . $description . '</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="h5 mb-0 text-primary">' . $price . ' ₽</span>
-                            <a href="/product/' . $id . '" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                            <span class="h5 mb-0 text-primary">' . $price . ' ' . $currency . '</span>
+                            <a href="/product/' . $id . '" class="btn btn-outline-primary btn-sm">' . htmlspecialchars($detailsButton) . '</a>
                         </div>
                     </div>
                 </div>

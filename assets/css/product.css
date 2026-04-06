@@ -1,0 +1,13 @@
+/* === Стили для product.html.php === */
+/* Уникальные стили для страницы товара */
+.product-image-container {
+    min-height: 300px;
+}
+
+.product-details .btn-add-to-cart {
+    transition: all 0.3s ease;
+}
+
+.product-details .btn-add-to-cart:active {
+    transform: scale(0.95);
+}

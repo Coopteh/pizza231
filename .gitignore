@@ -1,2 +1,6 @@
 vendor
 .vscode
+config/email.php
+storage/logs/*
+!storage/logs/.gitkeep
+storage/orders_backup_*.json

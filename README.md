@@ -18,6 +18,8 @@
 > git checkout -b april-trash
 ```
 
+## Задание-2 - рефакторинг маршрутизатора
+
 Как снизить сложность кода маршрутизатора
 ```
 Метод route в классе Router - имеет высокую цикломатическую сложность.
@@ -27,50 +29,79 @@
 - жёсткая связность (прямая зависимость от конкретных классов контроллеров)
 
 ✅ Стратегии рефакторинга
+
 1. Выделите карту маршрутов (Route Map) - используйте таблицу маршрутов (массив) вместо switch
 
-3. Вынесите логику выполнения в отдельный метод
-php
-123456789101112131415161718192021222324252627
-4. Внедрите зависимость через контейнер (опционально, но рекомендуется)
-php
-1234567891011
-5. Разделите побочные эффекты (редиректы) от возвращаемых значений
-php
-123456789101112
-📊 Результат рефакторинга
-Метрика
-Было
-Стало
-Цикломатическая сложность
-~12
-~4-5
-Ответственность метода
-5+
-1 (только маршрутизация)
-Тестируемость
-Низкая
-Высокая (можно мокать контроллеры)
-Расширяемость
-Требует правки switch
-Добавление в массив маршрутов
-Повторное использование
-Нет
-Да (методы extractParams, handleDefault)
-🚀 Бонус: Используйте готовый роутер
-Если проект растёт, рассмотрите использование готовых решений:
-bash
-12
-php
-12345
-💡 Ключевые принципы, которые стоит применить
-Single Responsibility — роутер только направляет, не выполняет бизнес-логику
-Open/Closed — новые маршруты добавляются без изменения кода роутера
-Dependency Inversion — зависите от абстракций (интерфейсов), а не от конкретных контроллеров
-Separation of Concerns — отделите маршрутизацию, создание объектов и побочные эффекты
-🎯 Совет: Начните с вынесения карты маршрутов в отдельный метод — это даст наибольший выигрыш в читаемости при минимальных изменениях.
-```
+private function getRoutes(): array {
+        return [
+            'about' => ['controller' => AboutController::class, 
+                        'method' => 'get'],
+            'products' => ['controller' => ProductController::class, 
+                        'method' => 'get', 
+                        'params' => ['id' => $this->id]],
+            'basket' => ['controller' => BasketController::class, 
+                        'method' => 'add', 
+                        'redirect' => true],
+            'order' => [
+                'GET' => ['controller' => OrderController::class, 
+                        'method' => 'get'],
+                'POST' => ['controller' => OrderController::class, 
+                        'method' => 'create'],
+            ],
+            'basket_clear' => ['controller' => BasketController::class,
+                        'method' => 'clear',                         
+                        'redirect' => true],
+        ];
+    }
 
+2. Используйте таблицу маршрутов (массив) вместо switch в основном методе route()
+
+private int $id = 0;
+public function route(string $url): string {
+        $path = parse_url($url, PHP_URL_PATH);
+        $pieces = explode("/", $path);
+        $resource = $pieces[1];
+        $this->id = (isset($pieces[2])) ? intval($pieces[2]) : 0;
+        $method = $_SERVER['REQUEST_METHOD'];
+
+        $routes = $this->getRoutes();
+        if (!isset($routes[$resource])) {
+            return $this->handleDefault();
+        }
+    
+        $route = $routes[$resource];
+    
+        // Обработка методов для ресурса (например, order)
+        if (isset($route[$method])) {
+            $route = $route[$method];
+        }
+    
+        return $this->executeRoute($route, $pieces);
+}
+
+3. Вынесите логику выполнения в отдельный метод
+
+    private function executeRoute(array $route, array $pieces): string {
+        $controller = new $route['controller']();
+        $params = ($this->id) ? ['id' => $this->id] : [];
+        $result = $controller->{$route['method']}(...$params);
+    
+        if ($route['redirect'] ?? false) {
+            $prevUrl = $server['HTTP_REFERER'] ?? '/';
+            header("Location: {$prevUrl}");
+            return '';
+        }
+        return $result ?? '';
+    }
+
+    private function handleDefault(): string {
+        return (new HomeController())->get();
+    }
+
+Было - цикломатическая сложность = 8
+Стало - цикломатическая сложность = 6
+но при добавлении маршрутов цикломатическая сложность метода route увеличиваться не будет
+```
 
 Закоммитьте и запуште изменения
 ```

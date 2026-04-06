@@ -10,7 +10,7 @@ use App\Controllers\BasketController;
 use App\Controllers\OrderController;
 
 class Router {
-    
+    private $id;
     private function getRoutes(): array {
         return [
             'about' => ['controller' => AboutController::class, 

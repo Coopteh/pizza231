@@ -18,5 +18,13 @@
             "name": "Student",
             "email": "student@kuzbasskt.ru"
         }
-    ]
+    ],
+    "require-dev": {
+        "nunomaduro/phpinsights": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }

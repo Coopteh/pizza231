@@ -1,0 +1,395 @@
+[
+    {
+        "id": "log_69cba54146f35",
+        "timestamp": "2026-03-31 12:43:13",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba4a488b17",
+        "timestamp": "2026-03-31 12:40:36",
+        "user": "fggffg",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cba4a487d79",
+            "total": 7000,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cba49e63931",
+        "timestamp": "2026-03-31 12:40:30",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba372214bd",
+        "timestamp": "2026-03-31 12:35:30",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba0ca4de84",
+        "timestamp": "2026-03-31 12:24:10",
+        "user": "fggffg",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cba0ca4cfcc",
+            "total": 3500,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cb9fe84ff17",
+        "timestamp": "2026-03-31 12:20:24",
+        "user": "fggffg",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cb9fe84ee5c",
+            "total": 7000,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cb9fdfb53f9",
+        "timestamp": "2026-03-31 12:20:15",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cb9d901ba19",
+        "timestamp": "2026-03-31 12:10:24",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cb9d7aa99ca",
+        "timestamp": "2026-03-31 12:10:02",
+        "user": "fggffg",
+        "action": "Активация админ-доступа",
+        "ip": "::1",
+        "details": {
+            "user_id": 2
+        }
+    },
+    {
+        "id": "log_69cb9d1277e6f",
+        "timestamp": "2026-03-31 12:08:18",
+        "user": "fggffg",
+        "action": "Регистрация пользователя",
+        "ip": "::1",
+        "details": {
+            "email": "lilconte6@gmail.com"
+        }
+    },
+    {
+        "id": "log_69cb8cd92ed2f",
+        "timestamp": "2026-03-31 10:59:05",
+        "user": "Масленников Антон Дмитриевич, Терешкин Иван Андревич Милевский Владислав Анатольевич",
+        "action": "Удаление пользователя",
+        "ip": "::1",
+        "details": {
+            "user_id": 2,
+            "email": "lilconte6@gmail.com"
+        }
+    },
+    {
+        "id": "log_69cb8cd16c2f4",
+        "timestamp": "2026-03-31 10:58:57",
+        "user": "Масленников Антон Дмитриевич, Терешкин Иван Андревич Милевский Владислав Анатольевич",
+        "action": "Изменение роли",
+        "ip": "::1",
+        "details": {
+            "user_id": 2,
+            "email": "lilconte6@gmail.com",
+            "new_role": "user"
+        }
+    },
+    {
+        "id": "log_69cb8cb71a20d",
+        "timestamp": "2026-03-31 10:58:31",
+        "user": "Масленников Антон Дмитриевич, Терешкин Иван Андревич Милевский Владислав Анатольевич",
+        "action": "Подтверждение email",
+        "ip": "::1",
+        "details": {
+            "email": "lilconte6@gmail.com"
+        }
+    },
+    {
+        "id": "log_69cb8c26d9860",
+        "timestamp": "2026-03-31 10:56:06",
+        "user": "neGkusei",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cb8c26d9004",
+            "total": 3500,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cb8be34b585",
+        "timestamp": "2026-03-31 10:54:59",
+        "user": "neGkusei",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cb8be34a146",
+            "total": 1900,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cb890ca08e0",
+        "timestamp": "2026-03-31 10:42:52",
+        "user": "neGkusei",
+        "action": "Активация админ-доступа",
+        "ip": "::1",
+        "details": {
+            "user_id": 1
+        }
+    },
+    {
+        "id": "log_69cb88cfd0e4f",
+        "timestamp": "2026-03-31 10:41:51",
+        "user": "neGkusei",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cb88c927c05",
+        "timestamp": "2026-03-31 10:41:45",
+        "user": "neGkusei",
+        "action": "Подтверждение email",
+        "ip": "::1",
+        "details": {
+            "email": "ewanteryoshkin@yandex.ru"
+        }
+    },
+    {
+        "id": "log_69cb88b01cf83",
+        "timestamp": "2026-03-31 10:41:20",
+        "user": "neGkusei",
+        "action": "Регистрация пользователя",
+        "ip": "::1",
+        "details": {
+            "email": "ewanteryoshkin@yandex.ru"
+        }
+    },
+    {
+        "id": "log_69cb88cedca3b",
+        "timestamp": "2026-03-31 10:41:50",
+        "user": "neGkusei",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cb88e56cf79",
+        "timestamp": "2026-03-31 10:42:13",
+        "user": "neGkusei",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cb88e56c42b",
+            "total": 7000,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cb8a1ed4388",
+        "timestamp": "2026-03-31 10:47:26",
+        "user": "neGkusei",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 2
+        }
+    },
+    {
+        "id": "log_69cb8c22044f8",
+        "timestamp": "2026-03-31 10:56:02",
+        "user": "neGkusei",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cb8c60a193e",
+        "timestamp": "2026-03-31 10:57:04",
+        "user": "Масленников Антон Дмитриевич, Терешкин Иван Андревич Милевский Владислав Анатольевич",
+        "action": "Регистрация пользователя",
+        "ip": "::1",
+        "details": {
+            "email": "lilconte6@gmail.com"
+        }
+    },
+    {
+        "id": "log_69cb8cc3dd309",
+        "timestamp": "2026-03-31 10:58:43",
+        "user": "Масленников Антон Дмитриевич, Терешкин Иван Андревич Милевский Владислав Анатольевич",
+        "action": "Активация админ-доступа",
+        "ip": "::1",
+        "details": {
+            "user_id": 2
+        }
+    },
+    {
+        "id": "log_69cb8cd4ec2ba",
+        "timestamp": "2026-03-31 10:59:00",
+        "user": "Масленников Антон Дмитриевич, Терешкин Иван Андревич Милевский Владислав Анатольевич",
+        "action": "Изменение роли",
+        "ip": "::1",
+        "details": {
+            "user_id": 2,
+            "email": "lilconte6@gmail.com",
+            "new_role": "admin"
+        }
+    },
+    {
+        "id": "log_69cb9af75f07b",
+        "timestamp": "2026-03-31 11:59:19",
+        "user": "ewantereyoshkin@yandex.ru",
+        "action": "Регистрация пользователя",
+        "ip": "::1",
+        "details": {
+            "email": "ewantereyoshkin@yandex.ru"
+        }
+    },
+    {
+        "id": "log_69cb9d6748469",
+        "timestamp": "2026-03-31 12:09:43",
+        "user": "fggffg",
+        "action": "Подтверждение email",
+        "ip": "::1",
+        "details": {
+            "email": "lilconte6@gmail.com"
+        }
+    },
+    {
+        "id": "log_69cb9d8fa8f7f",
+        "timestamp": "2026-03-31 12:10:23",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cb9da2bb103",
+        "timestamp": "2026-03-31 12:10:42",
+        "user": "fggffg",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cb9da2ba591",
+            "total": 7000,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cb9fdfdb12d",
+        "timestamp": "2026-03-31 12:20:15",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba0c38aa33",
+        "timestamp": "2026-03-31 12:24:03",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba371ecacb",
+        "timestamp": "2026-03-31 12:35:29",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba37d74ced",
+        "timestamp": "2026-03-31 12:35:41",
+        "user": "fggffg",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cba37d73cf1",
+            "total": 7000,
+            "items": 1
+        }
+    },
+    {
+        "id": "log_69cba49ed3746",
+        "timestamp": "2026-03-31 12:40:30",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba541264f4",
+        "timestamp": "2026-03-31 12:43:13",
+        "user": "fggffg",
+        "action": "Добавление в корзину",
+        "ip": "::1",
+        "details": {
+            "product_id": 1
+        }
+    },
+    {
+        "id": "log_69cba545990ae",
+        "timestamp": "2026-03-31 12:43:17",
+        "user": "fggffg",
+        "action": "Создание заказа",
+        "ip": "::1",
+        "details": {
+            "order_id": "ORD_69cba54598034",
+            "total": 7000,
+            "items": 1
+        }
+    }
+]

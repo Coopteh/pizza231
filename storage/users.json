@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "ewantereyoshkin@yandex.ru",
+        "email": "ewantereyoshkin@yandex.ru",
+        "password": "$2y$10$\/m1xSGqJAPQK9zc85oEsnuZMgxz\/onGUlXV5ld.ESpQt6cCI5k30K",
+        "phone": "",
+        "card_last4": "",
+        "created_at": "2026-03-31 11:59:19",
+        "verified": false,
+        "role": "user"
+    },
+    {
+        "id": 2,
+        "name": "fggffg",
+        "email": "lilconte6@gmail.com",
+        "password": "$2y$10$4DSuAvJ2mXqIGVuCTkKqf.GeCwpT3YsdrnKrIuchKCYzrDdSHhn8W",
+        "phone": "",
+        "card_last4": "",
+        "created_at": "2026-03-31 12:08:18",
+        "verified": true,
+        "role": "admin"
+    }
+]

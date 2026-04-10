@@ -1,115 +1,193 @@
 <?php
-// 🌐 LANG: Добавлена поддержка сессии для языка
-session_start();
+// 🔹 Запускаем сессию в самом начале
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// 🌐 LANG: 1. СНАЧАЛА регистрируем автозагрузчик
-spl_autoload_register(function ($class) {
-    // Преобразуем пространство имен в путь к файлу
-    $class = ltrim($class, '\\');
-    
-    // 🌐 LANG: Проверка для Lib namespace
-    if (strpos($class, 'Lib\\') === 0) {
-        $fileName = __DIR__ . '/Lib/' . substr($class, 4) . '.php';
-        if (file_exists($fileName)) {
-            require $fileName;
-            return;
-        }
-    }
-    
-    // Проверка для Controllers namespace
-    if (strpos($class, 'Controllers\\') === 0) {
-        $fileName = __DIR__ . '/Controllers/' . substr($class, 12) . '.php';
-        if (file_exists($fileName)) {
-            require $fileName;
-            return;
-        }
-    }
-    
-    // Проверка для Views namespace
-    if (strpos($class, 'Views\\') === 0) {
-        $fileName = __DIR__ . '/Views/' . substr($class, 6) . '.php';
-        if (file_exists($fileName)) {
-            require $fileName;
-            return;
-        }
-    }
-    
-    // Общий путь
-    $fileName = __DIR__ . '/' . str_replace('\\', '/', $class) . '.php';
-    if (file_exists($fileName)) {
-        require $fileName;
-    }
-});
+// 🔹 Подключаем автозагрузчик Composer
+require_once __DIR__ . '/vendor/autoload.php';
 
-// 🌐 LANG: 2. ТЕПЕРЬ инициализируем язык (после автозагрузчика!)
-use Lib\Language;
-Language::init();
+// 🔹 Загружаем переменные из .env
+if (file_exists(__DIR__ . '/config/env.php')) {
+    require_once __DIR__ . '/config/env.php';
+    EnvLoader::load(__DIR__);
+}
 
-// 🌐 LANG: 3. Обработка переключения языка
-if (isset($_GET['lang']) && in_array($_GET['lang'], ['ru', 'en'])) {
-    $_SESSION['lang'] = $_GET['lang'];
-    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    header('Location: ' . $uri);
+// 🔹 Подключаем контроллеры
+use Controllers\{
+    HomeController,
+    AboutController,
+    ServicesController,
+    CatalogController,
+    ProductController,
+    BasketController,
+    AuthController,
+    ProfileController,
+    CheckoutController,
+    ErrorController,
+    OrderController,
+    AdminController,
+    VerificationController
+};
+
+// 🔹 Получаем и очищаем путь
+$requestUri = $_SERVER['REQUEST_URI'];
+$path = parse_url($requestUri, PHP_URL_PATH);
+$resource = trim($path, '/');
+$resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
+
+// === 🔐 Маршруты авторизации ===
+if ($resource === 'register') {
+    echo (new AuthController())->register();
+    exit;
+}
+if ($resource === 'register/process') {
+    (new AuthController())->processRegister();
+    exit;
+}
+if ($resource === 'login') {
+    echo (new AuthController())->login();
+    exit;
+}
+if ($resource === 'login/process') {
+    (new AuthController())->processLogin();
+    exit;
+}
+if ($resource === 'logout') {
+    (new AuthController())->logout();
     exit;
 }
 
-// Простая маршрутизация
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+// === ✉️ Верификация ===
+if ($resource === 'verify') {
+    (new VerificationController())->verify();
+    exit;
+}
+if ($resource === 'verification/send') {
+    (new VerificationController())->sendCode();
+    exit;
+}
 
-switch ($uri) {
-    case '/':
-    case '/home':
-        $controller = new Controllers\HomeController();
+// === 👤 Маршруты профиля ===
+if ($resource === 'profile') {
+    echo (new ProfileController())->get();
+    exit;
+}
+if ($resource === 'profile/phone') {
+    (new ProfileController())->updatePhone();
+    exit;
+}
+if ($resource === 'profile/password') {
+    (new ProfileController())->updatePassword();
+    exit;
+}
+if ($resource === 'profile/card') {
+    (new ProfileController())->updateCard();
+    exit;
+}
+
+// === 🛒 Маршруты корзины ===
+if ($resource === 'cart') {
+    echo (new BasketController())->get();
+    exit;
+}
+if ($resource === 'cart/add') {
+    (new BasketController())->add();
+    exit;
+}
+if ($resource === 'cart/remove') {
+    (new BasketController())->remove();
+    exit;
+}
+if ($resource === 'cart/clear') {
+    (new BasketController())->clear();
+    exit;
+}
+if ($resource === 'cart/update') {
+    (new BasketController())->update();
+    exit;
+}
+if ($resource === 'cart/setStorage') {
+    (new BasketController())->setStorage();
+    exit;
+}
+
+// === 💳 Оформление заказа ===
+if ($resource === 'checkout') {
+    header("Location: /order");
+    exit;
+}
+if ($resource === 'order') {
+    $controller = new OrderController();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $controller->create();
+        exit;
+    } else {
         echo $controller->get();
+        exit;
+    }
+}
+
+// === 📦 Маршрут /product/{id} ===
+if (preg_match('/^product\/(\d+)$/', $resource, $matches)) {
+    echo (new ProductController())->get((int)$matches[1]);
+    exit;
+}
+
+// === 📋 Маршрут /products ===
+if ($resource === 'products') {
+    echo (new CatalogController())->get();
+    exit;
+}
+
+// === 👑 Админ-панель ===
+if ($resource === 'admin') {
+    echo (new AdminController())->dashboard();
+    exit;
+}
+if ($resource === 'admin/product/edit') {
+    (new AdminController())->editProduct();
+    exit;
+}
+if ($resource === 'admin/product/add') {
+    (new AdminController())->addProduct();
+    exit;
+}
+if ($resource === 'admin/user/delete') {
+    (new AdminController())->deleteUser();
+    exit;
+}
+if ($resource === 'admin/role') {
+    (new AdminController())->setRole();
+    exit;
+}
+if ($resource === 'admin/activate') {
+    (new AdminController())->activate();
+    exit;
+}
+if ($resource === 'admin/logs') {
+    (new AdminController())->logs();
+    exit;
+}
+if ($resource === 'admin/logs/clear') {
+    (new AdminController())->clearLogs();
+    exit;
+}
+
+// === 🏠 Остальные маршруты ===
+switch ($resource) {
+    case '':
+    case 'home':
+        echo (new HomeController())->get();
         break;
-    case '/courses':
-        $controller = new Controllers\CoursesController();
-        echo $controller->get();
+    case 'about':
+        echo (new AboutController())->get();
         break;
-    case '/about':
-        $controller = new Controllers\AboutController();
-        echo $controller->get();
-        break;
-    case '/cart':
-        $controller = new Controllers\CartController();
-        echo $controller->view();
-        break;
-    case '/cart/add':
-        $controller = new Controllers\CartController();
-        $controller->add();
-        break;
-    case '/cart/remove':
-        $controller = new Controllers\CartController();
-        $controller->remove();
-        break;
-    case '/cart/clear':
-        $controller = new Controllers\CartController();
-        $controller->clear();
-        break;
-    case '/cart/count':
-        $controller = new Controllers\CartController();
-        $controller->getCountJson();
-        break;
-    case '/cart/checkout':
-        $controller = new Controllers\CartController();
-        $controller->checkout();
-        break;
-    case '/cart/order':
-        $controller = new Controllers\CartController();
-        $controller->order();
-        break;
-    case '/cart/success':
-        $controller = new Controllers\CartController();
-        $controller->success();
+    case 'services':
+        echo (new ServicesController())->get();
         break;
     default:
-        if (preg_match('#^/course/(\d+)$#', $uri, $matches)) {
-            $controller = new Controllers\CourseController((int)$matches[1]);
-            echo $controller->get();
-        } else {
-            $controller = new Controllers\ErrorController();
-            http_response_code(404);
-            echo $controller->get();
-        }
+        http_response_code(404);
+        echo (new ErrorController())->get();
         break;
 }

@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\Product;
 use App\Views\ProductTemplate;
 use App\Config\Config;
-use App\Services\DatabaseStorage;
+use App\Services\ProductDBStorage;
 use App\Services\FileStorage;
 
 class ProductController {
@@ -12,10 +12,12 @@ class ProductController {
     {
         if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
             $serviceStorage = new FileStorage();
-        } else {
-            $serviceStorage = new DatabaseStorage();
+            $model = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);
+        } 
+        if (Config::STORAGE_TYPE == Config::TYPE_DB) {
+            $serviceStorage = new ProductDBStorage();
+            $model = new Product($serviceStorage, Config::TABLE_PRODUCTS, Config::TABLE_ORDERS);
         }
-        $model = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);
 
         $data = $model->loadData();
         if ($id) {

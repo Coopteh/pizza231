@@ -1,11 +1,11 @@
 <?php
 namespace App\Controllers;
 use App\Views\OrderTemplate;
-use App\Models\Product;
+use App\Models\Order;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use App\Config\Config;
-use App\Services\DatabaseStorage;
+use App\Services\OrderDBStorage;
 use App\Services\FileStorage;
 
 class OrderController {
@@ -13,24 +13,27 @@ class OrderController {
     {
         if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
             $serviceStorage = new FileStorage();
-        } else {
-            $serviceStorage = new DatabaseStorage();
+            $model = new Order($serviceStorage, Config::FILE_ORDERS);
         }
-        $product = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);
-
+        if (Config::STORAGE_TYPE == Config::TYPE_DB) {
+            $serviceStorage = new OrderDBStorage();
+            $model = new Order($serviceStorage, Config::TABLE_ORDERS);
+        }
         // получаем массив с характеристиками товаров из корзины
-        $data = $product->getBasketData();
+        $data = $model->getBasketData();
         return OrderTemplate::getOrderTemplate($data);
     }
 
     public function create() {
         if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
             $serviceStorage = new FileStorage();
-        } else {
-            $serviceStorage = new DatabaseStorage();
+            $model = new Order($serviceStorage, Config::FILE_ORDERS);
         }
-        $model = new Product($serviceStorage, Config::FILE_PRODUCTS, Config::FILE_ORDERS);
-
+        if (Config::STORAGE_TYPE == Config::TYPE_DB) {
+            $serviceStorage = new OrderDBStorage();
+            $model = new Order($serviceStorage, Config::TABLE_ORDERS);
+        }
+        
         // список заказанных продуктов - берем список товаров из корзины
         $products = $model->getBasketData();
         // подготовка массив c данными заказа

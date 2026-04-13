@@ -15,11 +15,11 @@ class ProductController
         if (Config::STORAGE_TYPE == Config::TYPE_DB) {
             $serviceStorage = new ProductDBStorage();
             $model = new Product($serviceStorage, Config::TABLE_PRODUCTS);
+            $data = $model->loadData();
         } else {
-            $serviceStorage = new DatabaseStorage();
+            // Обработка других типов хранилищ или ошибка
+            $data = [];
         }
-        $model = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
-        $data = $model->loadData();
         
         // $model = new Product();
         // DOES THE KEY EXIST AT ALL?

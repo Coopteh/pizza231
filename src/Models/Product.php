@@ -4,6 +4,7 @@ use App\Config\Config;
 use App\Services\ILoadStorage;
 use App\Services\ISaveStorage;
 // use App\Services\IStorage;
+use App\Services\OrderStorage;
 
 class Product {
 
@@ -13,13 +14,13 @@ class Product {
     private string $nameResourceLoad;
     private string $nameResourceSave;
 
-     public function __construct(ILoadStorage $lservice, IStorage $service, string $nameLoad, string $nameSave)
+     public function __construct(ILoadStorage $lservice, string $nameLoad)
     {
         $this->loadStorage = $lservice;
         // $this->saveStorage = $sservice;
         // $this->dataStorage = $service;
         $this->nameResourceLoad = $nameLoad;
-        $this->nameResourceSave = $nameSave;
+        // $this->nameResourceSave = $nameSave;
     }
 
     public function loadData(): ?array {
@@ -38,7 +39,7 @@ class Product {
 	$basketProducts= [];
 
         foreach ($products as $product) {
-            $id = $product['id'];
+            $id = $product['id_product'];
 
             if (array_key_exists($id, $_SESSION['basket'])) {
 		// количество товара берем то что указано в корзине
@@ -64,8 +65,8 @@ class Product {
 	return $basketProducts;
         }
         public function saveData($arr) {
-        
-        return $this->saveStorage->saveData( $this->nameResourceSave, $arr ); 
+         if ($this->loadStorage instanceof ISaveStorage) {
+        return $this->loadStorage->saveData($this->nameResourceLoad, $arr);}
         // $nameFile= Config::FILE_ORDERS;
 
         // $handle = fopen($nameFile, "r");

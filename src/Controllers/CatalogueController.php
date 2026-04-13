@@ -16,17 +16,21 @@ class CatalogueController
         if (Config::STORAGE_TYPE == Config::TYPE_DB) {
             $serviceStorage = new ProductDBStorage();
             $model = new Product($serviceStorage, Config::TABLE_PRODUCTS);
+            $data = $model->loadData();
+        } else {
+            // Обработка других типов хранилищ или ошибка
+            $data = [];
         }
-        
+       
         // if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
         //     $serviceStorage = new FileStorage();
         // } else {
         //     $serviceStorage = new DatabaseStorage();
         // }
         // $model = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
-        $data = $model->loadData();
+        //$data = $model->loadData();
         // $model = new Product();
-        $data = $model->loadData();
+        //$data = $model->loadData();
 
         return CatalogueTemplate::getCatalogue($data);
     }

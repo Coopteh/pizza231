@@ -11,7 +11,7 @@ class CatalogueTemplate extends BaseTemplate {
                         ';
             foreach($arr as $key=> $item) {
                 // DATA EXTRACTION
-                $id = $item['id']-1;
+                $id = $item['id_product'];
                 $image = $item['image'] ?? '';
                 $fallbackImage = '/assets/img/keep_out.png';
                 $fallbackImageJs = json_encode($fallbackImage, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
@@ -53,7 +53,7 @@ class CatalogueTemplate extends BaseTemplate {
                                                 
                                                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                                                     <form class="mt-4" action="/basket" method="POST">
-                                                        <input type="hidden" name="id" value="{$item['id']}">
+                                                        <input type="hidden" name="id" value="{$item['id_product']}">
                                                         <input type="hidden" name="name" value="{$item['name']}">
                                                         <button type="submit" class="btn btn-primary">Добавить в корзину</button>
                                                     </form> 

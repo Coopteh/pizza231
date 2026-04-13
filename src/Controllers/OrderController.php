@@ -8,62 +8,155 @@ use PHPMailer\PHPMailer\Exception;
 use App\Services\DatabaseStorage;
 use App\Services\FileStorage;
 use App\Config\Config;
+use App\Services\OrderStorage;
+use App\Services\ProductStorage;
+use PDO;
 
 class OrderController extends BaseTemplate {
+    
     public function get(): string 
     {
         if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
             $serviceStorage = new FileStorage();
+            $tableName = Config::FILE_DATA;  // путь к файлу
         } else {
             $serviceStorage = new DatabaseStorage();
+            $tableName = Config::TABLE_PRODUCTS;  // имя таблицы
         }
-        $product = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
-
-        // получаем массив с характеристиками товаров из корзины
+        
+        // Конструктор Product принимает 2 параметра: сервис + имя ресурса
+        $product = new Product($serviceStorage, $tableName);
+        
         $data = $product->getBasketData();
         return OrderTemplate::getOrderTemplate($data);
-        // $product = new Product();
-        // // получаем массив с характеристиками товаров из корзины
+        // // Загрузка товаров из БД или файла
+        // if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+        //     $loadService = new \App\Services\FileStorage();
+        // } else {
+        //     $loadService = new OrderStorage($this->getPDO()); // ваша функция получения PDO
+        // }
+        
+        // // Конструктор теперь принимает 2 параметра!
+        // $product = new Product($loadService, Config::TABLE_PRODUCTS);
+        
         // $data = $product->getBasketData();
         // return OrderTemplate::getOrderTemplate($data);
     }
 
     public function create() {
-        
         if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
             $serviceStorage = new FileStorage();
+            $tableName = Config::FILE_DATA;
         } else {
             $serviceStorage = new DatabaseStorage();
+            $tableName = Config::TABLE_PRODUCTS;
         }
-        $model = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
+        
+        $model = new Product($serviceStorage, $tableName);
 
-        // список заказанных продуктов - берем список товаров из корзины
         $products = $model->getBasketData();
-        // подготовка массив c данными заказа
-        $arr = $model->prepareData( $_POST, $products );
-        // сохранение заказа
-        $model->saveData($arr);
+        $arr = $model->prepareData($_POST, $products);
+        
+        // ✅ Сохранение заказа
+        $model->saveData($arr);  // Если saveData использует имя ресурса из конструктора
     
-        // $model = new Product();
-        // // список заказанных продуктов - берем список товаров из корзины
-        // $products = $model->getBasketData();
-        // // подготовка массив c данными заказа
-        // $arr = $model->prepareData( $_POST, $products );
-        // // сохранение заказа
-        // $model->saveData($arr);
-
-        // отправка емайл
         if ($this->sendMail($arr['email'], $arr)) {
-            // очистка корзины
             $_SESSION['basket'] = [];
-            // вывод сообщения
             $_SESSION['flash'] = "Спасибо! Ваш заказ успешно создан и передан службе доставки";
             header("Location: /");
+            exit;
         } else {
+            $_SESSION['flash'] = "Ошибка отправки письма";
             header("Location: /order");
+            exit;
         }
-	    return '';
     }
+        // //  Сервис для загрузки (товары)
+        // if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+        //     $loadService = new \App\Services\FileStorage();
+        // } else {
+        //     $loadService = new ProductStorage($this->getPDO());
+        // }
+        
+        // $model = new Product($loadService, Config::TABLE_PRODUCTS);
+
+        // $products = $model->getBasketData();
+        // $arr = $model->prepareData($_POST, $products);
+        
+        // // Сохранение заказа через отдельный сервис
+        // if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+        //     $saveService = new \App\Services\FileStorage();
+        // } else {
+        //     $saveService = new OrderStorage($this->getPDO());
+        // }
+        // $saveService->saveData(Config::TABLE_ORDERS, $arr);    
+    
+    // Вспомогательный метод для получения PDO
+    // private function getPDO(): \PDO {
+    //     static $pdo = null;
+    //     if ($pdo === null) {
+    //         $this->connection = new PDO(
+    //         Config::MYSQL_DNS,
+    //         Config::MYSQL_USER,
+    //         Config::MYSQL_PASSWORD
+    //     );
+        
+    //     }
+    //     return $pdo;
+    
+    // public function get(): string 
+    // {
+    //     if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+    //         $serviceStorage = new FileStorage();
+    //     } else {
+    //         $serviceStorage = new DatabaseStorage();
+    //     }
+    //     $product = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
+
+    //     // получаем массив с характеристиками товаров из корзины
+    //     $data = $product->getBasketData();
+    //     return OrderTemplate::getOrderTemplate($data);
+    //     // $product = new Product();
+    //     // // получаем массив с характеристиками товаров из корзины
+    //     // $data = $product->getBasketData();
+    //     // return OrderTemplate::getOrderTemplate($data);
+    // }
+
+    // public function create() {
+        
+    //     if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
+    //         $serviceStorage = new FileStorage();
+    //     } else {
+    //         $serviceStorage = new DatabaseStorage();
+    //     }
+    //     $model = new Product($serviceStorage, Config::FILE_DATA, Config::FILE_ORDERS);
+
+    //     // список заказанных продуктов - берем список товаров из корзины
+    //     $products = $model->getBasketData();
+    //     // подготовка массив c данными заказа
+    //     $arr = $model->prepareData( $_POST, $products );
+    //     // сохранение заказа
+    //     $model->saveData($arr);
+    
+    //     // $model = new Product();
+    //     // // список заказанных продуктов - берем список товаров из корзины
+    //     // $products = $model->getBasketData();
+    //     // // подготовка массив c данными заказа
+    //     // $arr = $model->prepareData( $_POST, $products );
+    //     // // сохранение заказа
+    //     // $model->saveData($arr);
+
+        // отправка емайл
+        // if ($this->sendMail($arr['email'], $arr)) {
+        //     // очистка корзины
+        //     $_SESSION['basket'] = [];
+        //     // вывод сообщения
+        //     $_SESSION['flash'] = "Спасибо! Ваш заказ успешно создан и передан службе доставки";
+        //     header("Location: /");
+        // } else {
+        //     header("Location: /order");
+        // }
+	    // return '';
 
     public function sendMail($email, $data) {
         $mail = new PHPMailer();
@@ -88,7 +181,7 @@ class OrderController extends BaseTemplate {
             try {
                 $mail->SMTPDebug = 2;
                 $mail->CharSet = 'UTF-8';
-                $mail->SetFrom("coopteh231@mail.ru","PIZZA-221");
+                $mail->SetFrom("coopteh231@mail.ru","MAGAZIN-231");
                 $mail->addAddress($email);
                 $mail->isHTML(true);
                 $mail->isSMTP();                                            //Send using SMTP

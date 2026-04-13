@@ -4,15 +4,17 @@ namespace App\Controllers;
 use App\Views\ProductTemplate;
 use App\Models\Product;
 use App\Config\Config;
-
+use App\Services\ProductDBStorage;
+use App\Services\DatabaseStorage;
 
 class ProductController
 {
     public function get($id): string 
     {
         // MODEL CREATION
-        if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
-            $serviceStorage = new FileStorage();
+        if (Config::STORAGE_TYPE == Config::TYPE_DB) {
+            $serviceStorage = new ProductDBStorage();
+            $model = new Product($serviceStorage, Config::TABLE_PRODUCTS);
         } else {
             $serviceStorage = new DatabaseStorage();
         }

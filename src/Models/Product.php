@@ -3,17 +3,21 @@ namespace App\Models;
 use App\Config\Config;
 use App\Services\ILoadStorage;
 use App\Services\ISaveStorage;
-use App\Services\IStorage;
+// use App\Services\IStorage;
 
 class Product {
 
-    private IStorage $dataStorage;
+    private ISaveStorage $saveStorage;
+    private ILoadStorage $loadStorage;
+    // private IStorage $dataStorage;
     private string $nameResourceLoad;
     private string $nameResourceSave;
 
-     public function __construct(IStorage $service, string $nameLoad, string $nameSave)
+     public function __construct(ILoadStorage $lservice, IStorage $service, string $nameLoad, string $nameSave)
     {
-        $this->dataStorage = $service;
+        $this->loadStorage = $lservice;
+        // $this->saveStorage = $sservice;
+        // $this->dataStorage = $service;
         $this->nameResourceLoad = $nameLoad;
         $this->nameResourceSave = $nameSave;
     }
@@ -24,7 +28,7 @@ class Product {
         // $data = json_decode($file, true);
 
         // return $data;
-        return $this->dataStorage->loadData( $this->nameResourceLoad ); 
+        return $this->loadStorage->loadData( $this->nameResourceLoad ); 
     }
     public function getBasketData(): array {
         if (!isset($_SESSION['basket'])) {
@@ -61,7 +65,7 @@ class Product {
         }
         public function saveData($arr) {
         
-        return $this->dataStorage->saveData( $this->nameResourceSave, $arr ); 
+        return $this->saveStorage->saveData( $this->nameResourceSave, $arr ); 
         // $nameFile= Config::FILE_ORDERS;
 
         // $handle = fopen($nameFile, "r");

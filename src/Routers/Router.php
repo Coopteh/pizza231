@@ -8,6 +8,7 @@ use App\Controllers\ProductController;
 use App\Controllers\CatalogueController;
 use App\Controllers\BasketController;
 use App\Controllers\OrderController;
+use App\Controllers\RegisterController;
 
 class Router {
     private $id;
@@ -33,6 +34,15 @@ class Router {
             'basket_clear' => ['controller' => BasketController::class,
                         'method' => 'clear',                         
                         'redirect' => true],
+            'register' => [
+                'controller' => RegisterController::class, 
+                'method' => 'get'
+            ],
+            'verify' => [
+                'controller' => RegisterController::class, 
+                'method' => 'verify',
+                'params' => ['token' => $this->id]
+            ]           
         ];
     }
 

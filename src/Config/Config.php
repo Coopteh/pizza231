@@ -10,7 +10,9 @@ class Config {
     const MYSQL_DNS = 'mysql:dbname=is231;host=localhost';
     const MYSQL_USER = 'root';
     const MYSQL_PASSWORD = '';
-
+    const SITE_URL = '/localhost';
+    
+    const TABLE_USERS="users";
     const TABLE_PRODUCTS="products";
     const TABLE_ORDERS="orders";
 }

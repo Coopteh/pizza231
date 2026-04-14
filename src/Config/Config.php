@@ -17,4 +17,7 @@ class Config {
 
     const TABLE_PRODUCTS="products";
     const TABLE_ORDERS="orders";
+    const TABLE_USERS="users";
+
+    const SITE_URL = "https://localhost";
 }

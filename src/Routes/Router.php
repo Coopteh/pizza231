@@ -6,9 +6,10 @@ use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\BasketController;
 use App\Controllers\OrderController;
+use App\Controllers\RegisterController;
 
 class Router {
-    private int $id = 0;
+    private $id;
 
     private function getRoutes(): array {
         return [
@@ -29,6 +30,15 @@ class Router {
             'basket_clear' => ['controller' => BasketController::class,
                         'method' => 'clear',                         
                         'redirect' => true],
+            'register' => [
+                'controller' => RegisterController::class, 
+                'method' => 'get'
+            ],
+            'verify' => [
+                'controller' => RegisterController::class, 
+                'method' => 'verify',
+                'params' => ['token' => $this->id]
+            ]
         ];
     }
 
@@ -53,7 +63,7 @@ class Router {
         $path = parse_url($url, PHP_URL_PATH);
         $pieces = explode("/", $path);
         $resource = $pieces[1];
-        $this->id = (isset($pieces[2])) ? intval($pieces[2]) : 0;
+        $this->id = (isset($pieces[2])) ? $pieces[2] : 0;
         $method = $_SERVER['REQUEST_METHOD'];
 
         $routes = $this->getRoutes();

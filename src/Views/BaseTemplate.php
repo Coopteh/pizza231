@@ -3,6 +3,7 @@ namespace App\Views;
 
 class BaseTemplate {
     public static function getTemplate(): string {
+    
         $html = <<<LINE
         <!DOCTYPE html>
         <html lang="en">
@@ -33,7 +34,10 @@ class BaseTemplate {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/order">Заказ</a>
-                        </li>                        
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/register">Регистрация</a>
+                        </li>
                     </ul>
                     </div>
                 </div>

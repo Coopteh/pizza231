@@ -52,5 +52,25 @@ class UserDBStorage extends DBStorage implements ISaveStorage
         }
         return false;
     }
+     public function loginUser($username, $password) {   
+        // Поиск пользователя
+        $stmt = $this->connection->prepare(
+            "SELECT * FROM users WHERE username = ? OR email = ?"
+        );
+        $stmt->execute([$username, $username]);
+        $user = $stmt->fetch();
+
+        // проверка пароля
+        if ($user === false) 
+            return false;
+        if (!password_verify($password, $user['password']))
+            return false;
+        
+        // Установка переменных сессии
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        
+        return true;
+    }
 
 }

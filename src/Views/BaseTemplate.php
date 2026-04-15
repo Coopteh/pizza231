@@ -5,6 +5,7 @@ namespace App\Views;
 class BaseTemplate {
     public static function getTemplate(string $content): string
     {
+        global $user_id, $username;
         // Шаблон с двумя вставками %s: первая для title, вторая для контента
         $html = <<<HTML
         <!DOCTYPE html>
@@ -54,9 +55,9 @@ class BaseTemplate {
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/about">О нас</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="/register">Регистрация</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -64,6 +65,32 @@ class BaseTemplate {
             </header>
         HTML;
         
+        if ($user_id == 0) {
+                $html .= <<<LINE
+                                <li class="nav-item">
+                                <a class="nav-link active" href="/register">Регистрация</a>
+                                </li>
+                LINE;
+        }
+                $html .= <<<LINE
+                            </ul>
+                        </div>
+                    </div>
+                LINE;
+
+        if ($user_id > 0) {
+                $html .= <<<LINE
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown-item">{$username}</li>
+                            <li class="nav-item dropdown-item">&nbsp;|&nbsp;</li>
+                            <li><a class="nav-item dropdown-item" href="/logout">Выход</a></li>
+                        </ul>
+                LINE;
+        } else {
+            $html .= <<<LINE
+                <a class="nav-link p-3" href="/login">Вход</a>
+            LINE;    
+        }
         if (isset($_SESSION['flash'])) {
             $html .= <<<END
                 <div id="liveAlertBtn" class="alert alert-info alert-dismissible" role="alert">

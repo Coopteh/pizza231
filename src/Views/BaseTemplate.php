@@ -3,7 +3,8 @@ namespace App\Views;
 
 class BaseTemplate {
     public static function getTemplate(): string {
-    
+    global $user_id, $username;
+
         $html = <<<LINE
         <!DOCTYPE html>
         <html lang="en">
@@ -35,16 +36,35 @@ class BaseTemplate {
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/order">Заказ</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/register">Регистрация</a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-                </nav>
-            </header>           
         LINE;
-        
+        if ($user_id == 0) {
+                $html .= <<<LINE
+                                <li class="nav-item">
+                                <a class="nav-link active" href="/register">Регистрация</a>
+                                </li>
+                LINE;
+        }
+                $html .= <<<LINE
+                            </ul>
+                        </div>
+                    </div>
+                LINE;
+
+        if ($user_id > 0) {
+                $html .= <<<LINE
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown-item">{$username}</li>
+                            <li class="nav-item dropdown-item">&nbsp;|&nbsp;</li>
+                            <li><a class="nav-item dropdown-item" href="/logout">Выход</a></li>
+                        </ul>
+                LINE;
+        } else {
+            $html .= <<<LINE
+                <a class="nav-link p-3" href="/login">Вход</a>
+            LINE;    
+        }
+        $html .= "</nav></header>";
+   
         // Добавим flash сообщение
         if (isset($_SESSION['flash'])) {
             $html .= <<<FLASH

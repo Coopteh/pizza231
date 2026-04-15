@@ -7,6 +7,7 @@ use App\Controllers\ProductController;
 use App\Controllers\BasketController;
 use App\Controllers\OrderController;
 use App\Controllers\RegisterController;
+use App\Controllers\UserController;
 
 class Router {
     private $id;
@@ -38,7 +39,15 @@ class Router {
                 'controller' => RegisterController::class, 
                 'method' => 'verify',
                 'params' => ['token' => $this->id]
-            ]
+            ],
+            'login' => [
+                'controller' => UserController::class, 
+                'method' => 'get'
+            ],
+            'logout' => [
+                'controller' => UserController::class,
+                'method' => 'logout'
+            ],                           
         ];
     }
 

@@ -1,15 +1,16 @@
 <?php
 namespace Test;
 
+use App\Models\Order;
 use App\Models\Product;
 use PHPUnit\Framework\TestCase;
 
-class ProductTest extends TestCase
+class OrderTest extends TestCase
 {
     public function testPrepareData()
     {
         $storage = new MockStorage();
-        $model = new Product($storage, "", "");
+        $model = new Order($storage, "");
 
         $form_data['fio'] = "";
         $form_data['address'] = "";

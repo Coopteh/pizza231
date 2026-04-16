@@ -35,6 +35,7 @@ class RegisterController {
             header("Location: /register");
             return;
         }
+
         $hashed_password = password_hash($data['password'], PASSWORD_DEFAULT);
         $verification_token = bin2hex(random_bytes(32));
 

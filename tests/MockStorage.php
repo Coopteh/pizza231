@@ -1,16 +1,12 @@
 <?php
 namespace Test;
 
-use App\Services\IStorage;
+use App\Services\ISaveStorage;
 
-class MockStorage implements IStorage 
+class MockStorage implements ISaveStorage
 {
-    public function loadData(string $name): ?array
-    {
-        return [];
-    }
-    public function saveData(string $name, array $data): bool
+    public function saveData(string $name, array $arr): bool
     {
         return true;
-    }   
+    }
 }

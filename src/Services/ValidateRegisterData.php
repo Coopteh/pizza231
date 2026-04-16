@@ -4,10 +4,15 @@ namespace App\Services;
 use App\Config\Config;
 use App\Services\UserDBStorage;
 
-class ValidateRegisterData {
+class ValidateRegisterData extends ValidateBase {  
 
-    public static function validate(array $data): bool 
+    public static function validate(array &$data): bool 
     {
+        // санитизация значений
+        self::sanitationArray($data);
+// не проходит  <p>"Ivan"<br></p>
+
+        // проверки значений
         if (empty($data['username'])) {
             $_SESSION['flash']= "Имя пользователя обязательно";
             return false;
@@ -41,7 +46,7 @@ class ValidateRegisterData {
                 return false;
             }
         }
-
+        
         return true;
     }
 }

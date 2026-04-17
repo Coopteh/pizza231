@@ -98,7 +98,7 @@ class Product {
             $arr['products'] = $basket_data;
 
             if (ValidateRegisterData::validate($arr) == false) {
-            header("Location: /register");
+            header("Location: /order");
             return;
             }
             $all_sum = 0;

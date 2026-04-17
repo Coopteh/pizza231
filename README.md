@@ -2,7 +2,7 @@
 
 Работа с git
 ```
-запустите Git Bash 
+запустите Git Bash
 перейдите в каталог c:/xampp/htdocs
 > cd c:/xampp/htdocs
 Удалите все файлы и папки в htdocs

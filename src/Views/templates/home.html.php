@@ -33,12 +33,6 @@ $image = $texts['image'] ?? [];
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="col-md-6">
-            <img src="/assets/img/123.jpg" 
-                 alt="<?= htmlspecialchars($image['alt'] ?? 'Запчасти') ?>" 
-                 class="img-fluid rounded shadow-lg"
-                 onerror="this.src='/assets/img/error.jpg';">
-        </div>
     </div>
     
     <?php if ($showCatalog): ?>

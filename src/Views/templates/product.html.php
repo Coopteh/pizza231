@@ -66,7 +66,7 @@ $toastText = $texts['toast'] ?? [];
                             <!-- Цена и статус -->
                             <div class="mt-auto">
                                 <div class="d-flex align-items-center mb-4">
-                                    <span class="display-5 fw-bold me-3"><?= $priceFormatted ?> ₽</span>
+                                    <span class="display-5 fw-bold me-3">От: <?= $priceFormatted ?> ₽</span>
                                     <span class="badge bg-success px-3 py-2 rounded-pill"><?= htmlspecialchars($productText['inStock'] ?? 'В наличии') ?></span>
                                 </div>
                                 

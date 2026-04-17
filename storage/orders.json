@@ -1,0 +1,48 @@
+[
+    {
+        "id": "order_69dc6c98e2a21",
+        "created_at": "2026-04-13 06:10:00",
+        "fio": "goida",
+        "email": "goida@mail.com",
+        "phone": "+7 999 999 99 99",
+        "address": "улица пушкина дом калатушкина",
+        "payment": "card",
+        "items": [
+            {
+                "id": 3,
+                "name": "Мясная",
+                "price": 449,
+                "image": "\/..\/..\/assets\/img\/pizza003.png",
+                "quantity": 1,
+                "added_at": 1776053361
+            },
+            {
+                "id": 2,
+                "name": "Говядина с хреном",
+                "price": 339,
+                "image": "\/..\/..\/assets\/img\/pizza002.png",
+                "quantity": 1,
+                "added_at": 1776053361
+            },
+            {
+                "id": 4,
+                "name": "Пепперони фреш",
+                "price": 259,
+                "image": "\/..\/..\/assets\/img\/pizza004.png",
+                "quantity": 1,
+                "added_at": 1776053363
+            },
+            {
+                "id": 5,
+                "name": "Мясной микс",
+                "price": 549,
+                "image": "\/..\/..\/assets\/img\/pizza005.png",
+                "quantity": 1,
+                "added_at": 1776053363
+            }
+        ],
+        "total": 1596,
+        "status": "new",
+        "user_id": 16
+    }
+]

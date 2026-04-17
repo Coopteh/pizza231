@@ -5,3 +5,4 @@ storage/logs/*
 !storage/logs/.gitkeep
 storage/orders_backup_*.json
 crud
+promt.txt

@@ -56,12 +56,7 @@ $modalText = $texts['modal'] ?? [];
     <button class="toast-close" id="closeFullscreenToast" aria-label="Закрыть">
         <i class="bi bi-x-lg"></i>
     </button>
-    
-    <video class="toast-video" id="toastVideo" autoplay muted playsinline loop>
-        <source src="/assets/img/cart_video.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-    </video>
-    
+
     <div class="toast-message" id="fullscreenToastMessage">
         <?= htmlspecialchars($toastText['addedWithEmoji'] ?? '🎉 Товар добавлен в корзину!') ?>
     </div>

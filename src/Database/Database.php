@@ -40,7 +40,7 @@ class Database
             '%s:host=%s;port=%d;dbname=%s;charset=%s',
             $config['driver'] ?? 'mysql',
             $config['host'] ?? 'localhost',
-            $config['port'] ?? 3306,
+            $config['port'] ?? 3307,
             $config['database'] ?? '',
             $config['charset'] ?? 'utf8mb4'
         );

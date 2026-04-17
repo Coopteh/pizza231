@@ -110,7 +110,7 @@ class CatalogTemplate extends BaseTemplate
                         <h5 class="card-title fw-bold">' . $name . '</h5>
                         <p class="card-text text-muted small flex-grow-1">' . $shortDesc . '</p>
                         <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                            <span class="h5 mb-0">' . $price . ' ₽</span>
+                            <span class="h5 mb-0">От:' . $price . ' ₽</span>
                             <div class="btn-group">
                                 <!-- Кнопка добавления в корзину -->
                                 <button type="button" 

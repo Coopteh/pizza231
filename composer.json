@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "kkt/pizza231",
     "description": "Пиццерия на PHP с использованием MVC",
     "type": "project",
@@ -13,4 +14,56 @@
     "scripts": {
         "start": "php -S localhost:8000"
     }
+=======
+    "name": "coopteh/insurance221",
+    "description": "Сайт страховой компании - курсовая работа",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+
+        
+    },
+    
+    "scripts": {
+        
+        "test:unit": "phpunit --testsuite Unit",
+        "test:coverage": "phpunit --coverage-html ./coverage",
+        "test": "phpunit --testdox",
+        "test:verbose": "phpunit --testdox --display-all-issues",
+        "test:debug": "phpunit --debug",
+        "test:coverage": "phpunit --coverage-html ./coverage"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "phpstan/phpstan": "^2.1"
+    },
+
+
+
+
+
+
+
+
+    "autoload-dev": {
+            "psr-4": {
+                "Test\\": "tests/"
+            }
+        },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "Controllers/",
+            "Views\\": "Views/",
+            "Lib\\": "Lib/",
+            "Models\\": "Models/"
+        }        
+    },
+    "authors": [
+        {
+            "name": "Student",
+            "email": "student@kuzbasskt.ru"
+        }
+    ]
+>>>>>>> 66a47bb (upd)
 }

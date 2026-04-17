@@ -5,6 +5,7 @@ use App\Services\ILoadStorage;
 use App\Services\ISaveStorage;
 // use App\Services\IStorage;
 use App\Services\OrderStorage;
+use App\Services\ValidateRegisterData;
 
 class Product {
 
@@ -95,6 +96,11 @@ class Product {
             $arr['created_at'] = date("d-m-Y H:i:s");   
 
             $arr['products'] = $basket_data;
+
+            if (ValidateRegisterData::validate($arr) == false) {
+            header("Location: /register");
+            return;
+            }
             $all_sum = 0;
             foreach($basket_data as $product){
                 $all_sum += $product['price'] * $product['quantity'];

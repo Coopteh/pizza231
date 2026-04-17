@@ -1,0 +1,116 @@
+[
+    {
+        "order_id": "ORD_69ca2c9770d1b",
+        "user_id": 1,
+        "user_email": "ivasenkoignat22@gmail.com",
+        "fio": "123123",
+        "phone": "+79059000687",
+        "delivery_type": "email",
+        "email": "ivasenkoignat22@gmail.com",
+        "address": "",
+        "products": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Автострахование",
+                    "description": "ОСАГО и КАСКО с онлайн-оформлением.",
+                    "price": 3000,
+                    "period": "год",
+                    "image": "\/assets\/images\/auto.jpg",
+                    "coverage": "до 10 млн ₽",
+                    "features": [
+                        "Оформление за 15 мин\r",
+                        "Выплаты за 3 дня\r",
+                        "Помощь 24\/7"
+                    ]
+                },
+                "quantity": 1,
+                "subtotal": 3000
+            }
+        ],
+        "total": 3000,
+        "created_at": "30.03.2026 09:56:07"
+    },
+    {
+        "order_id": "ORD_69ca35121859d",
+        "user_id": 1,
+        "user_email": "ivasenkoignat22@gmail.com",
+        "fio": "123а12а3",
+        "phone": "123а12а3",
+        "delivery_type": "courier",
+        "email": "",
+        "address": "132а123",
+        "products": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Автострахование",
+                    "description": "ОСАГО и КАСКО с онлайн-оформлением.",
+                    "price": 3000,
+                    "period": "год",
+                    "image": "\/assets\/images\/auto.jpg",
+                    "coverage": "до 10 млн ₽",
+                    "features": [
+                        "Оформление за 15 мин\r",
+                        "Выплаты за 3 дня\r",
+                        "Помощь 24\/7"
+                    ]
+                },
+                "quantity": 1,
+                "subtotal": 3000
+            },
+            {
+                "product": {
+                    "id": 2,
+                    "name": "Имущество",
+                    "description": "Защита недвижимости от пожара и затопления.",
+                    "price": 1200,
+                    "period": "год",
+                    "image": "\/assets\/images\/property.jpg",
+                    "coverage": "до 10 млн ₽",
+                    "features": [
+                        "От пожара и затопления",
+                        "Защита от кражи",
+                        "Онлайн-оценка"
+                    ]
+                },
+                "quantity": 1,
+                "subtotal": 1200
+            }
+        ],
+        "total": 4200,
+        "created_at": "30.03.2026 10:32:18"
+    },
+    {
+        "order_id": "ORD_69ca38f641e58",
+        "user_id": 1,
+        "user_email": "ivasenkoignat22@gmail.com",
+        "fio": "123а12а3",
+        "phone": "123а12а3",
+        "delivery_type": "courier",
+        "email": "",
+        "address": "132а123",
+        "products": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Автострахование",
+                    "description": "ОСАГО и КАСКО с онлайн-оформлением.",
+                    "price": 3000,
+                    "period": "год",
+                    "image": "\/assets\/images\/auto.jpg",
+                    "coverage": "до 10 млн ₽",
+                    "features": [
+                        "Оформление за 15 мин\r",
+                        "Выплаты за 3 дня\r",
+                        "Помощь 24\/7"
+                    ]
+                },
+                "quantity": 3,
+                "subtotal": 9000
+            }
+        ],
+        "total": 9000,
+        "created_at": "30.03.2026 10:48:54"
+    }
+]

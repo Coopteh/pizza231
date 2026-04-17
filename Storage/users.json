@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Мой GigaChat API",
+        "email": "ivasenkoignat22@gmail.com",
+        "password": "$2y$10$7QT.gs3PEUVxXDsgS1fDuu4Gci55cqfcoHCA7zNOuA.LUDsoW4iUC",
+        "phone": "",
+        "card_last4": "",
+        "created_at": "2026-03-30 09:43:47",
+        "verified": true,
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "name": "zamena masla",
+        "email": "negrvpene1123@gmail.com",
+        "password": "$2y$10$lt7NF7TZisBrHTQ07Rblme4iPcA528xsLmFS53PAM0L893IwtY3Aa",
+        "phone": "",
+        "card_last4": "",
+        "created_at": "2026-03-30 09:57:05",
+        "verified": true,
+        "role": "admin"
+    }
+]

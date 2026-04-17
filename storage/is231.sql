@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Апр 13 2026 г., 06:33
+-- Время создания: Апр 17 2026 г., 10:21
 -- Версия сервера: 10.4.32-MariaDB
 -- Версия PHP: 8.2.12
 
@@ -82,6 +82,29 @@ INSERT INTO `products` (`id_product`, `name`, `description`, `image`, `price`, `
 (6, 'Чайник', 'Чайник', '/assets/img/card3.png', 1, '2026-04-13 07:30:53', '2026-04-13 07:30:53', 0),
 (7, 'Холодильник', 'Холодильник', '/assets/img/card4.png', 1, '2026-04-13 07:30:53', '2026-04-13 07:30:53', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `is_verified` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `token`, `is_verified`, `created_at`) VALUES
+(1, 'goyim', 'heslessscum@gmail.com', '$2y$10$lwMroE6TO28bNjqEqqNKMe9GXIIuqACwCipEoh9qG9DlSkmL5cYaK', '964a5218f1e2c467dc4c24fc060c5a81a792965e64a56b3a728aa9521b202ea8', 0, '2026-04-14 06:40:47');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -107,6 +130,13 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id_product`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`is_verified`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -127,6 +157,12 @@ ALTER TABLE `order_item`
 --
 ALTER TABLE `products`
   MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

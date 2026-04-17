@@ -14,7 +14,7 @@ class Config
     // === Настройки базы данных PDO ===
     const DB_DRIVER = 'mysql';
     const DB_HOST = 'localhost';
-    const DB_PORT = 3307;
+    const DB_PORT = 3306;
     const DB_DATABASE = 'is231';      // Имя БД
     const DB_USERNAME = 'root';            // Имя пользователя
     const DB_PASSWORD = '';                // Пароль

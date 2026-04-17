@@ -19,10 +19,10 @@ class AuthController
         
         // Запуск сессии
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            @session_start();
         }
     }
-    
+        
     /**
      * Страница регистрации
      */
@@ -208,7 +208,7 @@ class AuthController
     public function logout(): void
     {
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            @session_start();
         }
         
         session_destroy();
@@ -247,7 +247,7 @@ class AuthController
      */
     public function apiRegister(): string
     {
-        header('Content-Type: application/json');
+        @header('Content-Type: application/json');
         
         $input = json_decode(file_get_contents('php://input'), true);
         $email = trim($input['email'] ?? '');
@@ -281,7 +281,7 @@ class AuthController
             
             // Сразу входим в аккаунт
             if (session_status() === PHP_SESSION_NONE) {
-                session_start();
+                @session_start();
             }
             
             $_SESSION['user_id'] = $result['id'];
@@ -315,7 +315,7 @@ class AuthController
      */
     public function apiLogin(): string
     {
-        header('Content-Type: application/json');
+        @header('Content-Type: application/json');
         
         $input = json_decode(file_get_contents('php://input'), true);
         $email = trim($input['email'] ?? '');
@@ -333,7 +333,7 @@ class AuthController
             $isVerified = $this->userModel->isVerified($email);
             
             if (session_status() === PHP_SESSION_NONE) {
-                session_start();
+                @session_start();
             }
             
             $_SESSION['user_id'] = $user['id'];
@@ -383,7 +383,7 @@ class AuthController
      */
     public function apiVerify(): string
     {
-        header('Content-Type: application/json');
+        @header('Content-Type: application/json');
         
         $input = json_decode(file_get_contents('php://input'), true);
         $code = trim($input['code'] ?? '');
@@ -427,7 +427,7 @@ class AuthController
      */
     public function apiResend(): string
     {
-        header('Content-Type: application/json');
+        @header('Content-Type: application/json');
         
         $email = $_SESSION['pending_verification_email'] ?? '';
         
@@ -458,10 +458,10 @@ class AuthController
      */
     public function apiLogout(): string
     {
-        header('Content-Type: application/json');
+        @header('Content-Type: application/json');
         
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            @session_start();
         }
         
         session_destroy();
@@ -474,10 +474,10 @@ class AuthController
      */
     public function apiGetCurrent(): string
     {
-        header('Content-Type: application/json');
+        @header('Content-Type: application/json');
         
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            @session_start();
         }
         
         $user = self::getCurrentUser();

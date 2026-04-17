@@ -5,7 +5,7 @@ use App\Services\ILoadStorage;
 use App\Services\ISaveStorage;
 // use App\Services\IStorage;
 use App\Services\OrderStorage;
-use App\Services\ValidateRegisterData;
+use App\Services\OrderValidator;
 
 class Product {
 
@@ -96,11 +96,13 @@ class Product {
             $arr['created_at'] = date("d-m-Y H:i:s");   
 
             $arr['products'] = $basket_data;
-
-            if (ValidateRegisterData::validate($arr) == false) {
-            header("Location: /order");
-            return;
-            }
+            $validator = new OrderValidator;
+            if (!$validator->validate($arr, self::getBasketData())) {
+            return [
+                'success' => false,
+                'errors'  => $validator->getErrors()
+            ];
+        }
             $all_sum = 0;
             foreach($basket_data as $product){
                 $all_sum += $product['price'] * $product['quantity'];

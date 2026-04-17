@@ -12,6 +12,10 @@ class ValidateRegisterData {
             $_SESSION['flash']= "Имя пользователя обязательно";
             return false;
         }
+        if (empty($data['fio'])) {
+            $_SESSION['flash']= "ФИО обязательно";
+            return false;
+        }
         if (empty($data['email']))
         {
             $_SESSION['flash']= "Email обязателен";

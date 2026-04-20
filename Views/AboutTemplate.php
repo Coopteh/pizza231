@@ -11,8 +11,8 @@ class AboutTemplate extends BaseTemplate
         <style>
         .about-hero { background: linear-gradient(135deg, #f0f4ff, #fff); border-radius: 20px; padding: 2.5rem 2rem; margin-bottom: 2.5rem; border: 1px solid #eef2f7; }
         .feature-box { background:rgb(255, 255, 255); border-radius: 12px; padding: 1.5rem; text-align: center; border: 1px solid #eef2f7; height: 100%; }
-        .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; width: 64px; height: 64px; line-height: 64px; border-radius: 50%; margin: 0 auto 1rem; background: #eef2ff; color: #0d6efd; }
-        .contact-card { background: linear-gradient(135deg,rgb(14, 107, 255),rgb(68, 0, 255)); color: #fff; border-radius: 20px; padding: 2rem; text-align: center; margin: 2.5rem 0; }
+        .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; width: 64px; height: 64px; line-height: 64px; border-radius: 50%; margin: 0 auto 1rem; background: #eef2ff; color: #8b5cf6; }
+        .contact-card { background: linear-gradient(135deg, #8b5cf6, #8b5cf6); color: #fff; border-radius: 20px; padding: 2rem; text-align: center; margin: 2.5rem 0; }
         .contact-card a { color: #fff; text-decoration: none; }
         .phone { font-size: 1.75rem; font-weight: 700; display: block; margin: 0.75rem 0; }
         .map-box { border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; }

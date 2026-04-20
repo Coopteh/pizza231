@@ -93,10 +93,10 @@ class VerificationController
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
             <style>
             .verify-card { max-width: 450px; margin: 3rem auto; border: none; border-radius: 20px; box-shadow: 0 20px 60px rgba(13,110,253,0.15); }
-            .verify-header { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); color: #fff; padding: 1.5rem; border-radius: 20px 20px 0 0; text-align: center; }
+            .verify-header { background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%); color: #fff; padding: 1.5rem; border-radius: 20px 20px 0 0; text-align: center; }
             .verify-body { padding: 2rem; }
             .code-input { text-align: center; font-size: 1.5rem; letter-spacing: 0.5rem; }
-            .btn-verify { background: linear-gradient(135deg, #0d6efd, #0dcaf0); border: none; padding: 12px; border-radius: 50px; color: #fff; font-weight: 600; width: 100%; }
+            .btn-verify { background: linear-gradient(135deg, #8b5cf6, #0dcaf0); border: none; padding: 12px; border-radius: 50px; color: #fff; font-weight: 600; width: 100%; }
             </style>
         </head>
         <body>

@@ -27,7 +27,7 @@ class AuthTemplate extends BaseTemplate
                 box-shadow: 0 20px 60px rgba(13, 110, 253, 0.15);
             }
             .auth-header {
-                background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+                background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%);
                 color: #fff;
                 padding: 1.5rem;
                 border-radius: 20px 20px 0 0;
@@ -42,11 +42,11 @@ class AuthTemplate extends BaseTemplate
                 padding: 0.75rem 1rem;
             }
             .form-control:focus {
-                border-color: #0d6efd;
+                border-color: #8b5cf6;
                 box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12);
             }
             .btn-auth {
-                background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+                background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%);
                 border: none;
                 padding: 12px;
                 border-radius: 50px;
@@ -65,7 +65,7 @@ class AuthTemplate extends BaseTemplate
                 color: #64748b;
             }
             .auth-link a {
-                color: #0d6efd;
+                color: #8b5cf6;
                 text-decoration: none;
                 font-weight: 500;
             }
@@ -136,7 +136,7 @@ class AuthTemplate extends BaseTemplate
                 box-shadow: 0 20px 60px rgba(13, 110, 253, 0.15);
             }
             .auth-header {
-                background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+                background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%);
                 color: #fff;
                 padding: 1.5rem;
                 border-radius: 20px 20px 0 0;
@@ -151,11 +151,11 @@ class AuthTemplate extends BaseTemplate
                 padding: 0.75rem 1rem;
             }
             .form-control:focus {
-                border-color: #0d6efd;
+                border-color: #8b5cf6;
                 box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12);
             }
             .btn-auth {
-                background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+                background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%);
                 border: none;
                 padding: 12px;
                 border-radius: 50px;
@@ -174,7 +174,7 @@ class AuthTemplate extends BaseTemplate
                 color: #64748b;
             }
             .auth-link a {
-                color: #0d6efd;
+                color: #8b5cf6;
                 text-decoration: none;
                 font-weight: 500;
             }

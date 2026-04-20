@@ -43,15 +43,15 @@ class ProductTemplate extends BaseTemplate
 
         $content = '
         <style>
-        .product-header { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); border-radius: 20px; padding: 2.5rem 2rem; color: #fff; margin-bottom: 2rem; }
+        .product-header { background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%); border-radius: 20px; padding: 2.5rem 2rem; color: #fff; margin-bottom: 2rem; }
         .product-price { font-size: 2rem; font-weight: 700; margin: 1rem 0; }
         .coverage-badge { background: rgba(255,255,255,0.2); padding: 0.4rem 1.25rem; border-radius: 50px; display: inline-block; font-size: 0.95rem; }
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { color: #475569; padding-left: 1.5rem; position: relative; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #0d6efd; font-weight: bold; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #8b5cf6; font-weight: bold; }
         .back-link { color: #64748b; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
-        .back-link:hover { color: #0d6efd; }
-        .btn-primary-custom { background: linear-gradient(135deg, #0d6efd, #0dcaf0); border: none; padding: 12px 32px; border-radius: 50px; color: #fff; font-weight: 600; text-decoration: none; display: inline-block; }
+        .back-link:hover { color: #8b5cf6; }
+        .btn-primary-custom { background: linear-gradient(135deg, #8b5cf6, #0dcaf0); border: none; padding: 12px 32px; border-radius: 50px; color: #fff; font-weight: 600; text-decoration: none; display: inline-block; }
         .btn-primary-custom:hover { color: #fff; text-decoration: none; opacity: 0.95; }
         </style>
         <section class="container py-5">

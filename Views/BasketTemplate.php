@@ -18,22 +18,22 @@ class BasketTemplate extends BaseTemplate
         .basket-img { object-fit: cover; height: 140px; width: 100%; border-radius: 16px 0 0 16px; }
         @media (max-width: 768px) { .basket-img { border-radius: 16px 16px 0 0; height: 180px; } }
         .qty-control { display: inline-flex; align-items: center; gap: 0.5rem; background: #f8fafc; border-radius: 50px; padding: 0.25rem 0.75rem; }
-        .qty-btn { width: 28px; height: 28px; border: none; background: #0d6efd; color: #fff; border-radius: 50%; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-        .qty-btn:hover { background: #0b5ed7; transform: scale(1.05); }
+        .qty-btn { width: 28px; height: 28px; border: none; background: #8b5cf6; color: #fff; border-radius: 50%; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+        .qty-btn:hover { background: #8b5cf6; transform: scale(1.05); }
         .qty-btn:disabled { background: #cbd5e1; cursor: not-allowed; transform: none; }
         .qty-value { font-weight: 600; min-width: 20px; text-align: center; }
         .price-label { font-size: 0.85rem; color: #64748b; margin-bottom: 0.25rem; }
         .price-value { font-weight: 600; color: #1e293b; }
-        .total-value { font-size: 1.25rem; font-weight: 700; color: #0d6efd; transition: color 0.2s; }
+        .total-value { font-size: 1.25rem; font-weight: 700; color: #8b5cf6; transition: color 0.2s; }
         .total-value.updating { color: #94a3b8; animation: pulse 1s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .basket-summary { background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%); border-radius: 20px; padding: 1.75rem; border: 1px solid #e2e8f0; }
         .summary-row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid #e2e8f0; }
-        .summary-row:last-child { border-bottom: none; padding-top: 1rem; font-size: 1.25rem; font-weight: 700; color: #0d6efd; }
-        .btn-custom { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); border: none; padding: 12px 32px; border-radius: 50px; color: #fff; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s ease; width: 100%; text-align: center; }
+        .summary-row:last-child { border-bottom: none; padding-top: 1rem; font-size: 1.25rem; font-weight: 700; color: #8b5cf6; }
+        .btn-custom { background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%); border: none; padding: 12px 32px; border-radius: 50px; color: #fff; font-weight: 600; text-decoration: none; display: inline-block; transition: all 0.3s ease; width: 100%; text-align: center; }
         .btn-custom:hover { opacity: 0.95; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3); }
-        .btn-outline-custom { border: 2px solid #0d6efd; color: #0d6efd; padding: 10px 24px; border-radius: 50px; font-weight: 600; background: transparent; width: 100%; text-align: center; transition: all 0.3s ease; }
-        .btn-outline-custom:hover { background: #0d6efd; color: #fff; }
+        .btn-outline-custom { border: 2px solid #8b5cf6; color: #8b5cf6; padding: 10px 24px; border-radius: 50px; font-weight: 600; background: transparent; width: 100%; text-align: center; transition: all 0.3s ease; }
+        .btn-outline-custom:hover { background: #8b5cf6; color: #fff; }
         .basket-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
         @media (max-width: 768px) { .basket-actions { flex-direction: column; } }
         .basket-empty { text-align: center; padding: 4rem 2rem; }

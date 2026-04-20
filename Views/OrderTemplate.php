@@ -21,18 +21,18 @@ class OrderTemplate extends BaseTemplate
         <style>
         .order-form { max-width: 600px; margin: 0 auto; background: #fff; padding: 2.5rem; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         .order-form h2 { text-align: center; margin-bottom: 2rem; color: #1e293b; font-weight: 700; }
-        .form-summary { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.5rem; border-radius: 16px; margin-bottom: 2rem; border-left: 4px solid #0d6efd; }
+        .form-summary { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.5rem; border-radius: 16px; margin-bottom: 2rem; border-left: 4px solid #8b5cf6; }
         .form-summary .summary-item { display: flex; justify-content: space-between; margin: 0.5rem 0; font-size: 1rem; }
-        .form-summary .total { font-weight: 700; color: #0d6efd; font-size: 1.25rem; border-top: 2px dashed #0d6efd; padding-top: 1rem; margin-top: 1rem; }
+        .form-summary .total { font-weight: 700; color: #8b5cf6; font-size: 1.25rem; border-top: 2px dashed #8b5cf6; padding-top: 1rem; margin-top: 1rem; }
         .form-control-custom { border-radius: 12px; border: 2px solid #e2e8f0; padding: 0.9rem 1.2rem; transition: all 0.25s ease; width: 100%; box-sizing: border-box; font-size: 1rem; }
-        .form-control-custom:focus { border-color: #0d6efd; box-shadow: 0 0 0 4px rgba(13,110,253,0.12); outline: none; }
-        .btn-submit { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); border: none; padding: 18px; border-radius: 50px; color: #fff; font-weight: 600; width: 100%; font-size: 1.15rem; transition: all 0.3s ease; cursor: pointer; }
+        .form-control-custom:focus { border-color: #8b5cf6; box-shadow: 0 0 0 4px rgba(13,110,253,0.12); outline: none; }
+        .btn-submit { background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%); border: none; padding: 18px; border-radius: 50px; color: #fff; font-weight: 600; width: 100%; font-size: 1.15rem; transition: all 0.3s ease; cursor: pointer; }
         .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(13,110,253,0.35); }
         .btn-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
         .delivery-options { display: flex; gap: 1rem; margin: 1rem 0; }
         .delivery-option { flex: 1; text-align: center; padding: 1.2rem 1rem; border: 2px solid #e2e8f0; border-radius: 16px; cursor: pointer; transition: all 0.25s ease; user-select: none; font-weight: 500; }
-        .delivery-option:hover, .delivery-option.active { border-color: #0d6efd; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); box-shadow: 0 4px 12px rgba(13,110,253,0.1); }
-        .delivery-option input { margin-right: 0.5rem; accent-color: #0d6efd; }
+        .delivery-option:hover, .delivery-option.active { border-color: #8b5cf6; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); box-shadow: 0 4px 12px rgba(13,110,253,0.1); }
+        .delivery-option input { margin-right: 0.5rem; accent-color: #8b5cf6; }
         .form-label { font-weight: 600; color: #334155; margin-bottom: 0.6rem; display: block; font-size: 0.95rem; }
         .field-wrapper { position: relative; overflow: hidden; min-height: 100px; }
         .field-slide { transition: transform 0.35s ease, opacity 0.35s ease; }

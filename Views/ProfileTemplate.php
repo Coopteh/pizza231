@@ -61,20 +61,20 @@ class ProfileTemplate extends BaseTemplate
 
         $content = '
         <style>
-        .profile-header { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); border-radius: 20px; padding: 2rem; color: #fff; margin-bottom: 2rem; }
+        .profile-header { background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%); border-radius: 20px; padding: 2rem; color: #fff; margin-bottom: 2rem; }
         .profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1rem; }
         .profile-name { font-size: 1.5rem; font-weight: 700; margin: 0; }
         .profile-email { opacity: 0.9; margin: 0.25rem 0 0; }
         .profile-nav { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
         .profile-nav a { padding: 0.5rem 1.25rem; border-radius: 50px; text-decoration: none; color: #64748b; font-weight: 500; transition: all 0.2s; border: 1px solid transparent; cursor: pointer; }
-        .profile-nav a:hover, .profile-nav a.active { background: #0d6efd; color: #fff; }
+        .profile-nav a:hover, .profile-nav a.active { background: #8b5cf6; color: #fff; }
         .profile-section { background: #fff; border-radius: 20px; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; display: none; }
         .profile-section.active { display: block; }
         .profile-section h4 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; color: #1e293b; }
         .form-label { font-weight: 500; color: #334155; margin-bottom: 0.5rem; }
         .form-control { border-radius: 12px; border: 1px solid #cbd5e1; padding: 0.75rem 1rem; }
-        .form-control:focus { border-color: #0d6efd; box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12); }
-        .btn-profile { background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); border: none; padding: 10px 24px; border-radius: 50px; color: #fff; font-weight: 600; }
+        .form-control:focus { border-color: #8b5cf6; box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.12); }
+        .btn-profile { background: linear-gradient(135deg, #8b5cf6 0%, #0dcaf0 100%); border: none; padding: 10px 24px; border-radius: 50px; color: #fff; font-weight: 600; }
         .info-row { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #e2e8f0; }
         .info-row:last-child { border-bottom: none; }
         .info-label { color: #64748b; }

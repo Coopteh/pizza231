@@ -72,7 +72,7 @@ class CatalogTemplate extends BaseTemplate
         .toast-custom .toast-body { padding: 8px 16px 16px; font-size: 0.95rem; color: #333; }
         .hover-shadow:hover { box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; transition: box-shadow 0.2s; }
         .transition { transition: all 0.2s ease-in-out; }
-        a.hover-primary:hover { color: #0d6efd !important; }
+        a.hover-primary:hover { color: #8b5cf6 !important; }
         </style>
         <script>
         document.addEventListener("DOMContentLoaded", function() {

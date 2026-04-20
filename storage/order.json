@@ -304,5 +304,107 @@
         ],
         "total": 7000,
         "created_at": "31.03.2026 12:43:17"
+    },
+    {
+        "order_id": "ORD_69df34d760ff7",
+        "user_id": 1,
+        "user_email": "ewantereyoshkin@yandex.ru",
+        "fio": "Терешкин",
+        "phone": "+7 (236) 087-22-8",
+        "delivery_type": "email",
+        "email": "ewanteryoshkin@yandex.ru",
+        "address": "",
+        "products": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Безлимит",
+                    "description": "Полный доступ ко всем зонам клуба: тренажёрный зал, групповые программы, бассейн, сауна.",
+                    "price": 3500,
+                    "period": "мес",
+                    "image": "\/assets\/images\/card-unlimited.jpg",
+                    "coverage": "Все зоны",
+                    "features": [
+                        "Тренажёрный зал 24\/7",
+                        "Групповые программы без ограничений",
+                        "Бассейн и спа-зона",
+                        "Гостевые визиты (2 в месяц)",
+                        "Заморозка карты до 14 дней"
+                    ]
+                },
+                "quantity": 2,
+                "subtotal": 7000
+            }
+        ],
+        "total": 7000,
+        "created_at": "15.04.2026 08:48:55"
+    },
+    {
+        "order_id": "ORD_69df3585e0de9",
+        "user_id": 1,
+        "user_email": "ewantereyoshkin@yandex.ru",
+        "fio": "Терешкин",
+        "phone": "+7 (236) 087-22-8",
+        "delivery_type": "email",
+        "email": "ewanteryoshkin@yandex.ru",
+        "address": "",
+        "products": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Безлимит",
+                    "description": "Полный доступ ко всем зонам клуба: тренажёрный зал, групповые программы, бассейн, сауна.",
+                    "price": 3500,
+                    "period": "мес",
+                    "image": "\/assets\/images\/card-unlimited.jpg",
+                    "coverage": "Все зоны",
+                    "features": [
+                        "Тренажёрный зал 24\/7",
+                        "Групповые программы без ограничений",
+                        "Бассейн и спа-зона",
+                        "Гостевые визиты (2 в месяц)",
+                        "Заморозка карты до 14 дней"
+                    ]
+                },
+                "quantity": 26,
+                "subtotal": 91000
+            }
+        ],
+        "total": 91000,
+        "created_at": "15.04.2026 08:51:49"
+    },
+    {
+        "order_id": "ORD_69df3dbb4d1ac",
+        "user_id": 1,
+        "user_email": "ewantereyoshkin@yandex.ru",
+        "fio": "Терешкин",
+        "phone": "+7 (236) 087-22-8",
+        "delivery_type": "email",
+        "email": "ewanteryoshkin@yandex.ru",
+        "address": "",
+        "products": [
+            {
+                "product": {
+                    "id": 1,
+                    "name": "Безлимит",
+                    "description": "Полный доступ ко всем зонам клуба: тренажёрный зал, групповые программы, бассейн, сауна.",
+                    "price": 3500,
+                    "period": "мес",
+                    "image": "\/assets\/images\/card-unlimited.jpg",
+                    "coverage": "Все зоны",
+                    "features": [
+                        "Тренажёрный зал 24\/7",
+                        "Групповые программы без ограничений",
+                        "Бассейн и спа-зона",
+                        "Гостевые визиты (2 в месяц)",
+                        "Заморозка карты до 14 дней"
+                    ]
+                },
+                "quantity": 1,
+                "subtotal": 3500
+            }
+        ],
+        "total": 3500,
+        "created_at": "15.04.2026 09:26:51"
     }
 ]

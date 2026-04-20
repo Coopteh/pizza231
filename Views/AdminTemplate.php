@@ -297,7 +297,7 @@ class AdminTemplate extends BaseTemplate
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .badge.bg-primary { background: rgba(13,110,253,0.15); color: #0d6efd; border: 1px solid rgba(13,110,253,0.3); }
+        .badge.bg-primary { background: rgba(13,110,253,0.15); color: #8b5cf6; border: 1px solid rgba(13,110,253,0.3); }
         .badge.bg-success { background: rgba(25,135,84,0.15); color: #198754; border: 1px solid rgba(25,135,84,0.3); }
         .badge.bg-warning { background: rgba(255,193,7,0.2); color: #997404; border: 1px solid rgba(255,193,7,0.4); }
         .badge.bg-danger { background: rgba(220,53,69,0.15); color: #dc3545; border: 1px solid rgba(220,53,69,0.3); }

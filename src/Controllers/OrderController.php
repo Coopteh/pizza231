@@ -1,16 +1,19 @@
 <?php
 namespace App\Controllers;
+
 use App\Views\OrderTemplate;
 use App\Models\Order;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use App\Config\Config;
 use App\Services\OrderDBStorage;
+use App\Services\UserDBStorage;
 use App\Services\FileStorage;
 
 class OrderController {
     public function get(): string 
     {
+        global $user_id;
         if (Config::STORAGE_TYPE == Config::TYPE_FILE) {
             $serviceStorage = new FileStorage();
             $model = new Order($serviceStorage, Config::FILE_ORDERS);
@@ -21,7 +24,15 @@ class OrderController {
         }
         // получаем массив с характеристиками товаров из корзины
         $data = $model->getBasketData();
-        return OrderTemplate::getOrderTemplate($data);
+        // получаем массив данных из профиля пользователя
+        $dataProfile= null;
+        if ($user_id) {
+            if (Config::STORAGE_TYPE == Config::TYPE_DB) {
+                $serviceUser = new UserDBStorage();
+                $dataProfile= $serviceUser->getUserData($user_id);
+            }
+        }
+        return OrderTemplate::getOrderTemplate($data, $dataProfile);
     }
 
     public function create() {

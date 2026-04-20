@@ -2,8 +2,9 @@
 namespace App\Views;
 
 class OrderTemplate extends BaseTemplate {
-    public static function getOrderTemplate(array $arr): string {
+    public static function getOrderTemplate(array $arr, array $dataProfile = null): string {
         $template = parent::getTemplate();
+
         $title= 'Оформление заказа';
         $content = '<main class="row">
             <h1 class="mt-3">Оформление заказа</h1>
@@ -75,32 +76,40 @@ class OrderTemplate extends BaseTemplate {
 Телефон покупателя (input) c label "Телефон:"
 Кнопка (submit) "Создать заказ"
         */
-        $content .= self::formOrder();
+        $content .= self::formOrder($dataProfile);
 
         $resultTemplate = sprintf($template, $title, $content);
         return $resultTemplate;
     }
 
-    public static function formOrder(){
+    public static function formOrder($dataProfile = null){
+        $fio = (isset($dataProfile) && isset($dataProfile['fio'])) ? $dataProfile['fio'] : '';
+        $address = (isset($dataProfile) && isset($dataProfile['address'])) ? $dataProfile['address'] : '';
+        $phone = (isset($dataProfile) && isset($dataProfile['phone'])) ? $dataProfile['phone'] : '';
+        $email = (isset($dataProfile) && isset($dataProfile['email'])) ? $dataProfile['email'] : '';
+
         $form = <<<ORDERFORM
         <h3 class="mt-5">Параметры для доставки</h3>
         <div class="col-8">
             <form action="/order" method="POST">
                 <div class="mb-3">
                     <label for="fioId" class="form-label">Ваше ФИО:</label>
-                    <input type="text" name="fio" class="form-control" id="fioId" placeholder="Иван Иванов">
+                    <input type="text" name="fio" class="form-control" id="fioId" placeholder="Иван Иванов" value="{$fio}">
                 </div>
                 <div class="mb-3">
                     <label for="addressId" class="form-label">Адрес доставки:</label>
-                    <input type="textarea" name="address" class="form-control" id="addressId" placeholder="Кемерово, пр.Ленина, д.7, кв.5">
+                    <input type="textarea" name="address" class="form-control" id="addressId"
+                     placeholder="Кемерово, пр.Ленина, д.7, кв.5" value="{$address}">
                 </div>
                 <div class="mb-3">
                     <label for="phoneId" class="form-label">Телефон:</label>
-                    <input type="textarea" name="phone" class="form-control" id="phoneId" placeholder="89990000123">
+                    <input type="textarea" name="phone" class="form-control" id="phoneId"
+                     placeholder="89990000123" value="{$phone}">
                 </div> 
                 <div class="mb-3">
                     <label for="emailId" class="form-label">Емайл:</label>
-                    <input type="email" name="email" class="form-control" id="emailId" placeholder="ivan@mail.ru">
+                    <input type="email" name="email" class="form-control" id="emailId"
+                     placeholder="ivan@mail.ru" value="{$email}">
                 </div>
                 <div class="mb-3 float-sm-right">
                     <button type="submit" class="btn btn-primary">Создать заказ</button>

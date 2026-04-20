@@ -52,12 +52,22 @@ class BaseTemplate {
 
         if ($user_id > 0) {
                 $html .= <<<LINE
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown-item">{$username}</li>
-                            <li class="nav-item dropdown-item">&nbsp;|&nbsp;</li>
-                            <li><a class="nav-item dropdown-item" href="/logout">Выход</a></li>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {$username}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/profile">Профиль</a></li>
+                            <li><a class="dropdown-item" href="/history">История заказов</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/logout">Выход</a></li>
                         </ul>
-                LINE;
+                    </li>
+                </ul>
+                LINE;                
         } else {
             $html .= <<<LINE
                 <a class="nav-link p-3" href="/login">Вход</a>

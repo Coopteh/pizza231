@@ -47,7 +47,15 @@ class Router {
             'logout' => [
                 'controller' => UserController::class,
                 'method' => 'logout'
-            ],                           
+            ],
+            'profile' => [
+                'controller' => UserController::class,
+                'method' => 'profile'
+            ],
+            'history' => [
+                'controller' => UserController::class,
+                'method' => 'history'
+            ],
         ];
     }
 

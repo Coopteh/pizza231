@@ -41,7 +41,7 @@ class Order
         $basketProducts= [];
 
         foreach ($products as $product) {
-            $id = $product['id'];
+            $id = $product['id_product'];
 
             if (array_key_exists($id, $_SESSION['basket'])) {
                 // количество товара берем то что указано в корзине

@@ -42,8 +42,23 @@ class Router {
                 'controller' => RegisterController::class, 
                 'method' => 'verify',
                 'params' => ['token' => $this->id]
-            ]
-
+            ],
+            'login' => [
+                'controller' => UserController::class, 
+                'method' => 'get'
+            ],
+            'logout' => [
+                'controller' => UserController::class,
+                'method' => 'logout'
+            ],
+            'profile' => [
+                'controller' => UserController::class,
+                'method' => 'profile'
+            ],
+            'history' => [
+                'controller' => UserController::class,
+                'method' => 'history'
+            ],
         ];
     }
 

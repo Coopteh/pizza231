@@ -1,0 +1,979 @@
+[2026-03-28 21:34:25] [INFO] [IP:::1] [User:6] [URI:/admin/logs?action=clear] Логи очищены администратором | Context: {"admin_id":6}
+[2026-03-28 21:34:25] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs?success=cleared] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:34:29] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:34:30] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:34:31] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:34:32] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:34:33] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:38:56] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:38:57] [DEBUG] [IP:::1] [User:6] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:46:11] [DEBUG] [IP:::1] [User:6] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:46:13] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:14] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:46:14] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:14] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:46:14] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:15] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:46:15] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:15] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:18] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:18] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:24] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:25] [DEBUG] [IP:::1] [User:6] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:46:25] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:46:26] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:46:28] [DEBUG] [IP:::1] [User:6] [URI:/profile] Request | Context: {"uri":"\/profile","method":"GET"}
+[2026-03-28 21:46:29] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:30] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:30] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:31] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:31] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:32] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:33] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:33] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:34] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:46:35] [DEBUG] [IP:::1] [User:6] [URI:/profile] Request | Context: {"uri":"\/profile","method":"GET"}
+[2026-03-28 21:46:37] [DEBUG] [IP:::1] [User:6] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:46:37] [INFO] [IP:::1] [User:6] [URI:/admin] Доступ к админ-панели | Context: {"user_id":6}
+[2026-03-28 21:46:39] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:40] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:42] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:43] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:43] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:45] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:46] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:48] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:49] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:50] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:51] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:52] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:52] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:53] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:54] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:54] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:55] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:46:57] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:46:59] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:47:02] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:47:36] [DEBUG] [IP:::1] [User:6] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 21:47:39] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:40] [DEBUG] [IP:::1] [User:6] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:47:42] [DEBUG] [IP:::1] [User:6] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-28 21:47:42] [DEBUG] [IP:::1] [User:6] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-28 21:47:45] [DEBUG] [IP:::1] [User:6] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-28 21:47:45] [DEBUG] [IP:::1] [User:6] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-28 21:47:46] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:47:47] [DEBUG] [IP:::1] [User:6] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:47:47] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:47:48] [DEBUG] [IP:::1] [User:6] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:47:48] [DEBUG] [IP:::1] [User:6] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:47:48] [DEBUG] [IP:::1] [User:6] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:47:49] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:49] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:49] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:47:49] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:47:50] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:47:50] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:50] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:50] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:47:51] [DEBUG] [IP:::1] [User:6] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 21:47:51] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:51] [DEBUG] [IP:::1] [User:6] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:47:55] [DEBUG] [IP:::1] [User:6] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:47:55] [INFO] [IP:::1] [User:6] [URI:/admin] Доступ к админ-панели | Context: {"user_id":6}
+[2026-03-28 21:48:04] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:48:05] [DEBUG] [IP:::1] [User:6] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:48:05] [INFO] [IP:::1] [User:6] [URI:/admin] Доступ к админ-панели | Context: {"user_id":6}
+[2026-03-28 21:54:32] [DEBUG] [IP:::1] [User:6] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:54:32] [INFO] [IP:::1] [User:6] [URI:/admin] Доступ к админ-панели | Context: {"user_id":6}
+[2026-03-28 21:54:33] [DEBUG] [IP:::1] [User:6] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 21:54:34] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:54:35] [DEBUG] [IP:::1] [User:6] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 21:54:36] [DEBUG] [IP:::1] [User:6] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:54:36] [INFO] [IP:::1] [User:6] [URI:/admin] Доступ к админ-панели | Context: {"user_id":6}
+[2026-03-28 21:54:37] [DEBUG] [IP:::1] [User:6] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 21:54:38] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:54:38] [DEBUG] [IP:::1] [User:6] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:54:41] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:07] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:27] [DEBUG] [IP:::1] [User:6] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:27] [DEBUG] [IP:::1] [User:6] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 21:55:29] [DEBUG] [IP:::1] [User:6] [URI:/auth/logout] Request | Context: {"uri":"\/auth\/logout","method":"GET"}
+[2026-03-28 21:55:29] [INFO] [IP:::1] [User:guest] [URI:/auth/logout] Выход пользователя | Context: {"user_id":6}
+[2026-03-28 21:55:29] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 21:55:31] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-03-28 21:55:40] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-03-28 21:55:40] [DEBUG] [IP:::1] [User:3] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"D:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-28 21:55:40] [INFO] [IP:::1] [User:3] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":3,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-28 21:55:40] [DEBUG] [IP:::1] [User:3] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:55:40] [INFO] [IP:::1] [User:3] [URI:/admin] Доступ к админ-панели | Context: {"user_id":3}
+[2026-03-28 21:55:43] [DEBUG] [IP:::1] [User:3] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:47] [DEBUG] [IP:::1] [User:3] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:48] [DEBUG] [IP:::1] [User:3] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:50] [DEBUG] [IP:::1] [User:3] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:55:50] [DEBUG] [IP:::1] [User:3] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:56:49] [DEBUG] [IP:::1] [User:3] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:56:49] [DEBUG] [IP:::1] [User:3] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 21:56:51] [DEBUG] [IP:::1] [User:3] [URI:/profile] Request | Context: {"uri":"\/profile","method":"GET"}
+[2026-03-28 21:57:01] [DEBUG] [IP:::1] [User:3] [URI:/auth/logout] Request | Context: {"uri":"\/auth\/logout","method":"GET"}
+[2026-03-28 21:57:01] [INFO] [IP:::1] [User:guest] [URI:/auth/logout] Выход пользователя | Context: {"user_id":3}
+[2026-03-28 21:57:01] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 21:57:03] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-03-28 21:57:05] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-03-28 21:57:05] [DEBUG] [IP:::1] [User:4] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"D:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-28 21:57:05] [INFO] [IP:::1] [User:4] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":4,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-28 21:57:05] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:57:05] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 21:57:07] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:57:07] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 21:57:08] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 21:57:08] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 21:57:09] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:57:23] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:57:28] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:57:30] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 21:57:31] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 21:57:32] [DEBUG] [IP:::1] [User:4] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 21:57:33] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 21:57:34] [DEBUG] [IP:::1] [User:4] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:57:41] [DEBUG] [IP:::1] [User:4] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 21:57:42] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 21:57:43] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:58:57] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:59:00] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:59:03] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:59:05] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:59:06] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:59:07] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 21:59:08] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:00:51] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:00:55] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:00:58] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:01:02] [DEBUG] [IP:::1] [User:4] [URI:/course/3] Request | Context: {"uri":"\/course\/3","method":"GET"}
+[2026-03-28 22:01:05] [DEBUG] [IP:::1] [User:4] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-28 22:01:05] [DEBUG] [IP:::1] [User:4] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-28 22:01:06] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:01:07] [DEBUG] [IP:::1] [User:4] [URI:/course/1] Request | Context: {"uri":"\/course\/1","method":"GET"}
+[2026-03-28 22:01:10] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:01:12] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:01:18] [DEBUG] [IP:::1] [User:4] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-03-28 22:01:22] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:01:23] [DEBUG] [IP:::1] [User:4] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-28 22:01:23] [DEBUG] [IP:::1] [User:4] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-28 22:01:25] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:01:25] [DEBUG] [IP:::1] [User:4] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 22:01:30] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:01:34] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:11] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:13] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:14] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:14] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:14] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:14] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:15] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:15] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:06:22] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:06:33] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:06:33] [CRITICAL] [IP:::1] [User:4] [URI:/cart] Uncaught Exception: syntax error, unexpected identifier "ы" | Context: {"file":"D:\\xampp\\htdocs\\Views\\CartTemplate.php","line":136,"trace":"#0 D:\\xampp\\htdocs\\Controllers\\CartController.php(19): {closure}('Views\\\\CartTempl...')\n#1 D:\\xampp\\htdocs\\index.php(186): Controllers\\CartController->view()\n#2 {main}","code":0}
+[2026-03-28 22:06:40] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:06:48] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:08:22] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 22:08:22] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 22:08:24] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 22:08:31] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 22:09:19] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 22:09:20] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:09:22] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:09:24] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:09:24] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:09:40] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:09:46] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:12:14] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:12:15] [DEBUG] [IP:::1] [User:4] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 22:12:18] [DEBUG] [IP:::1] [User:4] [URI:/auth/logout] Request | Context: {"uri":"\/auth\/logout","method":"GET"}
+[2026-03-28 22:12:18] [INFO] [IP:::1] [User:guest] [URI:/auth/logout] Выход пользователя | Context: {"user_id":4}
+[2026-03-28 22:12:18] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 22:12:18] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-03-28 22:12:21] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-03-28 22:12:27] [DEBUG] [IP:::1] [User:guest] [URI:/auth/forgot-password] Request | Context: {"uri":"\/auth\/forgot-password","method":"GET"}
+[2026-03-28 22:12:29] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-03-28 22:12:30] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-03-28 22:12:39] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-03-28 22:12:39] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 22:12:40] [DEBUG] [IP:::1] [User:guest] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 22:12:40] [DEBUG] [IP:::1] [User:guest] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:12:42] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-03-28 22:12:44] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-03-28 22:12:48] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-03-28 22:12:48] [DEBUG] [IP:::1] [User:4] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"D:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-28 22:12:48] [INFO] [IP:::1] [User:4] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":4,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-28 22:12:48] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 22:12:48] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 22:12:53] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:12:54] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:12:55] [DEBUG] [IP:::1] [User:4] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-28 22:12:55] [DEBUG] [IP:::1] [User:4] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-28 22:12:56] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:13:19] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:13:19] [CRITICAL] [IP:::1] [User:4] [URI:/cart] Uncaught Exception: Class "Views\CartTemplate" not found | Context: {"file":"D:\\xampp\\htdocs\\Controllers\\CartController.php","line":19,"trace":"#0 D:\\xampp\\htdocs\\index.php(186): Controllers\\CartController->view()\n#1 {main}","code":0}
+[2026-03-28 22:13:39] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:15:33] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:15:34] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:15:35] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:15:47] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:15:52] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:16:28] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:16:43] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:16:43] [CRITICAL] [IP:::1] [User:4] [URI:/cart/checkout] Uncaught Exception: Class "Views\OrderTemplate" not found | Context: {"file":"D:\\xampp\\htdocs\\Controllers\\OrderController.php","line":43,"trace":"#0 D:\\xampp\\htdocs\\Controllers\\CartController.php(155): Controllers\\OrderController->checkout()\n#1 D:\\xampp\\htdocs\\index.php(206): Controllers\\CartController->checkout()\n#2 {main}","code":0}
+[2026-03-28 22:16:47] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:16:47] [CRITICAL] [IP:::1] [User:4] [URI:/cart/checkout] Uncaught Exception: Class "Views\OrderTemplate" not found | Context: {"file":"D:\\xampp\\htdocs\\Controllers\\OrderController.php","line":43,"trace":"#0 D:\\xampp\\htdocs\\Controllers\\CartController.php(155): Controllers\\OrderController->checkout()\n#1 D:\\xampp\\htdocs\\index.php(206): Controllers\\CartController->checkout()\n#2 {main}","code":0}
+[2026-03-28 22:16:53] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:19:31] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:22:18] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:22:22] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:22:30] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:22:36] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:22:37] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:22:38] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:22:41] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:22:43] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:22:43] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:22:44] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:22:45] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:06] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:07] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:07] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:08] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:09] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:09] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:11] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:12] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:14] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:16] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:23:17] [DEBUG] [IP:::1] [User:4] [URI:/about] Request | Context: {"uri":"\/about","method":"GET"}
+[2026-03-28 22:23:23] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:23:26] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:28:52] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:28:55] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:29:25] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:38:38] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:38:39] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:38:46] [DEBUG] [IP:::1] [User:4] [URI:/course/1] Request | Context: {"uri":"\/course\/1","method":"GET"}
+[2026-03-28 22:38:55] [DEBUG] [IP:::1] [User:4] [URI:/course/2] Request | Context: {"uri":"\/course\/2","method":"GET"}
+[2026-03-28 22:39:00] [DEBUG] [IP:::1] [User:4] [URI:/course/3] Request | Context: {"uri":"\/course\/3","method":"GET"}
+[2026-03-28 22:39:06] [DEBUG] [IP:::1] [User:4] [URI:/course/5] Request | Context: {"uri":"\/course\/5","method":"GET"}
+[2026-03-28 22:39:10] [DEBUG] [IP:::1] [User:4] [URI:/course/4] Request | Context: {"uri":"\/course\/4","method":"GET"}
+[2026-03-28 22:39:13] [DEBUG] [IP:::1] [User:4] [URI:/course/6] Request | Context: {"uri":"\/course\/6","method":"GET"}
+[2026-03-28 22:39:26] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:39:32] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:39:36] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:39:52] [DEBUG] [IP:::1] [User:4] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-03-28 22:39:52] [INFO] [IP:::1] [User:4] [URI:/cart/order] Заказ успешно создан | Context: {"order_id":"ORD-20260328-8606FD","total":50000,"user_id":4,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-28 22:40:06] [DEBUG] [IP:::1] [User:4] [URI:/cart/order] Уведомление администратору | Context: {"order_id":"ORD-20260328-8606FD","sent":true}
+[2026-03-28 22:40:06] [DEBUG] [IP:::1] [User:4] [URI:/cart/success?order=ORD-20260328-8606FD] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-03-28 22:44:54] [DEBUG] [IP:::1] [User:4] [URI:/cart/success?order=ORD-20260328-8606FD] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-03-28 22:44:58] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:44:58] [DEBUG] [IP:::1] [User:4] [URI:/cart?error=empty_cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:45:02] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:45:04] [DEBUG] [IP:::1] [User:4] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-28 22:45:04] [DEBUG] [IP:::1] [User:4] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-28 22:45:06] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:45:14] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:45:14] [CRITICAL] [IP:::1] [User:4] [URI:/cart/checkout] Uncaught Exception: htmlspecialchars(): Argument #1 ($string) must be of type string, array given | Context: {"file":"D:\\xampp\\htdocs\\Views\\OrderTemplate.php","line":254,"trace":"#0 D:\\xampp\\htdocs\\Views\\OrderTemplate.php(254): htmlspecialchars(Array)\n#1 D:\\xampp\\htdocs\\Controllers\\OrderController.php(40): Views\\OrderTemplate::getCheckoutTemplate(Array)\n#2 D:\\xampp\\htdocs\\Controllers\\CartController.php(155): Controllers\\OrderController->checkout()\n#3 D:\\xampp\\htdocs\\index.php(206): Controllers\\CartController->checkout()\n#4 {main}","code":0}
+[2026-03-28 22:45:23] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-28 22:48:38] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-28 22:48:52] [DEBUG] [IP:::1] [User:4] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-03-28 22:48:52] [INFO] [IP:::1] [User:4] [URI:/cart/order] Заказ успешно создан | Context: {"order_id":"ORD-20260328-43D8B3","total":50000,"user_id":4,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-28 22:49:04] [DEBUG] [IP:::1] [User:4] [URI:/cart/order] Уведомление администратору | Context: {"order_id":"ORD-20260328-43D8B3","sent":true}
+[2026-03-28 22:49:04] [DEBUG] [IP:::1] [User:4] [URI:/cart/success?order=ORD-20260328-43D8B3] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-03-28 22:49:08] [DEBUG] [IP:::1] [User:4] [URI:/cart/success] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-03-28 22:49:09] [DEBUG] [IP:::1] [User:4] [URI:/cart/success] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-03-28 22:49:14] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-28 22:49:18] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 22:49:18] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 22:49:27] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 22:49:32] [DEBUG] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-28 22:49:32] [CRITICAL] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Uncaught Exception: htmlspecialchars(): Argument #1 ($string) must be of type string, array given | Context: {"file":"D:\\xampp\\htdocs\\Views\\AdminTemplate.php","line":441,"trace":"#0 D:\\xampp\\htdocs\\Views\\AdminTemplate.php(441): htmlspecialchars(Array)\n#1 D:\\xampp\\htdocs\\Controllers\\AdminController.php(95): Views\\AdminTemplate::getOrderDetailTemplate(Array)\n#2 D:\\xampp\\htdocs\\index.php(152): Controllers\\AdminController->orderDetail()\n#3 {main}","code":0}
+[2026-03-28 22:49:41] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders?status=all&search=] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 22:49:43] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 22:49:51] [DEBUG] [IP:::1] [User:4] [URI:/admin/user/delete] Request | Context: {"uri":"\/admin\/user\/delete","method":"POST"}
+[2026-03-28 22:49:51] [WARNING] [IP:::1] [User:4] [URI:/admin/user/delete] Пользователь удалён | Context: {"deleted_user_id":"0","deleted_user_email":"kerji41123444400@gmail.com","admin_id":4}
+[2026-03-28 22:49:51] [DEBUG] [IP:::1] [User:4] [URI:/admin/users?success=deleted] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 22:49:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 22:50:04] [DEBUG] [IP:::1] [User:4] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-28 22:55:44] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 22:55:44] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 22:55:48] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 22:55:51] [DEBUG] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-28 22:55:51] [CRITICAL] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Uncaught Exception: htmlspecialchars(): Argument #1 ($string) must be of type string, array given | Context: {"file":"D:\\xampp\\htdocs\\Views\\AdminTemplate.php","line":432,"trace":"#0 D:\\xampp\\htdocs\\Views\\AdminTemplate.php(432): htmlspecialchars(Array)\n#1 D:\\xampp\\htdocs\\Controllers\\AdminController.php(95): Views\\AdminTemplate::getOrderDetailTemplate(Array)\n#2 D:\\xampp\\htdocs\\index.php(152): Controllers\\AdminController->orderDetail()\n#3 {main}","code":0}
+[2026-03-28 22:55:56] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 22:55:58] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 23:02:41] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 23:02:42] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:02:43] [DEBUG] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-28 23:02:43] [CRITICAL] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Uncaught Exception: htmlspecialchars(): Argument #1 ($string) must be of type string, array given | Context: {"file":"D:\\xampp\\htdocs\\Views\\AdminTemplate.php","line":432,"trace":"#0 D:\\xampp\\htdocs\\Views\\AdminTemplate.php(432): htmlspecialchars(Array)\n#1 D:\\xampp\\htdocs\\Controllers\\AdminController.php(95): Views\\AdminTemplate::getOrderDetailTemplate(Array)\n#2 D:\\xampp\\htdocs\\index.php(152): Controllers\\AdminController->orderDetail()\n#3 {main}","code":0}
+[2026-03-28 23:02:45] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-28 23:08:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 23:08:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:08:55] [DEBUG] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-28 23:09:00] [DEBUG] [IP:::1] [User:4] [URI:/admin/order/update] Request | Context: {"uri":"\/admin\/order\/update","method":"POST"}
+[2026-03-28 23:09:00] [INFO] [IP:::1] [User:4] [URI:/admin/order/update] Статус заказа обновлён | Context: {"order_id":"ORD-20260328-43D8B3","old_status":"pending","new_status":"completed","admin_id":4}
+[2026-03-28 23:09:00] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders?success=status_updated] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:09:02] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-28 23:09:02] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-28 23:09:03] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:09:05] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-28 23:09:05] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:09:07] [DEBUG] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-28 23:09:12] [DEBUG] [IP:::1] [User:4] [URI:/admin/order] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-28 23:09:12] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders?error=not_found] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:09:14] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders?error=not_found] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-28 23:09:16] [DEBUG] [IP:::1] [User:4] [URI:/admin/order?id=ORD-20260328-43D8B3] Request | Context: {"uri":"\/admin\/order","method":"GET"}
+[2026-03-30 09:38:28] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-30 09:38:28] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-03-30 10:12:22] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-03-30 10:12:25] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-03-30 10:12:25] [DEBUG] [IP:::1] [User:4] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:12:25] [INFO] [IP:::1] [User:4] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":4,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-30 10:12:25] [DEBUG] [IP:::1] [User:4] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-03-30 10:12:25] [INFO] [IP:::1] [User:4] [URI:/admin] Доступ к админ-панели | Context: {"user_id":4}
+[2026-03-30 10:12:34] [DEBUG] [IP:::1] [User:4] [URI:/admin/orders] Request | Context: {"uri":"\/admin\/orders","method":"GET"}
+[2026-03-30 10:12:36] [DEBUG] [IP:::1] [User:4] [URI:/admin/users] Request | Context: {"uri":"\/admin\/users","method":"GET"}
+[2026-03-30 10:12:37] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:52] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:52] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:52] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:52] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:52] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:52] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:53] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:12:54] [DEBUG] [IP:::1] [User:4] [URI:/admin/logs] Request | Context: {"uri":"\/admin\/logs","method":"GET"}
+[2026-03-30 10:30:16] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:16] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:16] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:30:17] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:19] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:20] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:28] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:39] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:39] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:39] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:39] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:39] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:40] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:31:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:56] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:56] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:56] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:56] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:56] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:57] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:32:58] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:01] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:01] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:02] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:58] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:58] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:35:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:36:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:36:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:36:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:36:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:40:20] [DEBUG] [IP:::1] [User:4] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-30 10:40:21] [DEBUG] [IP:::1] [User:4] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-03-30 10:40:22] [DEBUG] [IP:::1] [User:4] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-03-30 10:40:22] [DEBUG] [IP:::1] [User:4] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-03-30 10:40:25] [DEBUG] [IP:::1] [User:4] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-03-30 10:40:26] [DEBUG] [IP:::1] [User:4] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-03-30 10:40:31] [DEBUG] [IP:::1] [User:4] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-03-30 10:40:31] [INFO] [IP:::1] [User:4] [URI:/cart/order] Заказ успешно создан | Context: {"order_id":"ORD-20260330-F3F585","total":54000,"user_id":4,"email":"toni.maslennikov.08@inbox.ru"}
+[2026-03-30 10:40:38] [DEBUG] [IP:::1] [User:4] [URI:/cart/order] Уведомление администратору | Context: {"order_id":"ORD-20260330-F3F585","sent":true}
+[2026-03-30 10:40:38] [DEBUG] [IP:::1] [User:4] [URI:/cart/success?order=ORD-20260330-F3F585] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-03-30 10:41:32] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:32] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:33] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:34] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:34] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:34] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:50] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:50] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:50] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:50] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:50] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:50] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:41:51] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:05] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:05] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:05] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:05] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:05] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:41] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:44:42] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:25] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:26] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:45:27] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:46:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:46:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:46:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:46:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:46:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:46:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:00] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:01] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:01] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:06] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:07] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:08] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:08] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:08] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:08] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:12] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:12] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:13] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:16] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:16] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:16] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:24] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:24] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:29] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:47:30] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:11] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:11] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:11] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:11] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:11] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:53:11] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:03] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:04] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:14] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:15] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:43] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:43] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:43] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:44] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:45] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:45] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:55:45] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:58] [DEBUG] [IP:unknown] [User:2] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:58] [DEBUG] [IP:unknown] [User:2] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:58] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:56:59] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 10:57:11] [DEBUG] [IP:unknown] [User:2] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:21] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:22] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:00:23] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:02:55] [DEBUG] [IP:::1] [User:4] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:53] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:07:54] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:08] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:09] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-07 06:19:21] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-04-08 07:20:58] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-04-08 08:15:31] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-04-09 06:42:50] [DEBUG] [IP:::1] [User:guest] [URI:/geek/php.php] Request | Context: {"uri":"\/geek\/php.php","method":"GET"}
+[2026-04-09 06:42:50] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-04-09 06:42:55] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-13 04:25:26] [DEBUG] [IP:::1] [User:guest] [URI:/geek/php.php] Request | Context: {"uri":"\/geek\/php.php","method":"GET"}
+[2026-04-13 04:25:26] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-04-13 04:25:31] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-13 06:38:16] [DEBUG] [IP:::1] [User:guest] [URI:/geek/php.php] Request | Context: {"uri":"\/geek\/php.php","method":"GET"}
+[2026-04-13 06:38:23] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-13 06:38:27] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:38:27] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Курсы загружены из файла | Context: {"count":6}
+[2026-04-13 06:42:39] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:42:40] [INFO] [IP:::1] [User:guest] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:42:40] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:42:40] [INFO] [IP:::1] [User:guest] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:43:00] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-13 06:43:04] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-13 06:43:04] [WARNING] [IP:::1] [User:guest] [URI:/auth/login] Неудачная попытка входа | Context: {"email":"petrov@mail.ru","ip":"::1"}
+[2026-04-13 06:43:57] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-04-13 06:44:29] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"POST"}
+[2026-04-13 06:44:30] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:44:34] [INFO] [IP:::1] [User:guest] [URI:/auth/register] Новая регистрация пользователя | Context: {"user_id":307,"email":"kasll2007@inbox.ru"}
+[2026-04-13 06:44:34] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Request | Context: {"uri":"\/auth\/verify-code","method":"GET"}
+[2026-04-13 06:44:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Request | Context: {"uri":"\/auth\/verify-code","method":"POST"}
+[2026-04-13 06:44:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:44:50] [INFO] [IP:::1] [User:guest] [URI:/auth/verify-code] Email подтверждён | Context: {"email":"kasll2007@inbox.ru"}
+[2026-04-13 06:44:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login?verified=1] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-13 06:45:02] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-13 06:45:02] [WARNING] [IP:::1] [User:guest] [URI:/auth/login] Неудачная попытка входа | Context: {"email":"petrov@mail.ru","ip":"::1"}
+[2026-04-13 06:45:12] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-13 06:45:12] [DEBUG] [IP:::1] [User:307] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:45:12] [INFO] [IP:::1] [User:307] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":307,"email":"kasll2007@inbox.ru"}
+[2026-04-13 06:45:12] [DEBUG] [IP:::1] [User:307] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-04-13 06:45:12] [INFO] [IP:::1] [User:307] [URI:/admin] Доступ к админ-панели | Context: {"user_id":307}
+[2026-04-13 06:45:32] [DEBUG] [IP:::1] [User:307] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:45:32] [INFO] [IP:::1] [User:307] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:45:33] [DEBUG] [IP:::1] [User:307] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-13 06:45:33] [INFO] [IP:::1] [User:307] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:45:33] [DEBUG] [IP:::1] [User:307] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-04-13 06:45:35] [DEBUG] [IP:::1] [User:307] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-13 06:45:35] [INFO] [IP:::1] [User:307] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:45:35] [DEBUG] [IP:::1] [User:307] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-04-13 06:45:36] [DEBUG] [IP:::1] [User:307] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-04-13 06:45:37] [DEBUG] [IP:::1] [User:307] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-13 06:45:52] [DEBUG] [IP:::1] [User:307] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-13 06:45:52] [DEBUG] [IP:::1] [User:307] [URI:/cart/order] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:45:52] [INFO] [IP:::1] [User:307] [URI:/cart/order] Заказ успешно создан (файл) | Context: {"order_id":"ORD-20260413-06C521","total":86000}
+[2026-04-13 06:45:52] [INFO] [IP:::1] [User:307] [URI:/cart/order] Заказ успешно сохранён в БД | Context: {"order_id":"ORD-20260413-06C521"}
+[2026-04-13 06:45:58] [DEBUG] [IP:::1] [User:307] [URI:/cart/success?order=ORD-20260413-06C521] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-04-16 13:30:07] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-16 13:30:35] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-16 13:30:47] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-16 13:30:47] [WARNING] [IP:::1] [User:guest] [URI:/auth/login] Неудачная попытка входа | Context: {"email":"kasll2007@inbox.ru","ip":"::1"}
+[2026-04-16 13:30:50] [DEBUG] [IP:::1] [User:guest] [URI:/home] Request | Context: {"uri":"\/home","method":"GET"}
+[2026-04-16 13:30:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-16 13:31:02] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-16 13:31:02] [WARNING] [IP:::1] [User:guest] [URI:/auth/login] Неудачная попытка входа | Context: {"email":"kasll2007@inbox.ru","ip":"::1"}
+[2026-04-16 13:31:14] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-04-16 13:31:28] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"POST"}
+[2026-04-16 13:31:28] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-16 13:31:33] [INFO] [IP:::1] [User:guest] [URI:/auth/register] Новая регистрация пользователя | Context: {"user_id":308,"email":"garcihanovislam123333232323@gmail.com"}
+[2026-04-16 13:31:33] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Request | Context: {"uri":"\/auth\/verify-code","method":"GET"}
+[2026-04-16 13:31:53] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Request | Context: {"uri":"\/auth\/verify-code","method":"POST"}
+[2026-04-16 13:31:53] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-16 13:31:53] [INFO] [IP:::1] [User:guest] [URI:/auth/verify-code] Email подтверждён | Context: {"email":"garcihanovislam123333232323@gmail.com"}
+[2026-04-16 13:31:53] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login?verified=1] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-16 13:31:55] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-16 13:32:11] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-16 13:32:11] [DEBUG] [IP:::1] [User:308] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-16 13:32:11] [INFO] [IP:::1] [User:308] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":308,"email":"garcihanovislam123333232323@gmail.com"}
+[2026-04-16 13:32:11] [DEBUG] [IP:::1] [User:308] [URI:/profile] Request | Context: {"uri":"\/profile","method":"GET"}
+[2026-04-16 13:33:28] [DEBUG] [IP:::1] [User:308] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-16 13:33:28] [INFO] [IP:::1] [User:308] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-16 13:33:29] [DEBUG] [IP:::1] [User:308] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-16 13:33:29] [INFO] [IP:::1] [User:308] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-16 13:33:29] [DEBUG] [IP:::1] [User:308] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-04-16 13:33:30] [DEBUG] [IP:::1] [User:308] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-04-16 13:33:31] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:34:47] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:34:47] [INFO] [IP:::1] [User:308] [URI:/cart/order] Заказ успешно создан (файл) | Context: {"order_id":"ORD-20260416-70F3B6","total":54000}
+[2026-04-16 13:34:47] [INFO] [IP:::1] [User:308] [URI:/cart/order] Заказ успешно сохранён в БД | Context: {"order_id":"ORD-20260416-70F3B6"}
+[2026-04-16 13:34:53] [DEBUG] [IP:::1] [User:308] [URI:/cart/success?order=ORD-20260416-70F3B6] Request | Context: {"uri":"\/cart\/success","method":"GET"}
+[2026-04-16 13:45:13] [DEBUG] [IP:::1] [User:308] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-16 13:45:17] [DEBUG] [IP:::1] [User:308] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-16 13:45:17] [INFO] [IP:::1] [User:308] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-16 13:45:18] [DEBUG] [IP:::1] [User:308] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-16 13:45:18] [INFO] [IP:::1] [User:308] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-16 13:45:18] [DEBUG] [IP:::1] [User:308] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-04-16 13:45:19] [DEBUG] [IP:::1] [User:308] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-04-16 13:45:20] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:45:20] [CRITICAL] [IP:::1] [User:308] [URI:/cart/checkout] Uncaught Exception: Views\OrderTemplate::getCheckoutTemplate(): Return value must be of type string, none returned | Context: {"file":"C:\\xampp\\htdocs\\Views\\OrderTemplate.php","line":404,"trace":"#0 C:\\xampp\\htdocs\\Controllers\\OrderController.php(35): Views\\OrderTemplate::getCheckoutTemplate(Array)\n#1 C:\\xampp\\htdocs\\Controllers\\CartController.php(157): Controllers\\OrderController->checkout()\n#2 C:\\xampp\\htdocs\\index.php(217): Controllers\\CartController->checkout()\n#3 {main}","code":0}
+[2026-04-16 13:49:16] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:49:21] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:49:21] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:49:29] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:49:29] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:49:33] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:49:33] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:49:51] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:49:51] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:49:58] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:49:58] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:50:02] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:50:02] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:50:05] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:50:05] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:50:11] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:50:12] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:50:23] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:50:23] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:50:28] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:50:28] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:50:49] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:50:49] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:55:48] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:55:56] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:55:56] [WARNING] [IP:::1] [User:308] [URI:/cart/order] Ошибка валидации заказа | Context: {"errors":["Адрес обязателен"],"input":{"name":"Ант","email":"kasll2007@inbox.ru","phone":"+7 (123) 441-23-33","address":"","payment_method":"card","comment":""}}
+[2026-04-16 13:55:56] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 13:56:04] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 13:56:04] [WARNING] [IP:::1] [User:308] [URI:/cart/order] Ошибка валидации заказа | Context: {"errors":["Адрес обязателен"],"input":{"name":"Антон Админ Антон","email":"kasll2007@inbox.ru","phone":"+7 (123) 441-23-33","address":"","payment_method":"card","comment":""}}
+[2026-04-16 13:56:04] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 14:01:57] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 14:02:04] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 14:02:04] [WARNING] [IP:::1] [User:308] [URI:/cart/order] Ошибка валидации заказа | Context: {"errors":["Некорректный номер телефона"],"input":{"name":"Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич","email":"garcihanovislam123333232323@gmail.com","phone":"+7 (905","payment_method":"card","comment":""}}
+[2026-04-16 14:02:04] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 14:02:07] [DEBUG] [IP:::1] [User:308] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-16 14:02:07] [INFO] [IP:::1] [User:308] [URI:/cart/order] Заказ успешно создан | Context: {"order_id":"ORD-20260416-FC73C1","total":50000,"user_id":308,"email":"garcihanovislam123333232323@gmail.com"}
+[2026-04-16 14:02:14] [DEBUG] [IP:::1] [User:308] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-16 14:02:14] [DEBUG] [IP:::1] [User:308] [URI:/cart?error=empty_cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-04-16 14:02:16] [DEBUG] [IP:::1] [User:308] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-16 14:02:16] [INFO] [IP:::1] [User:308] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-16 14:02:17] [DEBUG] [IP:::1] [User:308] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-16 14:02:17] [INFO] [IP:::1] [User:308] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-16 14:02:17] [DEBUG] [IP:::1] [User:308] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}

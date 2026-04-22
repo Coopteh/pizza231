@@ -1,0 +1,167 @@
+[
+    {
+        "id": "ORD-20260328-43D8B3",
+        "name": "maslennikov anton dm",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (923) 487-96-35",
+        "payment_method": "sbp",
+        "comment": "",
+        "items": [
+            {
+                "id": 2,
+                "title": {
+                    "ru": "Frontend: React",
+                    "en": "Frontend: React"
+                },
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": {
+                    "ru": "10 недель • 4-6 часов в неделю",
+                    "en": "10 weeks • 4-6 hours per week"
+                },
+                "added_at": 1774734304
+            }
+        ],
+        "total": 50000,
+        "status": "completed",
+        "created_at": "2026-03-28 22:48:52",
+        "ip": "::1",
+        "user_id": 4,
+        "user_email": "toni.maslennikov.08@inbox.ru",
+        "updated_at": "2026-03-28 23:09:00"
+    },
+    {
+        "id": "ORD-20260330-F3F585",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (251) 256-46-42",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 1,
+                "title": {
+                    "ru": "Python-разработчик",
+                    "en": "Python Developer"
+                },
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": {
+                    "ru": "12 недель • 3-5 часов в неделю",
+                    "en": "12 weeks • 3-5 hours per week"
+                },
+                "added_at": 1774860022
+            }
+        ],
+        "total": 54000,
+        "status": "pending",
+        "created_at": "2026-03-30 10:40:31",
+        "ip": "::1",
+        "user_id": 4,
+        "user_email": "toni.maslennikov.08@inbox.ru"
+    },
+    {
+        "id": "ORD-20260413-06C521",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "vlad_milev@mail.ru",
+        "phone": "+7 (905) 900-06-87",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 1,
+                "title": {
+                    "ru": "Python-разработчик",
+                    "en": "Python-разработчик"
+                },
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": {
+                    "ru": "",
+                    "en": ""
+                },
+                "added_at": 1776055533
+            },
+            {
+                "id": 3,
+                "title": {
+                    "ru": "SQL и базы данных",
+                    "en": "SQL и базы данных"
+                },
+                "price": "32 000 ₽",
+                "icon": "DB",
+                "duration": {
+                    "ru": "",
+                    "en": ""
+                },
+                "added_at": 1776055535
+            }
+        ],
+        "total": 86000,
+        "status": "pending",
+        "created_at": "2026-04-13 06:45:52",
+        "ip": "::1",
+        "user_id": 307,
+        "user_email": "kasll2007@inbox.ru"
+    },
+    {
+        "id": "ORD-20260416-70F3B6",
+        "name": "12",
+        "email": "garcihanovislam123333232323@gmail.com",
+        "phone": "+7 (123) 44",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 1,
+                "title": {
+                    "ru": "Python-разработчик",
+                    "en": "Python-разработчик"
+                },
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": {
+                    "ru": "",
+                    "en": ""
+                },
+                "added_at": 1776339209
+            }
+        ],
+        "total": 54000,
+        "status": "pending",
+        "created_at": "2026-04-16 13:34:47",
+        "ip": "::1",
+        "user_id": 308,
+        "user_email": "garcihanovislam123333232323@gmail.com"
+    },
+    {
+        "id": "ORD-20260416-FC73C1",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "garcihanovislam123333232323@gmail.com",
+        "phone": "+79051231231",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 2,
+                "title": {
+                    "ru": "Frontend: React",
+                    "en": "Frontend: React"
+                },
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": {
+                    "ru": "",
+                    "en": ""
+                },
+                "added_at": 1776339918
+            }
+        ],
+        "total": 50000,
+        "status": "pending",
+        "created_at": "2026-04-16 14:02:07",
+        "ip": "::1",
+        "user_id": 308,
+        "user_email": "garcihanovislam123333232323@gmail.com"
+    }
+]

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ конкурентов - Geek Legends</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        h1 { 
+            text-align: center; 
+            color: #2c5282; 
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle { 
+            text-align: center; 
+            color: #718096; 
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .section { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 30px; 
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h2 { 
+            color: #2c5282; 
+            border-bottom: 3px solid #4299e1; 
+            padding-bottom: 10px; 
+            margin-bottom: 20px;
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin-top: 20px;
+        }
+        .card { 
+            background: #f7fafc; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 4px solid #4299e1;
+        }
+        .card h3 { color: #2c5282; margin-bottom: 10px; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0;
+            overflow-x: auto;
+            display: block;
+        }
+        th, td { 
+            padding: 12px; 
+            text-align: left; 
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th { 
+            background: #2c5282; 
+            color: white; 
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover { background: #f7fafc; }
+        .check { color: #48bb78; font-weight: bold; }
+        .cross { color: #f56565; font-weight: bold; }
+        .swot-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+        }
+        .swot-item { 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 10px;
+        }
+        .strength { background: #c6f6d5; border-left: 4px solid #48bb78; }
+        .weakness { background: #fed7d7; border-left: 4px solid #f56565; }
+        .opportunity { background: #bee3f8; border-left: 4px solid #4299e1; }
+        .threat { background: #feebc8; border-left: 4px solid #ed8936; }
+        .badge { 
+            display: inline-block; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            font-weight: 600;
+            margin: 2px;
+        }
+        .badge-primary { background: #4299e1; color: white; }
+        .badge-success { background: #48bb78; color: white; }
+        .badge-danger { background: #f56565; color: white; }
+        .progress-bar { 
+            background: #e2e8f0; 
+            height: 30px; 
+            border-radius: 15px; 
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill { 
+            height: 100%; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 15px; 
+            color: white; 
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .swot-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Анализ конкурентов Geek Legends</h1>
+        <p class="subtitle">Сравнение с Geekbrains, Skillbox и Netology</p>
+
+        <!-- ОБЗОР КОНКУРЕНТОВ -->
+        <div class="section">
+            <h2>📚 Обзор конкурентов</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🎓 Geekbrains</h3>
+                    <p><strong>Основан:</strong> 2010, с 2016 в Mail.ru Group</p>
+                    <p><strong>Курсов:</strong> 149</p>
+                    <p><strong>Профессий:</strong> 31</p>
+                    <p><strong>Цена:</strong> 8,400 ₽/мес</p>
+                    <p><strong>Особенности:</strong> Живые вебинары, наставники, стажировки</p>
+                </div>
+                <div class="card">
+                    <h3>🚀 Skillbox</h3>
+                    <p><strong>Позиция:</strong> Лидер рынка</p>
+                    <p><strong>Курсов:</strong> 500+</p>
+                    <p><strong>Программ:</strong> 12 отраслей</p>
+                    <p><strong>Цена:</strong> 12,000-15,000 ₽/мес</p>
+                    <p><strong>Особенности:</strong> Высшее образование, MBA, воркшопы</p>
+                </div>
+                <div class="card">
+                    <h3>💡 Netology</h3>
+                    <p><strong>Формат:</strong> Онлайн-университет</p>
+                    <p><strong>Курсов:</strong> 110+</p>
+                    <p><strong>Профессий:</strong> 15+</p>
+                    <p><strong>Цена:</strong> 12,100 ₽/мес</p>
+                    <p><strong>Особенности:</strong> Офлайн кампус, магистратура, буткемпы</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SWOT АНАЛИЗ -->
+        <div class="section">
+            <h2>🎯 SWOT-анализ Geek Legends</h2>
+            <div class="swot-grid">
+                <div>
+                    <h3 style="color: #276749;">✓ Сильные стороны</h3>
+                    <div class="swot-item strength">
+                        • Мультиязычность (RU/EN) - уникально!<br>
+                        • Темная/светлая тема<br>
+                        • Система логирования<br>
+                        • Современный дизайн<br>
+                        • Простая архитектура
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #c53030;">✗ Слабые стороны</h3>
+                    <div class="swot-item weakness">
+                        • Мало курсов (6 vs 100+)<br>
+                        • Нет LMS системы<br>
+                        • Нет вебинаров<br>
+                        • Нет помощи в трудоустройстве<br>
+                        • Нет рассрочки
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #2b6cb0;">🚀 Возможности</h3>
+                    <div class="swot-item opportunity">
+                        • Расширение каталога<br>
+                        • Интеграция вебинаров<br>
+                        • Платежные системы<br>
+                        • Мобильное приложение<br>
+                        • Международная экспансия
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #c05621;">⚠️ Угрозы</h3>
+                    <div class="swot-item threat">
+                        • Высокая конкуренция<br>
+                        • Крупные игроки<br>
+                        • Демпинг цен<br>
+                        • Быстрое устаревание<br>
+                        • Требование лицензии
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- СРАВНЕНИЕ ФУНКЦИОНАЛА -->
+        <div class="section">
+            <h2>📋 Сравнение функционала</h2>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Функция</th>
+                            <th>Geek Legends</th>
+                            <th>Geekbrains</th>
+                            <th>Skillbox</th>
+                            <th>Netology</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Мультиязычность</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+                        <tr><td>Темная тема</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+                        <tr><td>Корзина</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>Логирование</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+                        <tr><td>Живые вебинары</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>Домашние задания</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>Наставники</td><td class="cross">✗</td><td class="check">✓</td><td class="cross">✗</td><td class="check">✓</td></tr>
+                        <tr><td>Помощь в трудоустройстве</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>Рассрочка</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>Курсов</td><td>6</td><td>149</td><td>500+</td><td>110+</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- РЕКОМЕНДАЦИИ -->
+        <div class="section">
+            <h2>🎯 Приоритеты развития</h2>
+            
+            <h3 style="color: #c53030; margin-top: 20px;">🔥 Критически важно (1-3 месяца)</h3>
+            <div class="card" style="border-left-color: #f56565;">
+                <ol>
+                    <li>Интеграция платежной системы</li>
+                    <li>Добавление видеоплеера для уроков</li>
+                    <li>Система домашнего задания</li>
+                    <li>Личный кабинет с прогрессом</li>
+                    <li>Расширение каталога до 20+ курсов</li>
+                    <li>Получение образовательной лицензии</li>
+                </ol>
+            </div>
+
+            <h3 style="color: #d69e2e; margin-top: 20px;">⚡ Высокий приоритет (3-6 месяцев)</h3>
+            <div class="card" style="border-left-color: #d69e2e;">
+                <ol>
+                    <li>Интеграция вебинарной комнаты</li>
+                    <li>Система проверки заданий</li>
+                    <li>Чат поддержки</li>
+                    <li>Рассрочка платежа</li>
+                    <li>Система сертификатов</li>
+                </ol>
+            </div>
+
+            <h3 style="color: #2b6cb0; margin-top: 20px;">📌 Средний приоритет (6-12 месяцев)</h3>
+            <div class="card" style="border-left-color: #4299e1;">
+                <ol>
+                    <li>Партнерство с IT-компаниями</li>
+                    <li>Центр карьеры</li>
+                    <li>Мобильное приложение</li>
+                    <li>Сообщество студентов</li>
+                    <li>Система наставничества</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ОЦЕНКА -->
+        <div class="section">
+            <h2>📈 Текущая оценка платформы</h2>
+            
+            <div style="margin: 20px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Техническая база</span>
+                    <strong>8/10</strong>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%; background: #48bb78;">80%</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Функционал обучения</span>
+                    <strong>3/10</strong>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 30%; background: #f56565;">30%</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Контент</span>
+                    <strong>2/10</strong>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 20%; background: #f56565;">20%</div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span>Поддержка студентов</span>
+                    <strong>1/10</strong>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 10%; background: #f56565;">10%</div>
+                </div>
+            </div>
+
+            <div style="margin: 30px 0; padding: 20px; background: #ebf8ff; border-radius: 8px; border-left: 4px solid #4299e1;">
+                <h3 style="color: #2c5282; margin-bottom: 10px;">💡 Итоговая оценка</h3>
+                <p><strong>Текущее состояние:</strong> 3.2/10</p>
+                <p><strong>Потенциал:</strong> 7-8/10 при правильной реализации</p>
+                <p><strong>Срок развития:</strong> 12-18 месяцев</p>
+                <p><strong>Необходимые инвестиции:</strong> 3-5 млн руб</p>
+            </div>
+        </div>
+
+        <!-- УТП -->
+        <div class="section">
+            <h2>🎯 Уникальное торговое предложение</h2>
+            <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h3 style="color: white;">Ваше текущее УТП:</h3>
+                <p>Современная платформа с мультиязычностью и темной темой</p>
+                
+                <h3 style="color: white; margin-top: 20px;">Рекомендуемое УТП:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0;">✓ "Первая международная IT-школа с обучением на русском и английском"</li>
+                    <li style="margin: 10px 0;">✓ "Современная платформа с AI-помощником и персональным подходом"</li>
+                    <li style="margin: 10px 0;">✓ "Быстрый старт в IT за 6 месяцев с гарантией трудоустройства"</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

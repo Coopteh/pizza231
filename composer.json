@@ -8,7 +8,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.6",
-        "nunomaduro/phpinsights": "^2.12"
+        "nunomaduro/phpinsights": "^2.12",
+        "phpmetrics/phpmetrics": "^2.9"
     },
     "autoload": {
         "psr-4": {

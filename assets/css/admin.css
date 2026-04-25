@@ -1,0 +1,21 @@
+/* === Стили для admin.html.php (dashboard) === */
+.admin-stats-card {
+    transition: transform 0.3s ease;
+}
+
+.admin-stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.admin-stats-icon {
+    font-size: 3rem;
+    opacity: 0.5;
+}
+
+.admin-menu-card {
+    cursor: pointer;
+}
+
+.admin-menu-card .card-header {
+    transition: background-color 0.2s ease;
+}

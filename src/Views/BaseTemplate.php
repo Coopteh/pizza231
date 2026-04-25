@@ -1,127 +1,41 @@
 <?php
-
 namespace App\Views;
 
-class BaseTemplate {
-    public static function getTemplate(string $content): string
+class BaseTemplate
+{
+    /**
+     * Путь к файлу базового шаблона
+     */
+    private const TEMPLATE_PATH = __DIR__ . '/templates/base.html.php';
+
+    /**
+     * Путь к файлу с текстами
+     */
+    private const TEXTS_PATH = __DIR__ . '/../../storage/templates/base.json';
+
+    /**
+     * Загружает тексты из JSON файла
+     */
+    private static function loadTexts(): array
     {
-        global $user_id, $username;
-        // Шаблон с двумя вставками %s: первая для title, вторая для контента
-        $html = <<<HTML
-        <!DOCTYPE html>
-        <html lang="ru">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- Вставка 1: Заголовок страницы -->
-            <title>ККТ</title>
-            
-            <!-- Подключение Bootstrap CSS -->
-            <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-        </head>
-        <body>
-
-            <!-- Header секция -->
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container">
-                        <!-- Логотип и Заголовок "Магазин 231" -->
-                        <a class="navbar-brand d-flex align-items-center" href="/">
-                            <img src="/assets/img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-                            Бытовая Техника
-                        </a>
-                        
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/">Главная</a>
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/catalogue">Каталог</a>
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/order">Корзина</a>
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/history">История</a>
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/about">О нас</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/register">Регистрация</a>
-                                </li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        HTML;
-        
-        if ($user_id == 0) {
-                $html .= <<<LINE
-                                <li class="nav-item">
-                                <a class="nav-link active" href="/register">Регистрация</a>
-                                </li>
-                LINE;
+        $path = self::TEXTS_PATH;
+        if (!file_exists($path)) {
+            return [];
         }
-                $html .= <<<LINE
-                            </ul>
-                        </div>
-                    </div>
-                LINE;
+        $json = file_get_contents($path);
+        return json_decode($json, true) ?? [];
+    }
 
-        if ($user_id > 0) {
-                $html .= <<<LINE
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown-item">{$username}</li>
-                            <li class="nav-item dropdown-item">&nbsp;|&nbsp;</li>
-                            <li><a class="nav-item dropdown-item" href="/logout">Выход</a></li>
-                        </ul>
-                LINE;
-        } else {
-            $html .= <<<LINE
-                <a class="nav-link p-3" href="/login">Вход</a>
-            LINE;    
-        }
-        if (isset($_SESSION['flash'])) {
-            $html .= <<<END
-                <div id="liveAlertBtn" class="alert alert-info alert-dismissible" role="alert">
-                    <div>{$_SESSION['flash']}</div>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
-                    onclick="this.parentNode.style.display='none';"></button>
-                </div>
-            END;
-            unset($_SESSION['flash']);
+    public static function getTemplate(string $content, array $texts = []): string
+    {
+        // Если тексты не переданы, загружаем базовые
+        if (empty($texts)) {
+            $texts = self::loadTexts();
         }
 
-        $html .= <<<HTML
-            <main class="container mt-4">
-                $content
-            </main>
-
-        <footer class="mt-5">©2025 «Кемеровский кооперативный техникум»<footer>
-            <!-- SCRIPTS -->
-            <script src="../../assets/js/bootstrap.bundle.js"></script>
-        </body>
-        </html>
-        HTML;
-        return $html;
-        // LEGACY CRAP
-        // $title="BASETPLT";
-        // $content="test";
-        // return sprintf($template, $title, $content);
+        // Буферизация вывода для подключения PHP-шаблона
+        ob_start();
+        include self::TEMPLATE_PATH;
+        return ob_get_clean();
     }
 }

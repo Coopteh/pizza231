@@ -1,0 +1,14 @@
+/* === Стили для home.html.php === */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/img/banner.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.hero-section h1, .hero-section p {
+    color: #fff !important;
+}

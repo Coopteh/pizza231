@@ -1,1 +1,0 @@
-{"version":2,"defects":{"ProductTest::testPrepareDataCalculatesCorrectTotalSum":8,"ProductTest::testPrepareDataWithEmptyBasket":5,"ProductTest::testPrepareDataValidatesInput":5},"times":{"ProductTest::testPrepareDataCalculatesCorrectTotalSum":0.027,"ProductTest::testPrepareDataWithEmptyBasket":0.001,"ProductTest::testPrepareDataValidatesInput":0.002}}

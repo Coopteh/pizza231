@@ -1,0 +1,25 @@
+/* === Стили для auth.html.php (login/register) === */
+.auth-card {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.auth-form .form-label {
+    font-weight: 500;
+}
+
+.auth-form .btn {
+    padding: 10px 20px;
+}
+
+.auth-switch-link {
+    transition: color 0.2s ease;
+}
+
+.auth-switch-link:hover {
+    color: #0d6efd !important;
+}
+
+.auth-alert {
+    border-radius: 8px;
+}

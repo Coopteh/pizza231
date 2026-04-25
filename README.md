@@ -1,47 +1,28 @@
-## Проект МАГАЗИНА БЫТОВОЙ ТЕХНИКИ для МЕНЯ
+## Задание на создание страницы "О нас". Работа через роутер (3)
 
-ONLY THE MACHINE GOD KNOWS WHAT THE HELL IS HAPPENING IN THE ROUTING. MAY OMNISSIAH FORGIVE ME
-ONLY WITH THE HELP OF THE MACHINE GOD DOEST THIS CODE WORK
+Работа с git
+```
+запустите Git Bash 
+перейдите в каталог c:/xampp/htdocs
+> cd c:/xampp/htdocs
+выполните в bash терминале - получение изменений
+> git pull
+создайте новую ветку
+> git checkout -b task-13-03-26
+```
+Выполните работу по курсу "Разработка кода" - c Шага 2
++ добавьте пункт меню в BaseTemplate "О нас" с маршрутом "/about"
+  
+Закоммитьте и запуште изменения
+```
+> git status
+> git add .
+> git status
+> git commit -m "Страница 'О нас'"
+> git push
+```
+Передвиньте в Project issues с этой задачей на "In progress"  
+Скопируйте ссылку на ветку с выполненным заданием и закройте issue со ссылкой на эту ветку.  
 
-FIX DAMN PRODUCT LINE 85 IT RETURNS PRODUCT WITH ID - 1
-AND IT SHOULD NOT DO THAT
-ALSO, TWEAK ORDER CONTROLLER. THERE IS CODE DOUBLING
-AND TESTS ARE NOT TESTING IF IT STAYS LIKE THIS
-
-SOMEHOW IT BEGUN WORKING PRAISE THE GOD OF MACHINE AND STOLEN CODE 
-GOTTA REFACTOR IT ALL LATER THO
-
-NOTHING WORKS AS I EXPECTED
-SEEMS THAT I'VE LOST THE FAVOR OF THE ESSENSE DIVINE
-
-IDS ARE MISMATCHED, FIX THAT LATER
-
-DATABASES ARE MISMATCHED, INSERTION DOES NOT WORK. FIX THAT LATER
-
-MAY THE GOD OF ALL MACHINES HAVE MERCY ON MY POOR SOUL
-
-THE TESTS DOTH WORK NOT
-
-THE LOGIN/REGISTRATION DOTH WORK NOT
-
-I HAVE INDEED  LOST THE FAVOR OF THE MACHINE GOD
-
-I SHALL REDO VALIDATION FOR THE FORM
-
-I SHALL COMBINE TWO DIFFERENT DOCS INTO ONE AND EXPAND ON THE INFO FOR THIS IS NEEDED FOR WHATEVER THEY NEED
-
-I REALLY FUCKING SHALL REDO EVERYTHING FOR IT IS A LOAD OF HORSE SHIT
-I CANNOT COMPREHEND EVEN A TINY BITS OF THE CODE I HAVE WRITTEN, STOLEN OR CREATED VIA HERETICAL MEANS
-
-LOGIN AND REGISTRATION STILL DO NOT WORK, DO NOT EVEN TRY TO WORK.
-
-EVERYTHING CASCADES FROM THIS POINT IN TIME
-I CANNOT DO THAT ANYMORE
-I FEAR I MUST RESOLVE TO USING ABOMITABLE INTELLEGENCE
-SHAME ON MY BLOODLINE
-
-NEVERTHELESS, IT HAS TO BE DONE
-
-PLEASE END THIS CRAP
-I AM TIRED
-GOD OF ALL MACHINES FORGIVE ME
+Сдайте работу - создав запрос на изменения Pull Request   
+- зайдите на github и создайте Pull Request со своего аккаунта в исходный репозиторий (для аккаунта Coopteh)  

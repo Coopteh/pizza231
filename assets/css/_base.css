@@ -1,0 +1,260 @@
+/* === Базовые стили (общие для всех страниц) === */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529 !important;
+}
+
+main {
+    flex: 1 0 auto;
+    background: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #212529 !important;
+}
+
+.list-group-item {
+    background: #fff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.bi {
+    color: #212529 !important;
+}
+
+.text-muted .bi {
+    color: #6c757d !important;
+}
+
+.badge.bg-success {
+    background: #198754 !important;
+}
+
+.bg-image-block {
+    background: #f8f9fa !important;
+}
+
+/* === Навигация === */
+.navbar {
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    max-height: 45px;
+    transition: opacity 0.2s;
+}
+
+.navbar-nav .nav-link {
+    color: #212529 !important;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33, 37, 41, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* === Подвал === */
+.footer {
+    flex-shrink: 0;
+    background: #212529;
+    margin-top: auto;
+}
+
+/* === Компоненты === */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-light:hover {
+    background: #fff;
+    color: #000 !important;
+    border-color: #fff;
+}
+
+input, textarea, select {
+    background: #fff !important;
+    border: 1px solid #ced4da !important;
+    color: #212529 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.table-dark {
+    --bs-table-bg: #fff;
+    --bs-table-color: #212529;
+    --bs-table-border-color: #dee2e6;
+}
+
+.table-dark thead {
+    background: #212529;
+    color: #fff;
+}
+
+.table-dark tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.quantity-input {
+    background-color: #fff !important;
+    border-color: #ced4da !important;
+    color: #212529 !important;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* === Toast === */
+.cart-counter {
+    min-width: 20px;
+    padding: 0.25em 0.5em;
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+#fullscreenToast {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#fullscreenToast.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#fullscreenToast .toast-video {
+    width: min(90vw, 600px);
+    height: min(90vh, 400px);
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(13, 110, 253, 0.4);
+    animation: blink-border 0.4s ease-in-out infinite alternate, fadeInUp 0.5s ease forwards;
+    background: #000;
+}
+
+@keyframes blink-border {
+    0% {
+        box-shadow: 0 0 20px rgba(13, 110, 253, 0.3), 0 0 40px rgba(13, 110, 253, 0.2);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0 0 60px rgba(13, 110, 253, 0.7), 0 0 100px rgba(13, 110, 253, 0.5), 0 0 140px rgba(13, 110, 253, 0.3);
+        transform: scale(1.02);
+    }
+}
+
+#fullscreenToast .toast-message {
+    color: #212529;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 600;
+    margin-top: 2rem;
+    text-align: center;
+    animation: pulse-text 1s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(0.98); }
+}
+
+#fullscreenToast .toast-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: #212529;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+#fullscreenToast .toast-close:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+body.toast-open {
+    overflow: hidden;
+}

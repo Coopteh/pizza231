@@ -1,0 +1,23 @@
+[
+    {
+        "id": "order_69ec94015a74d",
+        "created_at": "2026-04-25 12:14:25",
+        "fio": "МОГУЧИЙ НЕГР",
+        "email": "heslessscum@gmail.com",
+        "phone": "88005553555",
+        "address": "ГОЙДАЗАВРОВО",
+        "payment": "cash",
+        "items": [
+            {
+                "id": 3,
+                "name": "Чайник",
+                "price": 5000,
+                "image": "\/assets\/img\/card3.png",
+                "quantity": 3,
+                "added_at": 1777111988
+            }
+        ],
+        "total": 15000,
+        "status": "new"
+    }
+]

@@ -1,12 +1,14 @@
 <?php
-// Объявляем пространство имен, соответствующее папке src/Controllers
 namespace App\Controllers;
 
-// Подключаем класс шаблона из корня src/
+require_once __DIR__ . '/../Views/BaseTemplate.php';
+require_once __DIR__ . '/../Views/HomeTemplate.php';
+
 use App\Views\HomeTemplate;
 
-class HomeController{
-    public static function get(): string 
+class HomeController
+{
+    public function get(): string 
     {
         return HomeTemplate::getTemplate();
     }

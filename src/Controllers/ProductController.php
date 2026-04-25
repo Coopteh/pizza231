@@ -1,33 +1,42 @@
 <?php
-
 namespace App\Controllers;
+
+require_once __DIR__ . '/../Models/Product.php';
+require_once __DIR__ . '/../Views/ProductTemplate.php';
+
+use App\Models\Product; 
 use App\Views\ProductTemplate;
-use App\Models\Product;
-use App\Config\Config;
-use App\Services\ProductDBStorage;
-use App\Services\DatabaseStorage;
 
 class ProductController
 {
     public function get($id): string 
     {
-        // MODEL CREATION
-        if (Config::STORAGE_TYPE == Config::TYPE_DB) {
-            $serviceStorage = new ProductDBStorage();
-            $model = new Product($serviceStorage, Config::TABLE_PRODUCTS);
-            $data = $model->loadData();
-        } else {
-            // Обработка других типов хранилищ или ошибка
-            $data = [];
-        }
+        $model = new Product();
+        $data = $model->loadData(); 
         
-        // $model = new Product();
-        // DOES THE KEY EXIST AT ALL?
         if ($data && isset($data[$id])) {
             $productData = $data[$id];
-            return ProductTemplate::getCardTemplate($productData);
+            return \App\Views\ProductTemplate::getCardTemplate($productData);
         }
-        // IMPLEMENT THIS CHECK LATER
-        // return '<div class="alert alert-danger">Товар с ID ' . $id . ' не найден</div>';
+        
+        return '<div class="alert alert-danger">Товар с ID ' . $id . ' не найден</div>';
+    }
+    
+    // API: получить данные товара в JSON
+    public function apiGet($id): string 
+    {
+        header('Content-Type: application/json');
+        
+        $model = new Product();
+        $data = $model->loadData(); 
+        
+        if ($data && isset($data[$id])) {
+            $product = $data[$id];
+            $product['id'] = $id;
+            return json_encode($product, JSON_UNESCAPED_UNICODE);
+        }
+        
+        http_response_code(404);
+        return json_encode(['notFound' => true], JSON_UNESCAPED_UNICODE);
     }
 }  

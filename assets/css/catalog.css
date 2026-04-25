@@ -1,0 +1,32 @@
+/* === Стили для catalog.html.php === */
+.catalog-search {
+    position: relative;
+}
+
+.catalog-product-card {
+    transition: all 0.3s ease;
+}
+
+.catalog-product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-modal-image {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.btn-product-details,
+.btn-add-to-cart {
+    transition: all 0.2s ease;
+}
+
+.quantity-controls {
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+    .catalog-search .input-group-lg {
+        font-size: 14px;
+    }
+}

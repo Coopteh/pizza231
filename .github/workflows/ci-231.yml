@@ -3,7 +3,7 @@ name: PHP_CI_IS-231
 on:
   push:
     branches:
-      - tack-15-04-login, main
+      - tack-15-04-login
 
 jobs:
   build:

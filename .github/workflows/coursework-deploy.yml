@@ -3,7 +3,7 @@ name: PHP_CI_coursework
 on:
   push:
     branches:
-      - coursework
+      - main
 
 jobs:
   build:

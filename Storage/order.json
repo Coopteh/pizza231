@@ -1,0 +1,209 @@
+[
+    {
+        "fio": "123",
+        "address": "123",
+        "phone": "123",
+        "created_at": "27-03-2026 07:40:21",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "quantity": 1,
+                "price": 10550,
+                "sum": 10550
+            }
+        ],
+        "all_sum": 10550
+    },
+    {
+        "fio": "123",
+        "address": "123",
+        "phone": "123",
+        "created_at": "27-03-2026 07:41:33",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "quantity": 1,
+                "price": 10550,
+                "sum": 10550
+            }
+        ],
+        "all_sum": 10550
+    },
+    {
+        "fio": "123",
+        "address": "123",
+        "phone": "123",
+        "created_at": "27-03-2026 08:28:28",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "quantity": 1,
+                "price": 10550,
+                "sum": 10550
+            }
+        ],
+        "all_sum": 10550
+    },
+    {
+        "order_id": "ord_69cb88cedd9280.56961807",
+        "fio": "123",
+        "user_phone": "64546594",
+        "user_address": "вырвор",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 2,
+                "name": "Горные Вершины",
+                "price": 20450,
+                "quantity": 1,
+                "sum": 20450
+            }
+        ],
+        "all_sum": 20450,
+        "created_at": "2026-03-31 10:41:50",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69cb88f58f6369.85452638",
+        "fio": "123",
+        "user_phone": "123",
+        "user_address": "123",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 2,
+                "name": "Горные Вершины",
+                "price": 20450,
+                "quantity": 1,
+                "sum": 20450
+            }
+        ],
+        "all_sum": 20450,
+        "created_at": "2026-03-31 10:42:29",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69cb89fb9bcbc5.93590038",
+        "fio": "123",
+        "user_phone": "123",
+        "user_address": "12323",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 2,
+                "name": "Горные Вершины",
+                "price": 20450,
+                "quantity": 1,
+                "sum": 20450
+            }
+        ],
+        "all_sum": 20450,
+        "created_at": "2026-03-31 10:46:51",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69cb8a1b728953.33076357",
+        "fio": "123",
+        "user_phone": "123",
+        "user_address": "13",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "price": 10550,
+                "quantity": 1,
+                "sum": 10550
+            }
+        ],
+        "all_sum": 10550,
+        "created_at": "2026-03-31 10:47:23",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69cb8e6491f733.27116540",
+        "fio": "123",
+        "user_phone": "123",
+        "user_address": "123",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 2,
+                "name": "Горные Вершины",
+                "price": 20450,
+                "quantity": 1,
+                "sum": 20450
+            }
+        ],
+        "all_sum": 20450,
+        "created_at": "2026-03-31 11:05:40",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69cb8f10a5cfa1.81596924",
+        "fio": "оххохо",
+        "user_phone": "57452534",
+        "user_address": "дооооо",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "price": 10550,
+                "quantity": 1,
+                "sum": 10550
+            }
+        ],
+        "all_sum": 10550,
+        "created_at": "2026-03-31 11:08:32",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69cb8f7ca0fcf0.94206532",
+        "fio": "123",
+        "user_phone": "123",
+        "user_address": "123",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "price": 10550,
+                "quantity": 1,
+                "sum": 10550
+            },
+            {
+                "id": 2,
+                "name": "Горные Вершины",
+                "price": 20450,
+                "quantity": 1,
+                "sum": 20450
+            }
+        ],
+        "all_sum": 31000,
+        "created_at": "2026-03-31 11:10:20",
+        "status": "new"
+    },
+    {
+        "order_id": "ord_69d3843bf37e46.44218513",
+        "fio": "213",
+        "user_phone": "123",
+        "user_address": "123",
+        "user_comment": "",
+        "products": [
+            {
+                "id": 1,
+                "name": "Лесные Просторы",
+                "price": 10550,
+                "quantity": 1,
+                "sum": 10550
+            }
+        ],
+        "all_sum": 10550,
+        "created_at": "2026-04-06 12:00:27",
+        "status": "new"
+    }
+]
